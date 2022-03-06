@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: da4d732596845594e9b99bf9488ee15f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4526130349725787293
+    second: PillarTall1_Minifantasy_ForgottenPlainsPropsShadows_0
+  - first:
+      213: 4106142541947999973
+    second: PillarTall2_Minifantasy_ForgottenPlainsPropsShadows_1
+  - first:
+      213: -2153939924210325578
+    second: PillarTall3_Minifantasy_ForgottenPlainsPropsShadows_2
+  - first:
+      213: 7295656706182475025
+    second: PillarMedium1_Minifantasy_ForgottenPlainsPropsShadows_3
+  - first:
+      213: -6235170743244417360
+    second: PillarMedium2_Minifantasy_ForgottenPlainsPropsShadows_4
+  - first:
+      213: -578979815959159429
+    second: PillarMedium3_Minifantasy_ForgottenPlainsPropsShadows_5
+  - first:
+      213: -1133262976890496640
+    second: PillarShort1_Minifantasy_ForgottenPlainsPropsShadows_6
+  - first:
+      213: 1822199259735193992
+    second: PillarMedium4_Minifantasy_ForgottenPlainsPropsShadows_7
+  - first:
+      213: 7505493433767703009
+    second: PillarShort2_Minifantasy_ForgottenPlainsPropsShadows_8
+  - first:
+      213: -5767133754201675963
+    second: TreeNoApples_Minifantasy_ForgottenPlainsPropsShadows_9
+  - first:
+      213: -8184837761918644901
+    second: TreeApples_Minifantasy_ForgottenPlainsPropsShadows_10
+  - first:
+      213: -7420284942809958150
+    second: Creeper8_Minifantasy_ForgottenPlainsPropsShadows_11
+  - first:
+      213: 6375545030312398460
+    second: Creeper7_Minifantasy_ForgottenPlainsPropsShadows_12
+  - first:
+      213: -8065697511682960049
+    second: Creeper6_Minifantasy_ForgottenPlainsPropsShadows_13
+  - first:
+      213: -3269588682443333802
+    second: Creeper5_Minifantasy_ForgottenPlainsPropsShadows_14
+  - first:
+      213: 7816809880885889572
+    second: Creeper4_Minifantasy_ForgottenPlainsPropsShadows_15
+  - first:
+      213: 357156586833447690
+    second: Creeper3_Minifantasy_ForgottenPlainsPropsShadows_16
+  - first:
+      213: -5111578541363739173
+    second: Creeper2_Minifantasy_ForgottenPlainsPropsShadows_17
+  - first:
+      213: -7963566005678081763
+    second: Creeper1_Minifantasy_ForgottenPlainsPropsShadows_18
+  - first:
+      213: -799095800926775444
+    second: WallVertical_Minifantasy_ForgottenPlainsPropsShadows_19
+  - first:
+      213: -8563485134082019111
+    second: FlowerRed_Minifantasy_ForgottenPlainsPropsShadows_20
+  - first:
+      213: 3730822783780485838
+    second: FlowerPink_Minifantasy_ForgottenPlainsPropsShadows_21
+  - first:
+      213: -2447343969858186023
+    second: FlowerWhite_Minifantasy_ForgottenPlainsPropsShadows_22
+  - first:
+      213: 7844603315982627044
+    second: GrassLong1_Minifantasy_ForgottenPlainsPropsShadows_23
+  - first:
+      213: -6214563721479241393
+    second: GrassLong2_Minifantasy_ForgottenPlainsPropsShadows_24
+  - first:
+      213: 1804689221886211288
+    second: Cattail_Minifantasy_ForgottenPlainsPropsShadows_25
+  - first:
+      213: 8847506964314583739
+    second: Minifantasy_ForgottenPlainsPropsShadows_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PillarTall1_Minifantasy_ForgottenPlainsPropsShadows_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bda796d64ff21c0800000000000000
+      internalID: -4526130349725787293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarTall2_Minifantasy_ForgottenPlainsPropsShadows_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 48
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e61ee9f2e2fbf830800000000000000
+      internalID: 4106142541947999973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarTall3_Minifantasy_ForgottenPlainsPropsShadows_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 19
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b769ed0d0bab12e0800000000000000
+      internalID: -2153939924210325578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarMedium1_Minifantasy_ForgottenPlainsPropsShadows_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 45
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11de337ce116f3560800000000000000
+      internalID: 7295656706182475025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarMedium2_Minifantasy_ForgottenPlainsPropsShadows_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 48
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6120f8e393879a0800000000000000
+      internalID: -6235170743244417360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarMedium3_Minifantasy_ForgottenPlainsPropsShadows_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d12a9ccec07f7f0800000000000000
+      internalID: -578979815959159429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarShort1_Minifantasy_ForgottenPlainsPropsShadows_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 50
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0891759a357d540f0800000000000000
+      internalID: -1133262976890496640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarMedium4_Minifantasy_ForgottenPlainsPropsShadows_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 48
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889fe728290c94910800000000000000
+      internalID: 1822199259735193992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PillarShort2_Minifantasy_ForgottenPlainsPropsShadows_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 51
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e130cf138ed82860800000000000000
+      internalID: 7505493433767703009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeNoApples_Minifantasy_ForgottenPlainsPropsShadows_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 51
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547e4a8f76607ffa0800000000000000
+      internalID: -5767133754201675963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeApples_Minifantasy_ForgottenPlainsPropsShadows_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 19
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dc2a0bb6d996e80800000000000000
+      internalID: -8184837761918644901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper8_Minifantasy_ForgottenPlainsPropsShadows_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 25
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8f1aba82ad50990800000000000000
+      internalID: -7420284942809958150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper7_Minifantasy_ForgottenPlainsPropsShadows_12
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 25
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e074d0d6c7a7850800000000000000
+      internalID: 6375545030312398460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper6_Minifantasy_ForgottenPlainsPropsShadows_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 25
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f459266d8d2e01090800000000000000
+      internalID: -8065697511682960049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper5_Minifantasy_ForgottenPlainsPropsShadows_14
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 25
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fd3559a6610a2d0800000000000000
+      internalID: -3269588682443333802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper4_Minifantasy_ForgottenPlainsPropsShadows_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 25
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a87f2eb23ea7c60800000000000000
+      internalID: 7816809880885889572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper3_Minifantasy_ForgottenPlainsPropsShadows_16
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 25
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b066ff500e4f400800000000000000
+      internalID: 357156586833447690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper2_Minifantasy_ForgottenPlainsPropsShadows_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 25
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5418026660019b0800000000000000
+      internalID: -5111578541363739173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Creeper1_Minifantasy_ForgottenPlainsPropsShadows_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 25
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d197e2e19eabb7190800000000000000
+      internalID: -7963566005678081763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallVertical_Minifantasy_ForgottenPlainsPropsShadows_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1
+        width: 10
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67d0445a9a09e4f0800000000000000
+      internalID: -799095800926775444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlowerRed_Minifantasy_ForgottenPlainsPropsShadows_20
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0f3bf44a3682980800000000000000
+      internalID: -8563485134082019111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlowerPink_Minifantasy_ForgottenPlainsPropsShadows_21
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1
+        width: 1
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca7b2b1e8b86c330800000000000000
+      internalID: 3730822783780485838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlowerWhite_Minifantasy_ForgottenPlainsPropsShadows_22
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1
+        width: 1
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4986140a9490ed0800000000000000
+      internalID: -2447343969858186023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassLong1_Minifantasy_ForgottenPlainsPropsShadows_23
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 2
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0fef44721addc60800000000000000
+      internalID: 7844603315982627044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassLong2_Minifantasy_ForgottenPlainsPropsShadows_24
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f414333b83f61c9a0800000000000000
+      internalID: -6214563721479241393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cattail_Minifantasy_ForgottenPlainsPropsShadows_25
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 3
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4f080294b8b0910800000000000000
+      internalID: 1804689221886211288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

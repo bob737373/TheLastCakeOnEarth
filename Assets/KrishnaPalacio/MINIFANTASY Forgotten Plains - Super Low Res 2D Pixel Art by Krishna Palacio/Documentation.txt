@@ -1,0 +1,45 @@
+Rule and Animated Tiles
+	The Scenes labeled with "(Rule + Animated Tiles)" scene makes use of Rule and Animated Tiles.
+	In order to show the scene properly and make use of these Tiles, you will need to have downloaded and imported the 2D Tilemap Extras package.
+	If you are using a Unity Version 2020 or older, you will need to enable preview packages in "Package Manager > Advanced Project Settings > Enable Preview Packages."
+	If you are using a Unity Version 2021 or newer, the package should appear in the Unity Registry as a standard package.
+
+	When using the Rule Tiles, they will generally appear red when the tile is considered incomplete.
+	You may change these settings by opening the Rule Tile object in "Tile Palettes > Rule Tiles."
+
+Random Brush
+	In order to place tiles randomly we recommend using the random brushes included in the 2D Tilemap Extras package.
+	For Unity versions 2021 and above: Link here https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@2.0/manual/index.html
+	For Unity versions 2020 and below: Link here https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@1.6/manual/index.html
+
+Sorting Layer Setup
+	All objects are on the default layer. The objects are grouped as follows:
+	-10	Ground
+	-9	Water	
+	-8	Ground Decoration, Water Decoration
+	-7	Ground Shadow, Prop Shadows				Defined as: shadows that rest on the ground.
+	-6	Walls - Vertical
+	-5	Walls - Horizontal
+	-4	Walls - Cliffs (1)
+	-3	Walls - Cliffs (2)
+	-2	Walls - Cliffs (3)
+	-1	Walls - Above Cliffs, Walls Shadow		Defined as: shadows that rest on walls.
+	 0	Props
+
+Placing Objects in the Scene
+	We recommend one of these two options for maintaining crisp pixels while moving objects around the scene:
+		1. Grid Snapping
+			Set Size = 0.125 (1 pixel)
+			You can change this setting in "Edit > Grid and Snap Settings > World Grid > Size."
+		2. Grid and Snap Increment Snap
+			Set Move = 0.125 (1 pixel) or 0.0625 (1/2 pixel)
+			You can change this setting in "Edit > Grid and Snap Settings > Increment Snap > Move."
+			Then hold ctrl while moving objects to increment their position based on the move setting.
+
+Tile Palettes
+	Tile Palettes are notated with FP for Forgotten Plains. 
+	This is to avoid conflicts when multiple Minifantasy packs are imported in a single project.
+
+Prop Variants
+	Each type of prop comes with a script to easily change between prop variants.
+	To change between prop variants, find the FP "Prop" Script component on a prop prefab and use the selection dropdown.
