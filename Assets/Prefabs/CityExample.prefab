@@ -2722,6 +2722,7 @@ GameObject:
   - component: {fileID: 7582870900357496409}
   - component: {fileID: 7582870900357496411}
   - component: {fileID: 7582870900357496410}
+  - component: {fileID: 967104776550529712}
   m_Layer: 0
   m_Name: Cars
   m_TagString: Untagged
@@ -3073,3 +3074,19 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &967104776550529712
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7582870900357496408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
