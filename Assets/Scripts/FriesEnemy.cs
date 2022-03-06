@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class FriesEnemy : Enemy
 {
-
+    override protected void attack() {
+        
+    }
 }

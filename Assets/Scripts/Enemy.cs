@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    [SerializeField]
     int maxHealth;
     int health;
     bool dead;
@@ -12,7 +13,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -21,14 +22,22 @@ public class Enemy : MonoBehaviour
         
     }
 
-    void attack() {
+    protected virtual void attack() {
         
     }
 
-    void receiveDamage(int damage) {
+    public void TakeDamage(int damage) {
         health -= damage;
-        if (health < 0) {
-            dead = true;
+        if (health <= 0) {
+            Die();
         }
+    }
+
+    void Die() {
+        print("died");
+    }
+
+    bool canAttack() {
+        return true;
     }
 }
