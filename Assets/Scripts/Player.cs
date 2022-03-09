@@ -15,8 +15,13 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]
     LayerMask enemyLayers;
+    [SerializeField]
+    Weapon[] weapons;
 
     Vector2 movement;
+    int weaponIndex;
+    Weapon selectedWeapon;
+
 
     void Start()
     {
@@ -32,6 +37,13 @@ public class Player : MonoBehaviour
             Attack();
             print("attack");
         }
+
+        float scroll = Input.GetAxisRaw("Mouse Scrollwheel");
+        if (scroll > 0) {
+            ChangeWeapon(true);
+        } else if (scroll < 0) {
+            ChangeWeapon(false);
+        }
     }
 
     void FixedUpdate() 
@@ -40,12 +52,22 @@ public class Player : MonoBehaviour
         rb.velocity = movement * moveSpeed;
     }
 
-    void Attack() {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
-        foreach(Collider2D enemy in hitEnemies) {
-            print("hit " + enemy.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+    void ChangeWeapon(bool increment) {
+        weaponIndex++;
+        if (weaponIndex == weapons.Length) weaponIndex = 0;
+        selectedWeapon = weapons [weaponIndex];
+    }
+
+    void SelectWeapon(int newWeaponIndex) {
+        if(newWeaponIndex < weapons.Length && newWeaponIndex >= 0) {
+            selectedWeapon = weapons [newWeaponIndex];
+            weaponIndex = newWeaponIndex;
         }
+
+    }
+
+    void Attack() {
+        if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
     }
 
     void OnDrawGizmosSelected() {
