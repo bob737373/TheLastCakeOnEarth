@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
             print("attack");
         }
 
-        float scroll = Input.GetAxisRaw("Mouse Scrollwheel");
+        float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
         if (scroll > 0) {
             ChangeWeapon(true);
         } else if (scroll < 0) {
