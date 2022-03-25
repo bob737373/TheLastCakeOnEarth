@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 461568776808595160}
   - component: {fileID: 461568776808595167}
   - component: {fileID: -5462167263018717961}
-  - component: {fileID: 5344200442175806281}
   - component: {fileID: -2568964777802707717}
+  - component: {fileID: 6749151139136087874}
   m_Layer: 6
   m_Name: FriesEnemy
   m_TagString: Untagged
@@ -105,23 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &5344200442175806281
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461568776808595166}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.32
+  m_Constraints: 4
 --- !u!114 &-2568964777802707717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +119,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  walkingSpeed: 0
+  meleeAttackRange: 15
+  rb: {fileID: -5462167263018717961}
+--- !u!58 &6749151139136087874
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461568776808595166}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.96

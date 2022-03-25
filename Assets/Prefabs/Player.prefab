@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7822944252191047025}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  attackRange: 0.5
+  attackDamage: 2
   rb: {fileID: 2726189631472564872}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  weapons: []
 --- !u!61 &7822944252191047025
 BoxCollider2D:
   m_ObjectHideFlags: 0
