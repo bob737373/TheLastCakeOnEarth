@@ -25,7 +25,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+        if(weapons.Length != 0) {
+            selectedWeapon = weapons[0];
+        }
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1")) {
             Attack();
-            print("attack");
+            
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
@@ -53,9 +55,15 @@ public class Player : MonoBehaviour
     }
 
     void ChangeWeapon(bool increment) {
-        weaponIndex++;
-        if (weaponIndex == weapons.Length) weaponIndex = 0;
-        selectedWeapon = weapons [weaponIndex];
+        if(increment) {
+            weaponIndex++;
+            if (weaponIndex >= weapons.Length) weaponIndex = 0;
+        } else {
+            weaponIndex--;
+            if (weaponIndex < 0) weaponIndex = weapons.Length-1;
+        }
+        SelectWeapon (weaponIndex);
+        //selectedWeapon = weapons [weaponIndex];
     }
 
     void SelectWeapon(int newWeaponIndex) {
@@ -67,6 +75,7 @@ public class Player : MonoBehaviour
     }
 
     void Attack() {
+        print("attack");
         if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
     }
 

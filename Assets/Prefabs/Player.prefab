@@ -127,7 +127,8 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
-  weapons: []
+  weapons:
+  - {fileID: 6385026478801179345}
 --- !u!95 &5685725065730189259
 Animator:
   serializedVersion: 3
@@ -300,3 +301,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6514912618223039647, guid: 877d39e2e3771484fb2362d5b79f4400, type: 3}
   m_PrefabInstance: {fileID: 4178322171581972933}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6385026478801179345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7016689722154029844, guid: 877d39e2e3771484fb2362d5b79f4400, type: 3}
+  m_PrefabInstance: {fileID: 4178322171581972933}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46fd0d1e7699d104a987734aea013152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
