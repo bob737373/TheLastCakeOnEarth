@@ -119,8 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  walkingSpeed: 0
-  meleeAttackRange: 15
+  walkingSpeed: 3
+  meleeAttackRange: 0.3
+  alertRange: 3
   rb: {fileID: -5462167263018717961}
 --- !u!58 &6749151139136087874
 CircleCollider2D:
@@ -137,4 +138,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.96
+  m_Radius: 5

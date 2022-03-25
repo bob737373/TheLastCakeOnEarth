@@ -16,15 +16,21 @@ public class Enemy : MonoBehaviour
     private Vector2 movement;
 
     [SerializeField]
-    float meleeAttackRange = 15.0f;
+    float meleeAttackRange = 1.0f;
+
+    [SerializeField]
+    float alertRange = 10.0f;
+
 
     bool isDead;
 
     private enum EnemyState
     {
-        Idle,
-        moveToTarget,
-        moveToStartPosition
+        Idle, // Nothing in sight of enemm
+        Alert, // Can see target, not in range of alert
+        moveToTarget, // Moving to the target
+        moveToStartPosition, // Moving to start posiiton
+        attacking // Attack mode
     }
 
     private EnemyState currentState;
@@ -36,9 +42,8 @@ public class Enemy : MonoBehaviour
 
     
     private void walkTo(Vector3 destination)
-    {
-       transform.position = Vector2.Lerp(transform.position, destination, Time.deltaTime);
-    //    transform.position = Vector2.MoveTowards(this.transform.position, position, step);
+    {   
+       transform.position = Vector2.MoveTowards(this.transform.position, destination, walkingSpeed * Time.deltaTime);
     }
 
     // Start is called before the first frame update
@@ -52,11 +57,19 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print(currentState);
         // TODO: Check if in attack range.
         if (target)
-        {
-            currentState = EnemyState.moveToTarget;
+        {   
+            float distanceFromTarget = Vector2.Distance(target.transform.position, transform.position);
+
+            if (distanceFromTarget < meleeAttackRange){
+                currentState = EnemyState.attacking;
+            }else if (distanceFromTarget < alertRange){
+                currentState = EnemyState.moveToTarget;
+            }else {
+                currentState = EnemyState.Alert;
+            }
         }
         else if (startingPosition != this.transform.position)
         {
@@ -81,16 +94,11 @@ public class Enemy : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.Idle:
-                {
-                    print("idling");
                     break;
-                }
             case EnemyState.moveToStartPosition:
-                {
-                    print("Moving back to start position");
+            case EnemyState.Alert:
                     walkTo(startingPosition);
                     break;
-                }
             case EnemyState.moveToTarget:
                 {
                     walkTo(target.transform.position);
@@ -105,6 +113,7 @@ public class Enemy : MonoBehaviour
 
     }
 
+    // Takes damage from entity
     public void TakeDamage(int damage)
     {
         health -= damage;
