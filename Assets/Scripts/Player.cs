@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     int maxHealth = 20;
     int health = 20;
+    int coins = 0;
+    int icing = 0;
 
     [SerializeField]
     float defaultMoveSpeed = 5f;
@@ -85,6 +87,18 @@ public class Player : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float ang = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = ang;
+    }
+
+    int getHealth(){
+        return health;
+    }
+
+    int getCoins(){
+        return coins;
+    }
+
+    int getIcing(){
+        return icing;
     }
 
     void ChangeWeapon(bool increment) {
