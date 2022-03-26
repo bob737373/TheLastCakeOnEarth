@@ -31,7 +31,7 @@ public class RangedWeapon : Weapon
         StartCoroutine(ReloadAfterTime());
     }
 
-    IEnumerator ReloadAfterTime() {
+    private IEnumerator ReloadAfterTime() {
         yield return new WaitForSeconds (shootDelay);
         isReloading = false;
     }
@@ -41,6 +41,7 @@ public class RangedWeapon : Weapon
             return;
         }
         Instantiate(projectilePrefab, projectileSpawnPoint).Shoot(projectileSpawnPoint.up * projectileSpeed);
+        Reload();
     }
 
 }
