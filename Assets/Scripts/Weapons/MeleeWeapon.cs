@@ -5,10 +5,6 @@ using UnityEngine;
 public class MeleeWeapon : Weapon
 {
     [SerializeField]
-    float attackRadius = 0.5f;
-    [SerializeField]
-    int attackDamage = 5;
-    [SerializeField]
     Transform attackPoint;
 
     public override void Attack(LayerMask enemyLayers)

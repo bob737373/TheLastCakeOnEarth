@@ -113,9 +113,8 @@ public class Enemy : MonoBehaviour
 
     }
 
-    // Takes damage from entity
-    public void TakeDamage(int damage)
-    {
+    public void TakeDamage(int damage) {
+        print("ouch");
         health -= damage;
         if (health <= 0)
         {

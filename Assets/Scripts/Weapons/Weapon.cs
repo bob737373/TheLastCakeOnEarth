@@ -7,9 +7,13 @@ public abstract class Weapon : MonoBehaviour
     public enum WeaponType {melee, ranged};
     
     [SerializeField]
-    float attackRadius = 0.5f;
+    protected float attackRadius = 0.5f;
     [SerializeField]
-    int attackDamage = 0;
+    protected int attackDamage;
 
     public abstract void Attack(LayerMask enemyLayers);
+
+    public int GetDamage() {
+        return this.attackDamage;
+    }
 }
