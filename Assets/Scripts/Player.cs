@@ -16,13 +16,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     float attackRange = 0.5f;
     [SerializeField]
-    int attackDamage = 2;
-    [SerializeField]
     Rigidbody2D rb;
     [SerializeField]
     LayerMask enemyLayers;
     [SerializeField]
     Weapon[] weapons;
+    [SerializeField]
+    Camera cam;
 
     //booleans for HUD icon display
     bool[] statuses = { false, false, false, false, false };
@@ -36,21 +36,34 @@ public class Player : MonoBehaviour
     */
 
     Vector2 movement;
+    Vector2 mousePos;
+    Vector3 mousePos3;
     int weaponIndex;
     Weapon selectedWeapon;
+    float camZ;
 
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        camZ = cam.transform.position.z;
         if(weapons.Length != 0) {
             selectedWeapon = weapons[0];
+        }
+        for(int i = 1; i < weapons.Length; i++) {
+            weapons[i].gameObject.SetActive(false);
         }
     }
 
     void Update()
     {
+        cam.transform.rotation = Quaternion.Euler(0,0,0);
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        movement.Normalize();
+        mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mousePos3;
 
         if (Input.GetButtonDown("Fire1")) {
             Attack();
@@ -68,8 +81,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate() 
     {
-        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        rb.velocity = movement * moveSpeed;
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector2 lookDir = mousePos - rb.position;
+        float ang = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = ang;
     }
 
     void ChangeWeapon(bool increment) {
@@ -86,8 +101,11 @@ public class Player : MonoBehaviour
 
     void SelectWeapon(int newWeaponIndex) {
         if(newWeaponIndex < weapons.Length && newWeaponIndex >= 0) {
+            selectedWeapon.gameObject.SetActive(false);
             selectedWeapon = weapons [newWeaponIndex];
+            selectedWeapon.gameObject.SetActive(true);
             weaponIndex = newWeaponIndex;
+            print(selectedWeapon);
         }
 
     }

@@ -9,7 +9,11 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected float attackRadius = 0.5f;
     [SerializeField]
-    protected int attackDamage = 0;
+    protected int attackDamage;
 
     public abstract void Attack(LayerMask enemyLayers);
+
+    public int GetDamage() {
+        return this.attackDamage;
+    }
 }
