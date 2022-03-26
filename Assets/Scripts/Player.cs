@@ -67,9 +67,8 @@ public class Player : MonoBehaviour
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos = mousePos3;
 
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButton("Fire1")) {
             Attack();
-            
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
