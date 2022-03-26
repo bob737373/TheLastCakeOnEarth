@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
     }
 
 
-    //METHOD WHEN AN ITEM IS USED
+    // METHOD WHEN AN ITEM IS USED
     //-------------------------------------------------------------------------
     void itemUse(string item) {
         if (item == "expiredSnackCakes") {
@@ -209,7 +209,6 @@ public class Player : MonoBehaviour
         }
     }
     //-------------------------------------------------------------------------
-
 
     //STATUS EFFECTS' STAT EDITS + TIMER
     //-------------------------------------------------------------------------

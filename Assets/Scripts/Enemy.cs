@@ -40,10 +40,10 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
-    
+
     private void walkTo(Vector3 destination)
-    {   
-       transform.position = Vector2.MoveTowards(this.transform.position, destination, walkingSpeed * Time.deltaTime);
+    {
+        transform.position = Vector2.MoveTowards(this.transform.position, destination, walkingSpeed * Time.deltaTime);
     }
 
     // Start is called before the first frame update
@@ -60,14 +60,19 @@ public class Enemy : MonoBehaviour
         print(currentState);
         // TODO: Check if in attack range.
         if (target)
-        {   
+        {
             float distanceFromTarget = Vector2.Distance(target.transform.position, transform.position);
 
-            if (distanceFromTarget < meleeAttackRange){
+            if (distanceFromTarget < meleeAttackRange)
+            {
                 currentState = EnemyState.attacking;
-            }else if (distanceFromTarget < alertRange){
+            }
+            else if (distanceFromTarget < alertRange)
+            {
                 currentState = EnemyState.moveToTarget;
-            }else {
+            }
+            else
+            {
                 currentState = EnemyState.Alert;
             }
         }
@@ -94,11 +99,11 @@ public class Enemy : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.Idle:
-                    break;
+                break;
             case EnemyState.moveToStartPosition:
             case EnemyState.Alert:
-                    walkTo(startingPosition);
-                    break;
+                walkTo(startingPosition);
+                break;
             case EnemyState.moveToTarget:
                 {
                     walkTo(target.transform.position);
@@ -113,8 +118,8 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage) {
-        print("ouch");
+    public void TakeDamage(int damage)
+    {
         health -= damage;
         if (health <= 0)
         {
@@ -128,7 +133,7 @@ public class Enemy : MonoBehaviour
     }
 
     bool canAttack()
-    {   
+    {
         // TODO: Check if in melee range.
         return true;
     }
