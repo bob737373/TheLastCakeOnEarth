@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.44
+  m_Radius: 8
 --- !u!114 &-2568964777802707717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,5 +137,5 @@ MonoBehaviour:
   maxHealth: 10
   walkingSpeed: 4
   meleeAttackRange: 1
-  alertRange: 8
+  alertRange: 4
   rb: {fileID: 0}
