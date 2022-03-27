@@ -209,6 +209,7 @@ MonoBehaviour:
   maxHealth: 20
   rb: {fileID: 5685725065730189260}
   defaultMoveSpeed: 5
+  health: 10
   weapons:
   - label: RollingPin
     weapon: {fileID: 6385026478801179345}
@@ -218,7 +219,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   cam: {fileID: 2320031452381813977}
-  animator: {fileID: 0}
+  animator: {fileID: 7068420410341734693}
+  coins: 10
+  icing: 0
 --- !u!58 &17673713
 CircleCollider2D:
   m_ObjectHideFlags: 0

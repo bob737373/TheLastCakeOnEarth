@@ -7,22 +7,26 @@ public abstract class Entity : MonoBehaviour
 
     [SerializeField]
     protected float attackRange = 0.5f;
-    [SerializeField]
-    public int maxHealth;
+    protected int maxHealth;
+
     [SerializeField]
     protected Rigidbody2D rb;
+
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
     
     protected float moveSpeed = 5f;
-    public int health;
+
+    [SerializeField]
+    protected int health;
+
     protected Vector2 movement; 
     bool isDead;
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
-        health = maxHealth;
+        maxHealth = health;
     }
 
     // Update is called once per frame
@@ -39,6 +43,27 @@ public abstract class Entity : MonoBehaviour
         {
             Die();
         }
+    }
+    
+    public int getHealth()
+    {
+        return this.health;
+    }
+
+    public int getMaxHealth()
+    {
+        return this.maxHealth;
+    }
+
+    public void addHealth(int healthAmt){
+        int newHealthAmt = health + healthAmt;
+
+        // Make sure health is not greater then max health
+        if (newHealthAmt > maxHealth){
+            newHealthAmt = maxHealth;
+        }
+
+        this.health = newHealthAmt;
     }
 
     void Die()

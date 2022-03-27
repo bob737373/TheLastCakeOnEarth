@@ -42,7 +42,11 @@ public class HUD : MonoBehaviour
 
     public void updateHealth()
     {
-        healthBar.fillAmount = (player.health / player.maxHealth);
+        print(player.getHealth());
+        print(player.getMaxHealth());
+        healthBar.fillAmount = (float) player.getHealth() / (float) player.getMaxHealth();
+
+        print("HEALTH" + healthBar.fillAmount);
         if (healthBar.fillAmount < 0.3f)
         {
             healthBar.color = (Color.red);
