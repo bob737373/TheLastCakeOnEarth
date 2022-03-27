@@ -16,6 +16,8 @@ public abstract class Weapon : MonoBehaviour
     protected string attackTriggerName = "Attack";
     [SerializeField]
     protected float attackDelay = 0.5f;
+    [SerializeField]
+    protected Player.StatusEffects effect;
 
     protected bool isReadying;
 
@@ -30,6 +32,14 @@ public abstract class Weapon : MonoBehaviour
 
     public int GetDamage() {
         return this.attackDamage;
+    }
+
+    public Player.StatusEffects GetEffect() {
+        return effect;
+    }
+
+    public float GetAttackRadius() {
+        return attackRadius;
     }
 
     private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex) {

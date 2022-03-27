@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     Animator animator;
 
     //booleans for HUD icon display
+    public enum StatusEffects {caffeinated, coffeeCrash, minty, spicy, stomachAche}
     bool[] statuses = { false, false, false, false, false };
     /*
     status index list for all use cases of statuses:
@@ -65,6 +66,7 @@ public class Player : MonoBehaviour
         cam.transform.rotation = Quaternion.Euler(0,0,0);
         movement.x = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("SpeedX", movement.x);
+        animator.SetBool("MovingHorizontally", movement.x != 0);
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("SpeedY", movement.y);
         movement.Normalize();

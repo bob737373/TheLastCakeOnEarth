@@ -118,7 +118,7 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Player.StatusEffects effect)
     {
         health -= damage;
         if (health <= 0)
