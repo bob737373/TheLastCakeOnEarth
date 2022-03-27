@@ -6,10 +6,10 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    int maxHealth = 20;
-    int health = 20;
-    int coins = 0;
-    int icing = 0;
+    public int maxHealth = 20;
+    public int health = 20;
+    public int coins = 0;
+    public int icing = 0;
 
     [SerializeField]
     float defaultMoveSpeed = 5f;
