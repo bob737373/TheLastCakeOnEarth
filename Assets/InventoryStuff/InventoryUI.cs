@@ -5,6 +5,9 @@ public class InventoryUI : MonoBehaviour
 {
     
     Inventory inventory;
+
+    public GameObject inventoryUI;
+
     void Start()
     {
         //inventory = Inventory.instance;
@@ -14,6 +17,9 @@ public class InventoryUI : MonoBehaviour
     
     void Update()
     {
-        
+        if (Input.GetKeyDown("i"))
+        {
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
+        }
     }
 }
