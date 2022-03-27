@@ -14,6 +14,6 @@ public class InventoryUI : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("UPDATING UI");
+        
     }
 }
