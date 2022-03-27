@@ -6,10 +6,18 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    public int maxHealth = 20;
-    public int health = 20;
-    public int coins = 0;
-    public int icing = 0;
+    private int startingCoins = 0;
+
+    [SerializeField]
+    private int maxHealth = 20;
+
+    [SerializeField]
+    private int startingHealth = 0;
+
+    
+    private int health = 0;
+    private int coins = 0;
+    private int icing = 0;
 
     [SerializeField]
     float defaultMoveSpeed = 5f;
@@ -28,6 +36,8 @@ public class Player : MonoBehaviour
 
     //booleans for HUD icon display
     bool[] statuses = { false, false, false, false, false };
+
+
     /*
     status index list for all use cases of statuses:
     0: caffeinated
@@ -36,7 +46,6 @@ public class Player : MonoBehaviour
     3: spicy
     4: stomach ache
     */
-
     Vector2 movement;
     Vector2 mousePos;
     Vector3 mousePos3;
@@ -47,15 +56,23 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
+        
         if(weapons.Length != 0) {
             selectedWeapon = weapons[0];
         }
+
         for(int i = 1; i < weapons.Length; i++) {
             weapons[i].gameObject.SetActive(false);
         }
+
+        // Set starting values
+        this.coins = startingCoins;
+        this.health = startingHealth;
+
     }
 
     void Update()
@@ -88,15 +105,15 @@ public class Player : MonoBehaviour
         rb.rotation = ang;
     }
 
-    int getHealth(){
+    public int getHealth(){
         return health;
     }
 
-    int getCoins(){
+    public int getCoins(){
         return coins;
     }
 
-    int getIcing(){
+    public int getIcing(){
         return icing;
     }
 
@@ -131,7 +148,7 @@ public class Player : MonoBehaviour
     void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
+ 
 
     // METHOD WHEN AN ITEM IS USED
     //-------------------------------------------------------------------------

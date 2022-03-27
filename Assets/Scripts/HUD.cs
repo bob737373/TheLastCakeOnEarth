@@ -5,34 +5,49 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public Text coinsText;
-    public Text icingText;
+    private Text coinsText;
+
+    private Text icingText;
+
     public Image healthBar;
+
+    [SerializeField]
     public Player player;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinsText = gameObject.GetComponent<Text>();
-        icingText = gameObject.GetComponent<Text>();
-        healthBar = gameObject.GetComponent<Image>();
+        GameObject coinsTextGO = GameObject.Find("CoinCountText");
+        coinsText = coinsTextGO.GetComponent<Text>();
+
+        GameObject icingTextGO = GameObject.Find("IcingCountText");
+        icingText = icingTextGO.GetComponent<Text>();
+
+        GameObject imageHealthGO = GameObject.Find("HealthMeter");
+        healthBar = imageHealthGO.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        updateHealth();
-        updateCoins();
-        updateIcing();
+        if (player)
+        {
+            updateHealth();
+            updateCoins();
+            updateIcing();
+
+        }
     }
 
-    public void updateHealth(){
-        healthBar.fillAmount = (player.health/player.maxHealth);
-        if(healthBar.fillAmount < 0.3f)
+
+    public void updateHealth()
+    {
+        healthBar.fillAmount = (player.health / player.maxHealth);
+        if (healthBar.fillAmount < 0.3f)
         {
             healthBar.color = (Color.red);
         }
-        else if(healthBar.fillAmount < 0.5f)
+        else if (healthBar.fillAmount < 0.5f)
         {
             healthBar.color = (Color.yellow);
         }
@@ -42,11 +57,17 @@ public class HUD : MonoBehaviour
         }
     }
 
-    public void updateCoins(){
-        coinsText.text = player.coins.ToString();
+    public void updateCoins()
+    {
+        this.coinsText.text = player.getCoins().ToString();
     }
 
-    public void updateIcing(){
-        icingText.text = player.icing.ToString();
+    public void updateIcing()
+    {
+        icingText.text = player.getIcing().ToString();
+    }
+
+    public void setHealth(float health)
+    {
     }
 }
