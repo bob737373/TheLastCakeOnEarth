@@ -2,68 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Entity
 {
-
-    [SerializeField]
-    int maxHealth;
-
-    [SerializeField]
-    float walkingSpeed = 1f;
-
-    int health;
-    private Transform target = null;
-    private Vector2 movement;
-
-    [SerializeField]
-    float meleeAttackRange = 1.0f;
 
     [SerializeField]
     float alertRange = 10.0f;
 
-
-    bool isDead;
-
-    private enum EnemyState
+    enum EnemyState
     {
-        Idle, // Nothing in sight of enemm
-        Alert, // Can see target, not in range of alert
+        idle, // Nothing in sight of enemm
+        alert, // Can see target, not in range of alert
         moveToTarget, // Moving to the target
         moveToStartPosition, // Moving to start posiiton
         attacking // Attack mode
     }
+    EnemyState currentState;
 
-    private EnemyState currentState;
-
-    private Vector3 startingPosition;
-
-    [SerializeField]
-    private Rigidbody2D rb;
-
-
-    private void walkTo(Vector3 destination)
-    {
-        transform.position = Vector2.MoveTowards(this.transform.position, destination, walkingSpeed * Time.deltaTime);
-    }
+    Vector3 startingPosition;
+    Transform target = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentState = EnemyState.Idle;
+        currentState = EnemyState.idle;
         startingPosition = this.transform.position;
-        health = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(currentState);
+        //print(currentState);
         // TODO: Check if in attack range.
         if (target)
         {
             float distanceFromTarget = Vector2.Distance(target.transform.position, transform.position);
 
-            if (distanceFromTarget < meleeAttackRange)
+            if (distanceFromTarget < attackRange)
             {
                 currentState = EnemyState.attacking;
             }
@@ -73,7 +47,7 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                currentState = EnemyState.Alert;
+                currentState = EnemyState.alert;
             }
         }
         else if (startingPosition != this.transform.position)
@@ -82,60 +56,39 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            currentState = EnemyState.Idle;
+            currentState = EnemyState.idle;
         }
 
 
-        handleState();
+        HandleState();
     }
 
-    void FixedUpdate()
+    protected override void Attack() {
+
+    }
+
+    void WalkTo(Vector3 destination)
     {
-
+        transform.position = Vector2.MoveTowards(this.transform.position, destination, moveSpeed * Time.deltaTime);
     }
 
-    private void handleState()
+    private void HandleState()
     {
         switch (currentState)
         {
-            case EnemyState.Idle:
+            case EnemyState.idle:
                 break;
             case EnemyState.moveToStartPosition:
-            case EnemyState.Alert:
-                walkTo(startingPosition);
+            case EnemyState.alert:
+                WalkTo(startingPosition);
                 break;
             case EnemyState.moveToTarget:
                 {
-                    walkTo(target.transform.position);
+                    WalkTo(target.transform.position);
                     break;
                 }
             default: break;
         }
-    }
-
-    protected virtual void attack()
-    {
-
-    }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-    {
-        print("died");
-    }
-
-    bool canAttack()
-    {
-        // TODO: Check if in melee range.
-        return true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -147,7 +100,4 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Player") target = null;
     }
-
-
-
 }

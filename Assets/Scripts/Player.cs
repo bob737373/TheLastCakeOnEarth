@@ -2,42 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
 
     [SerializeField]
-    private int startingCoins = 0;
+    WeaponContainer[] weapons;
 
-    [SerializeField]
-    private int maxHealth = 20;
-
-    [SerializeField]
-    private int startingHealth = 0;
-
-    
-    private int health = 0;
-    private int coins = 0;
-    private int icing = 0;
-
-    [SerializeField]
-    float defaultMoveSpeed = 5f;
-    [SerializeField]
-    float moveSpeed = 5f;
-    [SerializeField]
-    float attackRange = 0.5f;
-    [SerializeField]
-    Rigidbody2D rb;
     [SerializeField]
     LayerMask enemyLayers;
     [SerializeField]
-    Weapon[] weapons;
-    [SerializeField]
     Camera cam;
+    [SerializeField]
+    Animator animator;
 
     //booleans for HUD icon display
+    public enum StatusEffects {caffeinated, coffeeCrash, minty, spicy, stomachAche}
     bool[] statuses = { false, false, false, false, false };
-
-
     /*
     status index list for all use cases of statuses:
     0: caffeinated
@@ -46,40 +26,38 @@ public class Player : MonoBehaviour
     3: spicy
     4: stomach ache
     */
-    Vector2 movement;
+
     Vector2 mousePos;
     Vector3 mousePos3;
+    Vector2 mouseDir;
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
+    public int coins = 0;
+    public int icing = 0;
 
 
     void Start()
     {
-        
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
-        
         if(weapons.Length != 0) {
-            selectedWeapon = weapons[0];
+            selectedWeapon = weapons[0].weapon;
         }
-
         for(int i = 1; i < weapons.Length; i++) {
-            weapons[i].gameObject.SetActive(false);
+            weapons[i].weapon.gameObject.SetActive(false);
         }
-
-        // Set starting values
-        this.coins = startingCoins;
-        this.health = startingHealth;
-
     }
 
     void Update()
     {
         cam.transform.rotation = Quaternion.Euler(0,0,0);
         movement.x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("SpeedX", movement.x);
+        animator.SetBool("MovingHorizontally", movement.x != 0);
         movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("SpeedY", movement.y);
         movement.Normalize();
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos = mousePos3;
@@ -100,20 +78,21 @@ public class Player : MonoBehaviour
     void FixedUpdate() 
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        Vector2 lookDir = mousePos - rb.position;
-        float ang = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = ang;
+        mouseDir = mousePos - rb.position;
+        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg - 90f;
+        selectedWeapon.transform.rotation = Quaternion.Euler(0,0,ang);//ang;
+        //rb.rotation = ang;
     }
 
-    public int getHealth(){
+    int getHealth(){
         return health;
     }
 
-    public int getCoins(){
+    int getCoins(){
         return coins;
     }
 
-    public int getIcing(){
+    int getIcing(){
         return icing;
     }
 
@@ -132,7 +111,7 @@ public class Player : MonoBehaviour
     void SelectWeapon(int newWeaponIndex) {
         if(newWeaponIndex < weapons.Length && newWeaponIndex >= 0) {
             selectedWeapon.gameObject.SetActive(false);
-            selectedWeapon = weapons [newWeaponIndex];
+            selectedWeapon = weapons [newWeaponIndex].weapon;
             selectedWeapon.gameObject.SetActive(true);
             weaponIndex = newWeaponIndex;
             print(selectedWeapon);
@@ -140,15 +119,14 @@ public class Player : MonoBehaviour
 
     }
 
-    void Attack() {
-        print("attack");
+    override protected void Attack() {
         if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
     }
 
     void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
- 
+
 
     // METHOD WHEN AN ITEM IS USED
     //-------------------------------------------------------------------------
@@ -275,4 +253,10 @@ public class Player : MonoBehaviour
     //-------------------------------------------------------------------------
 }
 
+[System.Serializable]
+public struct WeaponContainer {
 
+    public string label;// { get; private set; }
+    public Weapon weapon;// { get; private set; }
+
+}

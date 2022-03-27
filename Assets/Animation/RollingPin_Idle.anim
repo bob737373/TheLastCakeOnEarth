@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle
+  m_Name: RollingPin_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5472852325172983002, guid: 21c335ca0dea1594984824513d6ed742, type: 3}
+      value: {fileID: 21300000, guid: ed0c46638843bc7499897635558e50e8, type: 3}
+    - time: 0.016666668
+      value: {fileID: 21300000, guid: ed0c46638843bc7499897635558e50e8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,13 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5472852325172983002, guid: 21c335ca0dea1594984824513d6ed742, type: 3}
+    - {fileID: 21300000, guid: ed0c46638843bc7499897635558e50e8, type: 3}
+    - {fileID: 21300000, guid: ed0c46638843bc7499897635558e50e8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.033333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
