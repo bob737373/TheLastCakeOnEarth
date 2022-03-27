@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69b1833f6b455048b1a31a7984faaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 0.5
   maxHealth: 10
-  walkingSpeed: 4
-  meleeAttackRange: 1
+  rb: {fileID: -5462167263018717961}
+  defaultMoveSpeed: 5
   alertRange: 8
-  rb: {fileID: 0}

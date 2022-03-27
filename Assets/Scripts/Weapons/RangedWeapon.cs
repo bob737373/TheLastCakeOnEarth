@@ -14,8 +14,8 @@ public class RangedWeapon : Weapon
     string targetTag;
     bool isReloading;
 
-    protected override void DoAttack(LayerMask enemyLayers) {
-        Instantiate(projectilePrefab, projectileSpawnPoint).Shoot(projectileSpawnPoint.up * projectileSpeed);
+    protected override void DoAttack(LayerMask enemyLayer) {
+        Instantiate(projectilePrefab, projectileSpawnPoint).Shoot(projectileSpawnPoint.up * projectileSpeed, enemyLayer);
     }
 
 }

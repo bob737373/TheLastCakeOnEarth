@@ -2,25 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
 
     [SerializeField]
     WeaponContainer[] weapons;
-    [SerializeField]
-    int maxHealth = 20;
-    int health = 20;
-    int coins = 0;
-    int icing = 0;
 
-    [SerializeField]
-    float defaultMoveSpeed = 5f;
-    [SerializeField]
-    float moveSpeed = 5f;
-    [SerializeField]
-    float attackRange = 0.5f;
-    [SerializeField]
-    Rigidbody2D rb;
     [SerializeField]
     LayerMask enemyLayers;
     [SerializeField]
@@ -40,12 +27,14 @@ public class Player : MonoBehaviour
     4: stomach ache
     */
 
-    Vector2 movement;
     Vector2 mousePos;
     Vector3 mousePos3;
+    Vector2 mouseDir;
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
+    int coins = 0;
+    int icing = 0;
 
 
     void Start()
@@ -89,8 +78,9 @@ public class Player : MonoBehaviour
     void FixedUpdate() 
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        Vector2 lookDir = mousePos - rb.position;
-        float ang = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        mouseDir = mousePos - rb.position;
+        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg - 90f;
+        selectedWeapon.transform.rotation = Quaternion.Euler(0,0,ang);//ang;
         //rb.rotation = ang;
     }
 
@@ -129,8 +119,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void Attack() {
-        print("attack");
+    override protected void Attack() {
         if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
     }
 
@@ -265,18 +254,9 @@ public class Player : MonoBehaviour
 }
 
 [System.Serializable]
-public class WeaponContainer {
+public struct WeaponContainer {
 
-    [SerializeField]
-    private string _label;// { get; private set; }
-    [SerializeField]
-    private Weapon _weapon;// { get; private set; }
-    public string label { get; private set; }
-    public Weapon weapon { get; private set; }
-
-    WeaponContainer() {
-        label = _label;
-        weapon = _weapon;
-    }
+    public string label;// { get; private set; }
+    public Weapon weapon;// { get; private set; }
 
 }

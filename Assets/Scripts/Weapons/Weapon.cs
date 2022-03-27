@@ -21,14 +21,15 @@ public abstract class Weapon : MonoBehaviour
 
     protected bool isReadying;
 
-    public void Attack(LayerMask enemyLayers) {
+    public void Attack(LayerMask enemyLayer) {
         if(isReadying) return;
+        print("attack");
         animator.SetTrigger(attackTriggerName);
-        DoAttack(enemyLayers);
+        DoAttack(enemyLayer);
         ResetWeapon();
     }
 
-    protected abstract void DoAttack(LayerMask enemyLayers);
+    protected abstract void DoAttack(LayerMask enemyLayer);
 
     public int GetDamage() {
         return this.attackDamage;

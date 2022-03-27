@@ -13,7 +13,7 @@ public class MeleeWeapon : Weapon
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRadius, enemyLayers);
         foreach(Collider2D enemy in hitEnemies) {
             print("hit " + enemy.name);
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage, effect);
+            enemy.GetComponent<Entity>().TakeDamage(attackDamage, effect);
         }
     }
 
