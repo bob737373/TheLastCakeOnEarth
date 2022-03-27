@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
+    WeaponContainer[] weapons;
+    [SerializeField]
     int maxHealth = 20;
     int health = 20;
     int coins = 0;
@@ -22,9 +24,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     LayerMask enemyLayers;
     [SerializeField]
-    Weapon[] weapons;
-    [SerializeField]
     Camera cam;
+    [SerializeField]
+    Animator animator;
 
     //booleans for HUD icon display
     bool[] statuses = { false, false, false, false, false };
@@ -51,10 +53,10 @@ public class Player : MonoBehaviour
         Cursor.visible = true;
         camZ = cam.transform.position.z;
         if(weapons.Length != 0) {
-            selectedWeapon = weapons[0];
+            selectedWeapon = weapons[0].weapon;
         }
         for(int i = 1; i < weapons.Length; i++) {
-            weapons[i].gameObject.SetActive(false);
+            weapons[i].weapon.gameObject.SetActive(false);
         }
     }
 
@@ -62,7 +64,9 @@ public class Player : MonoBehaviour
     {
         cam.transform.rotation = Quaternion.Euler(0,0,0);
         movement.x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("SpeedX", movement.x);
         movement.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("SpeedY", movement.y);
         movement.Normalize();
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos = mousePos3;
@@ -85,7 +89,7 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         Vector2 lookDir = mousePos - rb.position;
         float ang = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = ang;
+        //rb.rotation = ang;
     }
 
     int getHealth(){
@@ -115,7 +119,7 @@ public class Player : MonoBehaviour
     void SelectWeapon(int newWeaponIndex) {
         if(newWeaponIndex < weapons.Length && newWeaponIndex >= 0) {
             selectedWeapon.gameObject.SetActive(false);
-            selectedWeapon = weapons [newWeaponIndex];
+            selectedWeapon = weapons [newWeaponIndex].weapon;
             selectedWeapon.gameObject.SetActive(true);
             weaponIndex = newWeaponIndex;
             print(selectedWeapon);
@@ -258,4 +262,19 @@ public class Player : MonoBehaviour
     //-------------------------------------------------------------------------
 }
 
+[System.Serializable]
+public class WeaponContainer {
 
+    [SerializeField]
+    private string _label;// { get; private set; }
+    [SerializeField]
+    private Weapon _weapon;// { get; private set; }
+    public string label { get; private set; }
+    public Weapon weapon { get; private set; }
+
+    WeaponContainer() {
+        label = _label;
+        weapon = _weapon;
+    }
+
+}
