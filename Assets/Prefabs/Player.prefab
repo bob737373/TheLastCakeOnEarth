@@ -215,6 +215,10 @@ MonoBehaviour:
     m_Bits: 64
   weapons:
   - {fileID: 6385026478801179345}
+  - {fileID: 5573037203937323938}
+  weaponAnimators:
+  - {fileID: 0}
+  - {fileID: 0}
   cam: {fileID: 2320031452381813977}
 --- !u!95 &5685725065730189259
 Animator:
@@ -402,3 +406,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2196672575293508562, guid: 5a2f14751f01cd541badf5b62668ec56, type: 3}
   m_PrefabInstance: {fileID: 6243724099729195954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5573037203937323938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2013476492102592528, guid: 5a2f14751f01cd541badf5b62668ec56, type: 3}
+  m_PrefabInstance: {fileID: 6243724099729195954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0876bd3b27aa43b4fa042f11cfc2d40d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
