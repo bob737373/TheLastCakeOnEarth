@@ -1,0 +1,3993 @@
+fileFormatVersion: 2
+guid: 5fb211b3d4c3f0e4dad8d7b2d60fc3a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1355951780033196830
+    second: RiverArrow_Minifantasy_ForgottenPlainsRiver_0
+  - first:
+      213: -8036041597888874270
+    second: RiverEast1a_Minifantasy_ForgottenPlainsRiver_1
+  - first:
+      213: -7325810547428634542
+    second: RiverEast1b_Minifantasy_ForgottenPlainsRiver_2
+  - first:
+      213: 8495478320277266907
+    second: RiverEast1c_Minifantasy_ForgottenPlainsRiver_3
+  - first:
+      213: -737057570782128323
+    second: RiverEast1d_Minifantasy_ForgottenPlainsRiver_4
+  - first:
+      213: -7322182647150032589
+    second: RiverEast2a_Minifantasy_ForgottenPlainsRiver_5
+  - first:
+      213: -1152477286798729120
+    second: RiverEast2b_Minifantasy_ForgottenPlainsRiver_6
+  - first:
+      213: -44317237674191043
+    second: RiverEast2c_Minifantasy_ForgottenPlainsRiver_7
+  - first:
+      213: -1580783385201734851
+    second: RiverEast2d_Minifantasy_ForgottenPlainsRiver_8
+  - first:
+      213: -2960647196882239674
+    second: RiverEast3a_Minifantasy_ForgottenPlainsRiver_9
+  - first:
+      213: -6197717638998509922
+    second: RiverEast3b_Minifantasy_ForgottenPlainsRiver_10
+  - first:
+      213: 1930000966775043217
+    second: RiverEast3c_Minifantasy_ForgottenPlainsRiver_11
+  - first:
+      213: -4009022765281500604
+    second: RiverEast3d_Minifantasy_ForgottenPlainsRiver_12
+  - first:
+      213: -7755774111284887643
+    second: RiverEast4a_Minifantasy_ForgottenPlainsRiver_13
+  - first:
+      213: -7301595916725123070
+    second: RiverEast4b_Minifantasy_ForgottenPlainsRiver_14
+  - first:
+      213: -1045238507063445240
+    second: RiverEast4c_Minifantasy_ForgottenPlainsRiver_15
+  - first:
+      213: 2692411322754317934
+    second: RiverEast4d_Minifantasy_ForgottenPlainsRiver_16
+  - first:
+      213: -1299650003337647379
+    second: RiverEast5a_Minifantasy_ForgottenPlainsRiver_17
+  - first:
+      213: -4711871147975343738
+    second: RiverEast6a_Minifantasy_ForgottenPlainsRiver_18
+  - first:
+      213: 8003086060589421107
+    second: RiverEast7a_Minifantasy_ForgottenPlainsRiver_19
+  - first:
+      213: -467117063510785025
+    second: RiverEast5b_Minifantasy_ForgottenPlainsRiver_20
+  - first:
+      213: 4562391202820316820
+    second: RiverEast6b_Minifantasy_ForgottenPlainsRiver_21
+  - first:
+      213: -2550271324720825049
+    second: RiverEast7b_Minifantasy_ForgottenPlainsRiver_22
+  - first:
+      213: 8737741737624272353
+    second: RiverEast5c_Minifantasy_ForgottenPlainsRiver_23
+  - first:
+      213: 8050752620525327588
+    second: RiverEast6c_Minifantasy_ForgottenPlainsRiver_24
+  - first:
+      213: 3722292539694877586
+    second: RiverEast7c_Minifantasy_ForgottenPlainsRiver_25
+  - first:
+      213: 6749792785791496595
+    second: RiverEast5d_Minifantasy_ForgottenPlainsRiver_26
+  - first:
+      213: 1447404577334052618
+    second: RiverEast6d_Minifantasy_ForgottenPlainsRiver_27
+  - first:
+      213: -6170503194477314458
+    second: RiverEast7d_Minifantasy_ForgottenPlainsRiver_28
+  - first:
+      213: -4966504056544628031
+    second: RiverEast8a_Minifantasy_ForgottenPlainsRiver_29
+  - first:
+      213: -4014348424013687882
+    second: RiverEast9a_Minifantasy_ForgottenPlainsRiver_30
+  - first:
+      213: 1444256422394119617
+    second: RiverEast10a_Minifantasy_ForgottenPlainsRiver_31
+  - first:
+      213: -2297182014523349013
+    second: RiverEast8b_Minifantasy_ForgottenPlainsRiver_32
+  - first:
+      213: -6261699876318086169
+    second: RiverEast9b_Minifantasy_ForgottenPlainsRiver_33
+  - first:
+      213: -3251670334655946585
+    second: RiverEast10b_Minifantasy_ForgottenPlainsRiver_34
+  - first:
+      213: 4977623463398862642
+    second: RiverEast8c_Minifantasy_ForgottenPlainsRiver_35
+  - first:
+      213: -8948704593795841015
+    second: RiverEast9c_Minifantasy_ForgottenPlainsRiver_36
+  - first:
+      213: 8645098356917253992
+    second: RiverEast10c_Minifantasy_ForgottenPlainsRiver_37
+  - first:
+      213: -6845860090367156552
+    second: RiverEast8d_Minifantasy_ForgottenPlainsRiver_38
+  - first:
+      213: 3992630313471781378
+    second: RiverEast9d_Minifantasy_ForgottenPlainsRiver_39
+  - first:
+      213: -3815257046386296004
+    second: RiverEast10d_Minifantasy_ForgottenPlainsRiver_40
+  - first:
+      213: -773794315500947130
+    second: Minifantasy_ForgottenPlainsRiver_41
+  - first:
+      213: -2885210164087569909
+    second: RiverSouth1a_Minifantasy_ForgottenPlainsRiver_42
+  - first:
+      213: -270037435152785593
+    second: RiverSouth1b_Minifantasy_ForgottenPlainsRiver_43
+  - first:
+      213: -6502612241675917841
+    second: RiverSouth1c_Minifantasy_ForgottenPlainsRiver_44
+  - first:
+      213: 2045647164504338435
+    second: RiverSouth1d_Minifantasy_ForgottenPlainsRiver_45
+  - first:
+      213: -805715087136719352
+    second: RiverSouth2a_Minifantasy_ForgottenPlainsRiver_46
+  - first:
+      213: 738725672014783566
+    second: RiverSouth3a_Minifantasy_ForgottenPlainsRiver_47
+  - first:
+      213: -7342473558752745376
+    second: RiverSouth4a_Minifantasy_ForgottenPlainsRiver_48
+  - first:
+      213: 7675518023289846221
+    second: RiverSouth2b_Minifantasy_ForgottenPlainsRiver_49
+  - first:
+      213: -3516375342892785658
+    second: RiverSouth3b_Minifantasy_ForgottenPlainsRiver_50
+  - first:
+      213: -7459616215617761405
+    second: RiverSouth4b_Minifantasy_ForgottenPlainsRiver_51
+  - first:
+      213: -8799917397519902965
+    second: RiverSouth2c_Minifantasy_ForgottenPlainsRiver_52
+  - first:
+      213: 4944997492778358356
+    second: RiverSouth3c_Minifantasy_ForgottenPlainsRiver_53
+  - first:
+      213: 6956182980029613669
+    second: RiverSouth4c_Minifantasy_ForgottenPlainsRiver_54
+  - first:
+      213: -4263013258157738601
+    second: RiverSouth2d_Minifantasy_ForgottenPlainsRiver_55
+  - first:
+      213: -7206729696012474114
+    second: RiverSouth3d_Minifantasy_ForgottenPlainsRiver_56
+  - first:
+      213: 6778551413782862447
+    second: RiverSouth4d_Minifantasy_ForgottenPlainsRiver_57
+  - first:
+      213: 6276357464008905931
+    second: RiverSouth5a_Minifantasy_ForgottenPlainsRiver_58
+  - first:
+      213: -1308001672926714750
+    second: RiverSouth6a_Minifantasy_ForgottenPlainsRiver_59
+  - first:
+      213: 7570294512061641397
+    second: RiverSouth7a_Minifantasy_ForgottenPlainsRiver_60
+  - first:
+      213: -1733668065174901712
+    second: RiverSouth5b_Minifantasy_ForgottenPlainsRiver_61
+  - first:
+      213: 2546223076274754835
+    second: RiverSouth6b_Minifantasy_ForgottenPlainsRiver_62
+  - first:
+      213: 8371480457197318028
+    second: RiverSouth7b_Minifantasy_ForgottenPlainsRiver_63
+  - first:
+      213: 1006117665974591194
+    second: RiverSouth5c_Minifantasy_ForgottenPlainsRiver_64
+  - first:
+      213: 7858041634816692912
+    second: RiverSouth6c_Minifantasy_ForgottenPlainsRiver_65
+  - first:
+      213: -7429115708576122336
+    second: RiverSouth7c_Minifantasy_ForgottenPlainsRiver_66
+  - first:
+      213: -2655631489068471756
+    second: RiverSouth5d_Minifantasy_ForgottenPlainsRiver_67
+  - first:
+      213: 1695337728168071048
+    second: RiverSouth6d_Minifantasy_ForgottenPlainsRiver_68
+  - first:
+      213: 2358777940167158680
+    second: RiverSouth7d_Minifantasy_ForgottenPlainsRiver_69
+  - first:
+      213: -2530351369542811743
+    second: RiverSouth8a_Minifantasy_ForgottenPlainsRiver_70
+  - first:
+      213: 1128772336107811636
+    second: RiverSouth9a_Minifantasy_ForgottenPlainsRiver_71
+  - first:
+      213: 3308417189488625400
+    second: RiverSouth10a_Minifantasy_ForgottenPlainsRiver_72
+  - first:
+      213: 3595658652068448963
+    second: RiverSouth8b_Minifantasy_ForgottenPlainsRiver_73
+  - first:
+      213: -3863462104824336035
+    second: RiverSouth9b_Minifantasy_ForgottenPlainsRiver_74
+  - first:
+      213: -416577913520768740
+    second: RiverSouth10b_Minifantasy_ForgottenPlainsRiver_75
+  - first:
+      213: -2165968574089983624
+    second: RiverSouth8c_Minifantasy_ForgottenPlainsRiver_76
+  - first:
+      213: -4281303229069345847
+    second: RiverSouth9c_Minifantasy_ForgottenPlainsRiver_77
+  - first:
+      213: -7814545815947985208
+    second: RiverSouth10c_Minifantasy_ForgottenPlainsRiver_78
+  - first:
+      213: -3776969665437987329
+    second: RiverSouth8d_Minifantasy_ForgottenPlainsRiver_79
+  - first:
+      213: -1355680856813267464
+    second: RiverSouth9d_Minifantasy_ForgottenPlainsRiver_80
+  - first:
+      213: -5709693577070064683
+    second: RiverSouth10d_Minifantasy_ForgottenPlainsRiver_81
+  - first:
+      213: -4191144680331556560
+    second: Minifantasy_ForgottenPlainsRiver_82
+  - first:
+      213: -7877892209615074138
+    second: RiverWest1a_Minifantasy_ForgottenPlainsRiver_83
+  - first:
+      213: 8433973004436195437
+    second: RiverWest1b_Minifantasy_ForgottenPlainsRiver_84
+  - first:
+      213: 3972752812564466106
+    second: RiverWest1c_Minifantasy_ForgottenPlainsRiver_85
+  - first:
+      213: -2244273632677529577
+    second: RiverWest1d_Minifantasy_ForgottenPlainsRiver_86
+  - first:
+      213: -3086667477805009899
+    second: RiverWest2a_Minifantasy_ForgottenPlainsRiver_87
+  - first:
+      213: -6374043234911201918
+    second: RiverWest2b_Minifantasy_ForgottenPlainsRiver_88
+  - first:
+      213: 1603247308693390619
+    second: RiverWest2c_Minifantasy_ForgottenPlainsRiver_89
+  - first:
+      213: 7099704020777048300
+    second: RiverWest2d_Minifantasy_ForgottenPlainsRiver_90
+  - first:
+      213: -8210554735754985166
+    second: RiverWest3a_Minifantasy_ForgottenPlainsRiver_91
+  - first:
+      213: -5105382834955910079
+    second: RiverWest3b_Minifantasy_ForgottenPlainsRiver_92
+  - first:
+      213: -41204477525972961
+    second: RiverWest3c_Minifantasy_ForgottenPlainsRiver_93
+  - first:
+      213: 6050401194052252189
+    second: RiverWest3d_Minifantasy_ForgottenPlainsRiver_94
+  - first:
+      213: -6755075967384295571
+    second: RiverWest4a_Minifantasy_ForgottenPlainsRiver_95
+  - first:
+      213: -4799722792433985892
+    second: RiverWest4b_Minifantasy_ForgottenPlainsRiver_96
+  - first:
+      213: -1515365985825793899
+    second: RiverWest4c_Minifantasy_ForgottenPlainsRiver_97
+  - first:
+      213: 3484025360511652192
+    second: RiverWest4d_Minifantasy_ForgottenPlainsRiver_98
+  - first:
+      213: -5647925993001067872
+    second: RiverWest5a_Minifantasy_ForgottenPlainsRiver_99
+  - first:
+      213: -6382611453136806576
+    second: RiverWest6a_Minifantasy_ForgottenPlainsRiver_100
+  - first:
+      213: 936789539912879484
+    second: RiverWest7a_Minifantasy_ForgottenPlainsRiver_101
+  - first:
+      213: -4165429642925214415
+    second: RiverWest5b_Minifantasy_ForgottenPlainsRiver_102
+  - first:
+      213: -4837713760455019206
+    second: RiverWest6b_Minifantasy_ForgottenPlainsRiver_103
+  - first:
+      213: -3642107825950487314
+    second: RiverWest7b_Minifantasy_ForgottenPlainsRiver_104
+  - first:
+      213: 1972502025826695633
+    second: RiverWest5c_Minifantasy_ForgottenPlainsRiver_105
+  - first:
+      213: 4191902168161695817
+    second: RiverWest6c_Minifantasy_ForgottenPlainsRiver_106
+  - first:
+      213: -8768163999425168480
+    second: RiverWest7c_Minifantasy_ForgottenPlainsRiver_107
+  - first:
+      213: 3752940103579791970
+    second: RiverWest5d_Minifantasy_ForgottenPlainsRiver_108
+  - first:
+      213: -8336493665694526871
+    second: RiverWest6d_Minifantasy_ForgottenPlainsRiver_109
+  - first:
+      213: -1097415639827837686
+    second: RiverWest7d_Minifantasy_ForgottenPlainsRiver_110
+  - first:
+      213: 3098301677222077823
+    second: RiverWest8a_Minifantasy_ForgottenPlainsRiver_111
+  - first:
+      213: -5712250226108907098
+    second: RiverWest9a_Minifantasy_ForgottenPlainsRiver_112
+  - first:
+      213: -658883484143831245
+    second: RiverWest10a_Minifantasy_ForgottenPlainsRiver_113
+  - first:
+      213: -438724630875403654
+    second: RiverWest8b_Minifantasy_ForgottenPlainsRiver_114
+  - first:
+      213: -4904744934007484121
+    second: RiverWest9b_Minifantasy_ForgottenPlainsRiver_115
+  - first:
+      213: 1104165142319067515
+    second: RiverWest10b_Minifantasy_ForgottenPlainsRiver_116
+  - first:
+      213: -5747378441390447407
+    second: RiverWest8c_Minifantasy_ForgottenPlainsRiver_117
+  - first:
+      213: 5550741992029288723
+    second: RiverWest9c_Minifantasy_ForgottenPlainsRiver_118
+  - first:
+      213: -4247160835092714069
+    second: RiverWest10c_Minifantasy_ForgottenPlainsRiver_119
+  - first:
+      213: -5031633434289647473
+    second: RiverWest8d_Minifantasy_ForgottenPlainsRiver_120
+  - first:
+      213: 6984051590150225282
+    second: RiverWest9d_Minifantasy_ForgottenPlainsRiver_121
+  - first:
+      213: 5253874428391938455
+    second: RiverWest10d_Minifantasy_ForgottenPlainsRiver_122
+  - first:
+      213: -612124750371797713
+    second: Minifantasy_ForgottenPlainsRiver_123
+  - first:
+      213: -3346398332780941672
+    second: RiverNorth1a_Minifantasy_ForgottenPlainsRiver_124
+  - first:
+      213: -1862037910074543132
+    second: RiverNorth1b_Minifantasy_ForgottenPlainsRiver_125
+  - first:
+      213: 4668703499982376834
+    second: RiverNorth1c_Minifantasy_ForgottenPlainsRiver_126
+  - first:
+      213: -2595337825347398505
+    second: RiverNorth1d_Minifantasy_ForgottenPlainsRiver_127
+  - first:
+      213: 1972971454529158625
+    second: RiverNorth2a_Minifantasy_ForgottenPlainsRiver_128
+  - first:
+      213: 5198398172566695149
+    second: RiverNorth3a_Minifantasy_ForgottenPlainsRiver_129
+  - first:
+      213: 2492638623230870931
+    second: RiverNorth4a_Minifantasy_ForgottenPlainsRiver_130
+  - first:
+      213: 4396277139869466117
+    second: RiverNorth2b_Minifantasy_ForgottenPlainsRiver_131
+  - first:
+      213: -8170980535365928597
+    second: RiverNorth3b_Minifantasy_ForgottenPlainsRiver_132
+  - first:
+      213: 3535099982596003435
+    second: RiverNorth4b_Minifantasy_ForgottenPlainsRiver_133
+  - first:
+      213: 1049914612855690562
+    second: RiverNorth2c_Minifantasy_ForgottenPlainsRiver_134
+  - first:
+      213: -6642998682415480412
+    second: RiverNorth3c_Minifantasy_ForgottenPlainsRiver_135
+  - first:
+      213: 3250417608595266176
+    second: RiverNorth4c_Minifantasy_ForgottenPlainsRiver_136
+  - first:
+      213: -2441669658323958772
+    second: RiverNorth2d_Minifantasy_ForgottenPlainsRiver_137
+  - first:
+      213: -3564537332645621264
+    second: RiverNorth3d_Minifantasy_ForgottenPlainsRiver_138
+  - first:
+      213: -8780374560131466702
+    second: RiverNorth4d_Minifantasy_ForgottenPlainsRiver_139
+  - first:
+      213: -2649356891379963814
+    second: RiverNorth5a_Minifantasy_ForgottenPlainsRiver_140
+  - first:
+      213: -3378734758074103210
+    second: RiverNorth6a_Minifantasy_ForgottenPlainsRiver_141
+  - first:
+      213: 8841899799020529948
+    second: RiverNorth7a_Minifantasy_ForgottenPlainsRiver_142
+  - first:
+      213: -3709029640469737325
+    second: RiverNorth5b_Minifantasy_ForgottenPlainsRiver_143
+  - first:
+      213: -7983927985439829377
+    second: RiverNorth6b_Minifantasy_ForgottenPlainsRiver_144
+  - first:
+      213: 7825030157353504152
+    second: RiverNorth7b_Minifantasy_ForgottenPlainsRiver_145
+  - first:
+      213: -8212700499999630771
+    second: RiverNorth5c_Minifantasy_ForgottenPlainsRiver_146
+  - first:
+      213: -6077794678298897155
+    second: RiverNorth6c_Minifantasy_ForgottenPlainsRiver_147
+  - first:
+      213: -7793611396715391691
+    second: RiverNorth7c_Minifantasy_ForgottenPlainsRiver_148
+  - first:
+      213: -4482054841537098666
+    second: RiverNorth5d_Minifantasy_ForgottenPlainsRiver_149
+  - first:
+      213: -5080069945130981106
+    second: RiverNorth6d_Minifantasy_ForgottenPlainsRiver_150
+  - first:
+      213: -2057774953033804951
+    second: RiverNorth7d_Minifantasy_ForgottenPlainsRiver_151
+  - first:
+      213: 5104314576360287576
+    second: RiverNorth8a_Minifantasy_ForgottenPlainsRiver_152
+  - first:
+      213: -3193911755774252055
+    second: RiverNorth9a_Minifantasy_ForgottenPlainsRiver_153
+  - first:
+      213: -5635868422252220413
+    second: RiverNorth10a_Minifantasy_ForgottenPlainsRiver_154
+  - first:
+      213: -8679604808939757481
+    second: RiverNorth8b_Minifantasy_ForgottenPlainsRiver_155
+  - first:
+      213: 6584032210237193401
+    second: RiverNorth9b_Minifantasy_ForgottenPlainsRiver_156
+  - first:
+      213: -8245313113284020755
+    second: RiverNorth10b_Minifantasy_ForgottenPlainsRiver_157
+  - first:
+      213: -8570627546671418638
+    second: RiverNorth8c_Minifantasy_ForgottenPlainsRiver_158
+  - first:
+      213: -1543132730823706406
+    second: RiverNorth9c_Minifantasy_ForgottenPlainsRiver_159
+  - first:
+      213: -5118447861086223059
+    second: RiverNorth10c_Minifantasy_ForgottenPlainsRiver_160
+  - first:
+      213: -5004857856337736361
+    second: RiverNorth8d_Minifantasy_ForgottenPlainsRiver_161
+  - first:
+      213: -1305041921699742870
+    second: RiverNorth9d_Minifantasy_ForgottenPlainsRiver_162
+  - first:
+      213: 525184677655028952
+    second: RiverNorth10d_Minifantasy_ForgottenPlainsRiver_163
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RiverArrow_Minifantasy_ForgottenPlainsRiver_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13ff65b5fe41d210800000000000000
+      internalID: 1355951780033196830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast1a_Minifantasy_ForgottenPlainsRiver_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e832955ebe3a7090800000000000000
+      internalID: -8036041597888874270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast1b_Minifantasy_ForgottenPlainsRiver_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250d4b4fe1e755a90800000000000000
+      internalID: -7325810547428634542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast1c_Minifantasy_ForgottenPlainsRiver_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1a825758006e570800000000000000
+      internalID: 8495478320277266907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast1d_Minifantasy_ForgottenPlainsRiver_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37d4826b0275c5f0800000000000000
+      internalID: -737057570782128323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast2a_Minifantasy_ForgottenPlainsRiver_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339c7105da1626a90800000000000000
+      internalID: -7322182647150032589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast2b_Minifantasy_ForgottenPlainsRiver_6
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060e7a483049100f0800000000000000
+      internalID: -1152477286798729120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast2c_Minifantasy_ForgottenPlainsRiver_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37d00705bd826ff0800000000000000
+      internalID: -44317237674191043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast2d_Minifantasy_ForgottenPlainsRiver_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b0632f2edef0ae0800000000000000
+      internalID: -1580783385201734851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast3a_Minifantasy_ForgottenPlainsRiver_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ff3948f0ba9e6d0800000000000000
+      internalID: -2960647196882239674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast3b_Minifantasy_ForgottenPlainsRiver_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96325de4a84df9a0800000000000000
+      internalID: -6197717638998509922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast3c_Minifantasy_ForgottenPlainsRiver_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19479c857adb8ca10800000000000000
+      internalID: 1930000966775043217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast3d_Minifantasy_ForgottenPlainsRiver_12
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44221f229071d58c0800000000000000
+      internalID: -4009022765281500604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast4a_Minifantasy_ForgottenPlainsRiver_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af71b2a984fd5490800000000000000
+      internalID: -7755774111284887643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast4b_Minifantasy_ForgottenPlainsRiver_14
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208082203358baa90800000000000000
+      internalID: -7301595916725123070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast4c_Minifantasy_ForgottenPlainsRiver_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8097ce0ad119e71f0800000000000000
+      internalID: -1045238507063445240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast4d_Minifantasy_ForgottenPlainsRiver_16
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6eb20245dd5d5520800000000000000
+      internalID: 2692411322754317934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast5a_Minifantasy_ForgottenPlainsRiver_17
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea69b23537b6fde0800000000000000
+      internalID: -1299650003337647379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast6a_Minifantasy_ForgottenPlainsRiver_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681848dc7221c9eb0800000000000000
+      internalID: -4711871147975343738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast7a_Minifantasy_ForgottenPlainsRiver_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3321054be5ca01f60800000000000000
+      internalID: 8003086060589421107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast5b_Minifantasy_ForgottenPlainsRiver_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff38ae071877489f0800000000000000
+      internalID: -467117063510785025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast6b_Minifantasy_ForgottenPlainsRiver_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ed87a50aed05f30800000000000000
+      internalID: 4562391202820316820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast7b_Minifantasy_ForgottenPlainsRiver_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d7629fdbd9b9cd0800000000000000
+      internalID: -2550271324720825049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast5c_Minifantasy_ForgottenPlainsRiver_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edf23ad0d1b24970800000000000000
+      internalID: 8737741737624272353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast6c_Minifantasy_ForgottenPlainsRiver_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e415f88ad40abf60800000000000000
+      internalID: 8050752620525327588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast7c_Minifantasy_ForgottenPlainsRiver_25
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b8992e75d38a330800000000000000
+      internalID: 3722292539694877586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast5d_Minifantasy_ForgottenPlainsRiver_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391b898d6c41cad50800000000000000
+      internalID: 6749792785791496595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast6d_Minifantasy_ForgottenPlainsRiver_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07454e5bc6361410800000000000000
+      internalID: 1447404577334052618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast7d_Minifantasy_ForgottenPlainsRiver_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e34cf8908fd5aa0800000000000000
+      internalID: -6170503194477314458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast8a_Minifantasy_ForgottenPlainsRiver_29
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2fe1ecfde631bb0800000000000000
+      internalID: -4966504056544628031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast9a_Minifantasy_ForgottenPlainsRiver_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3d306906b2a48c0800000000000000
+      internalID: -4014348424013687882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast10a_Minifantasy_ForgottenPlainsRiver_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5c06d60970b0410800000000000000
+      internalID: 1444256422394119617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast8b_Minifantasy_ForgottenPlainsRiver_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be76be7f025ce10e0800000000000000
+      internalID: -2297182014523349013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast9b_Minifantasy_ForgottenPlainsRiver_33
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebf3fd6329f919a0800000000000000
+      internalID: -6261699876318086169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast10b_Minifantasy_ForgottenPlainsRiver_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a028280f0fbfd2d0800000000000000
+      internalID: -3251670334655946585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast8c_Minifantasy_ForgottenPlainsRiver_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fe989da22141540800000000000000
+      internalID: 4977623463398862642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast9c_Minifantasy_ForgottenPlainsRiver_36
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90484ee8590dfc380800000000000000
+      internalID: -8948704593795841015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast10c_Minifantasy_ForgottenPlainsRiver_37
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867bd54e62f89f770800000000000000
+      internalID: 8645098356917253992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast8d_Minifantasy_ForgottenPlainsRiver_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be54abc48e9ef0a0800000000000000
+      internalID: -6845860090367156552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast9d_Minifantasy_ForgottenPlainsRiver_39
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a21f1cd1ca86730800000000000000
+      internalID: 3992630313471781378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverEast10d_Minifantasy_ForgottenPlainsRiver_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bb65f2eeb7d0bc0800000000000000
+      internalID: -3815257046386296004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth1a_Minifantasy_ForgottenPlainsRiver_42
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02c63b64aca5f7d0800000000000000
+      internalID: -2885210164087569909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth1b_Minifantasy_ForgottenPlainsRiver_43
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f19a92262a04cf0800000000000000
+      internalID: -270037435152785593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth1c_Minifantasy_ForgottenPlainsRiver_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5ecc65e9412c5a0800000000000000
+      internalID: -6502612241675917841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth1d_Minifantasy_ForgottenPlainsRiver_45
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300f0100249936c10800000000000000
+      internalID: 2045647164504338435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth2a_Minifantasy_ForgottenPlainsRiver_46
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80efa09a56681d4f0800000000000000
+      internalID: -805715087136719352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth3a_Minifantasy_ForgottenPlainsRiver_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4427e2b51b704a00800000000000000
+      internalID: 738725672014783566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth4a_Minifantasy_ForgottenPlainsRiver_48
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06828dd433b4a1a90800000000000000
+      internalID: -7342473558752745376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth2b_Minifantasy_ForgottenPlainsRiver_49
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9bc4db9fae48a60800000000000000
+      internalID: 7675518023289846221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth3b_Minifantasy_ForgottenPlainsRiver_50
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600eee59143533fc0800000000000000
+      internalID: -3516375342892785658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth4b_Minifantasy_ForgottenPlainsRiver_51
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f0c5b139e1a7890800000000000000
+      internalID: -7459616215617761405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth2c_Minifantasy_ForgottenPlainsRiver_52
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07db0c30c960e580800000000000000
+      internalID: -8799917397519902965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth3c_Minifantasy_ForgottenPlainsRiver_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456504c150920a440800000000000000
+      internalID: 4944997492778358356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth4c_Minifantasy_ForgottenPlainsRiver_54
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566884d9093598060800000000000000
+      internalID: 6956182980029613669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth2d_Minifantasy_ForgottenPlainsRiver_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7953ab2370cb6d4c0800000000000000
+      internalID: -4263013258157738601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth3d_Minifantasy_ForgottenPlainsRiver_56
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8eaec368d8cfb90800000000000000
+      internalID: -7206729696012474114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth4d_Minifantasy_ForgottenPlainsRiver_57
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6adf36b890421e50800000000000000
+      internalID: 6778551413782862447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth5a_Minifantasy_ForgottenPlainsRiver_58
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc45f952cd91a1750800000000000000
+      internalID: 6276357464008905931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth6a_Minifantasy_ForgottenPlainsRiver_59
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2842697986b09dde0800000000000000
+      internalID: -1308001672926714750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth7a_Minifantasy_ForgottenPlainsRiver_60
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2f584efb61f0960800000000000000
+      internalID: 7570294512061641397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth5b_Minifantasy_ForgottenPlainsRiver_61
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cafc08416c0f7e0800000000000000
+      internalID: -1733668065174901712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth6b_Minifantasy_ForgottenPlainsRiver_62
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315524cb560065320800000000000000
+      internalID: 2546223076274754835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth7b_Minifantasy_ForgottenPlainsRiver_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fee5f2f197d2470800000000000000
+      internalID: 8371480457197318028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth5c_Minifantasy_ForgottenPlainsRiver_64
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade19a2cfa276fd00800000000000000
+      internalID: 1006117665974591194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth6c_Minifantasy_ForgottenPlainsRiver_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b29a71bb3f5d0d60800000000000000
+      internalID: 7858041634816692912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth7c_Minifantasy_ForgottenPlainsRiver_66
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02abb0bcf9a76e890800000000000000
+      internalID: -7429115708576122336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth5d_Minifantasy_ForgottenPlainsRiver_67
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a6bb71b3d452bd0800000000000000
+      internalID: -2655631489068471756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth6d_Minifantasy_ForgottenPlainsRiver_68
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f86c57eac078710800000000000000
+      internalID: 1695337728168071048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth7d_Minifantasy_ForgottenPlainsRiver_69
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89be0bb0a001cb020800000000000000
+      internalID: 2358777940167158680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth8a_Minifantasy_ForgottenPlainsRiver_70
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af3a75f5d262ecd0800000000000000
+      internalID: -2530351369542811743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth9a_Minifantasy_ForgottenPlainsRiver_71
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4337efd85743aaf00800000000000000
+      internalID: 1128772336107811636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth10a_Minifantasy_ForgottenPlainsRiver_72
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f60444b7ebd9ed20800000000000000
+      internalID: 3308417189488625400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth8b_Minifantasy_ForgottenPlainsRiver_73
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca89125e7856e130800000000000000
+      internalID: 3595658652068448963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth9b_Minifantasy_ForgottenPlainsRiver_74
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5133c66fa9326ac0800000000000000
+      internalID: -3863462104824336035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth10b_Minifantasy_ForgottenPlainsRiver_75
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1932534894083af0800000000000000
+      internalID: -416577913520768740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth8c_Minifantasy_ForgottenPlainsRiver_76
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87905b2ce0fe0f1e0800000000000000
+      internalID: -2165968574089983624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth9c_Minifantasy_ForgottenPlainsRiver_77
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbb69f7561c594c0800000000000000
+      internalID: -4281303229069345847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth10c_Minifantasy_ForgottenPlainsRiver_78
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ceb76fcbf72d8390800000000000000
+      internalID: -7814545815947985208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth8d_Minifantasy_ForgottenPlainsRiver_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd842cb912859bc0800000000000000
+      internalID: -3776969665437987329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth9d_Minifantasy_ForgottenPlainsRiver_80
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f519d48177af2de0800000000000000
+      internalID: -1355680856813267464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverSouth10d_Minifantasy_ForgottenPlainsRiver_81
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 152
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbc86261f713c0b0800000000000000
+      internalID: -5709693577070064683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest1a_Minifantasy_ForgottenPlainsRiver_83
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac831336ca1ca290800000000000000
+      internalID: -7877892209615074138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest1b_Minifantasy_ForgottenPlainsRiver_84
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6847ae23cd7b0570800000000000000
+      internalID: 8433973004436195437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest1c_Minifantasy_ForgottenPlainsRiver_85
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9c65d62ad022730800000000000000
+      internalID: 3972752812564466106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest1d_Minifantasy_ForgottenPlainsRiver_86
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718fa71950dbad0e0800000000000000
+      internalID: -2244273632677529577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest2a_Minifantasy_ForgottenPlainsRiver_87
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5147ea56844f925d0800000000000000
+      internalID: -3086667477805009899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest2b_Minifantasy_ForgottenPlainsRiver_88
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285d220f279da87a0800000000000000
+      internalID: -6374043234911201918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest2c_Minifantasy_ForgottenPlainsRiver_89
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1545c1dee0ef3610800000000000000
+      internalID: 1603247308693390619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest2d_Minifantasy_ForgottenPlainsRiver_90
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce814d8e037378260800000000000000
+      internalID: 7099704020777048300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest3a_Minifantasy_ForgottenPlainsRiver_91
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2314c6e18ff3e0e80800000000000000
+      internalID: -8210554735754985166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest3b_Minifantasy_ForgottenPlainsRiver_92
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14483107c590629b0800000000000000
+      internalID: -5105382834955910079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest3c_Minifantasy_ForgottenPlainsRiver_93
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18a8e9febc9d6ff0800000000000000
+      internalID: -41204477525972961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest3d_Minifantasy_ForgottenPlainsRiver_94
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12751064d757f350800000000000000
+      internalID: 6050401194052252189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest4a_Minifantasy_ForgottenPlainsRiver_95
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67e74592362142a0800000000000000
+      internalID: -6755075967384295571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest4b_Minifantasy_ForgottenPlainsRiver_96
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9650a0ec85f36db0800000000000000
+      internalID: -4799722792433985892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest4c_Minifantasy_ForgottenPlainsRiver_97
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598d4262aa658fae0800000000000000
+      internalID: -1515365985825793899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest4d_Minifantasy_ForgottenPlainsRiver_98
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061dfb13b9eb95030800000000000000
+      internalID: 3484025360511652192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest5a_Minifantasy_ForgottenPlainsRiver_99
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aad97dbb398e91b0800000000000000
+      internalID: -5647925993001067872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest6a_Minifantasy_ForgottenPlainsRiver_100
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dd07c23b86c67a0800000000000000
+      internalID: -6382611453136806576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest7a_Minifantasy_ForgottenPlainsRiver_101
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d0fcb8f15200d00800000000000000
+      internalID: 936789539912879484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest5b_Minifantasy_ForgottenPlainsRiver_102
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1357f842fcb6136c0800000000000000
+      internalID: -4165429642925214415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest6b_Minifantasy_ForgottenPlainsRiver_103
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a353f0757fcfcdcb0800000000000000
+      internalID: -4837713760455019206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest7b_Minifantasy_ForgottenPlainsRiver_104
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec0d80aa32a47dc0800000000000000
+      internalID: -3642107825950487314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest5c_Minifantasy_ForgottenPlainsRiver_105
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d97328442cbf5b10800000000000000
+      internalID: 1972502025826695633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest6c_Minifantasy_ForgottenPlainsRiver_106
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948b772ffc0ac2a30800000000000000
+      internalID: 4191902168161695817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest7c_Minifantasy_ForgottenPlainsRiver_107
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abf4e95c49315680800000000000000
+      internalID: -8768163999425168480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest5d_Minifantasy_ForgottenPlainsRiver_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262f039e32f151430800000000000000
+      internalID: 3752940103579791970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest6d_Minifantasy_ForgottenPlainsRiver_109
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962dbfffd23de4c80800000000000000
+      internalID: -8336493665694526871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest7d_Minifantasy_ForgottenPlainsRiver_110
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d8a193a4235c0f0800000000000000
+      internalID: -1097415639827837686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest8a_Minifantasy_ForgottenPlainsRiver_111
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75a1ddb5f06ffa20800000000000000
+      internalID: 3098301677222077823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest9a_Minifantasy_ForgottenPlainsRiver_112
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a142a42fa20ab0b0800000000000000
+      internalID: -5712250226108907098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest10a_Minifantasy_ForgottenPlainsRiver_113
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3373c3b46fc2bd6f0800000000000000
+      internalID: -658883484143831245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest8b_Minifantasy_ForgottenPlainsRiver_114
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a057ec54659e9f0800000000000000
+      internalID: -438724630875403654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest9b_Minifantasy_ForgottenPlainsRiver_115
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721569e0878deebb0800000000000000
+      internalID: -4904744934007484121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest10b_Minifantasy_ForgottenPlainsRiver_116
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71fb49c858c25f00800000000000000
+      internalID: 1104165142319067515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest8c_Minifantasy_ForgottenPlainsRiver_117
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d42f2b22c53d30b0800000000000000
+      internalID: -5747378441390447407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest9c_Minifantasy_ForgottenPlainsRiver_118
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319ffb2ce62380d40800000000000000
+      internalID: 5550741992029288723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest10c_Minifantasy_ForgottenPlainsRiver_119
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bade85019bd0f05c0800000000000000
+      internalID: -4247160835092714069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest8d_Minifantasy_ForgottenPlainsRiver_120
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80df2ddc0c0c2ab0800000000000000
+      internalID: -5031633434289647473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest9d_Minifantasy_ForgottenPlainsRiver_121
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28df7eb0be55ce060800000000000000
+      internalID: 6984051590150225282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverWest10d_Minifantasy_ForgottenPlainsRiver_122
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7995fc6d4f289e840800000000000000
+      internalID: 5253874428391938455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth1a_Minifantasy_ForgottenPlainsRiver_124
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ee1a142743f81d0800000000000000
+      internalID: -3346398332780941672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth1b_Minifantasy_ForgottenPlainsRiver_125
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e332b3e266b826e0800000000000000
+      internalID: -1862037910074543132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth1c_Minifantasy_ForgottenPlainsRiver_126
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f821ee8119ac040800000000000000
+      internalID: 4668703499982376834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth1d_Minifantasy_ForgottenPlainsRiver_127
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7949800aff18bfbd0800000000000000
+      internalID: -2595337825347398505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth2a_Minifantasy_ForgottenPlainsRiver_128
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed323ba517616b10800000000000000
+      internalID: 1972971454529158625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth3a_Minifantasy_ForgottenPlainsRiver_129
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deca0ec789b642840800000000000000
+      internalID: 5198398172566695149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth4a_Minifantasy_ForgottenPlainsRiver_130
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395481b0f91a79220800000000000000
+      internalID: 2492638623230870931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth2b_Minifantasy_ForgottenPlainsRiver_131
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ef61824c6b20d30800000000000000
+      internalID: 4396277139869466117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth3b_Minifantasy_ForgottenPlainsRiver_132
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69f1eaae78da9e80800000000000000
+      internalID: -8170980535365928597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth4b_Minifantasy_ForgottenPlainsRiver_133
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66df1454b23f0130800000000000000
+      internalID: 3535099982596003435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth2c_Minifantasy_ForgottenPlainsRiver_134
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24551c717cb029e00800000000000000
+      internalID: 1049914612855690562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth3c_Minifantasy_ForgottenPlainsRiver_135
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1cc3bf4e35fc3a0800000000000000
+      internalID: -6642998682415480412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth4c_Minifantasy_ForgottenPlainsRiver_136
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08adef3f79dcb1d20800000000000000
+      internalID: 3250417608595266176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth2d_Minifantasy_ForgottenPlainsRiver_137
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0440ccd1627d1ed0800000000000000
+      internalID: -2441669658323958772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth3d_Minifantasy_ForgottenPlainsRiver_138
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f11a038e28388ec0800000000000000
+      internalID: -3564537332645621264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth4d_Minifantasy_ForgottenPlainsRiver_139
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23abc74abd7d52680800000000000000
+      internalID: -8780374560131466702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth5a_Minifantasy_ForgottenPlainsRiver_140
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a586016b1f79b3bd0800000000000000
+      internalID: -2649356891379963814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth6a_Minifantasy_ForgottenPlainsRiver_141
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a4aba83a25c11d0800000000000000
+      internalID: -3378734758074103210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth7a_Minifantasy_ForgottenPlainsRiver_142
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c196734550db4ba70800000000000000
+      internalID: 8841899799020529948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth5b_Minifantasy_ForgottenPlainsRiver_143
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390186a7131e68cc0800000000000000
+      internalID: -3709029640469737325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth6b_Minifantasy_ForgottenPlainsRiver_144
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f721f834cc3633190800000000000000
+      internalID: -7983927985439829377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth7b_Minifantasy_ForgottenPlainsRiver_145
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d46c52877189c60800000000000000
+      internalID: 7825030157353504152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth5c_Minifantasy_ForgottenPlainsRiver_146
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a59d27860a60e80800000000000000
+      internalID: -8212700499999630771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth6c_Minifantasy_ForgottenPlainsRiver_147
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df41c3e01f557aba0800000000000000
+      internalID: -6077794678298897155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth7c_Minifantasy_ForgottenPlainsRiver_148
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535d75d1ab787d390800000000000000
+      internalID: -7793611396715391691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth5d_Minifantasy_ForgottenPlainsRiver_149
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c8c5a5eda8cc1c0800000000000000
+      internalID: -4482054841537098666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth6d_Minifantasy_ForgottenPlainsRiver_150
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09645edc47ff79b0800000000000000
+      internalID: -5080069945130981106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth7d_Minifantasy_ForgottenPlainsRiver_151
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96359b035905173e0800000000000000
+      internalID: -2057774953033804951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth8a_Minifantasy_ForgottenPlainsRiver_152
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dadc9301b26d640800000000000000
+      internalID: 5104314576360287576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth9a_Minifantasy_ForgottenPlainsRiver_153
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eba1212e22fca3d0800000000000000
+      internalID: -3193911755774252055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth10a_Minifantasy_ForgottenPlainsRiver_154
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300b0d2b78f59c1b0800000000000000
+      internalID: -5635868422252220413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth8b_Minifantasy_ForgottenPlainsRiver_155
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750af5ca969db8780800000000000000
+      internalID: -8679604808939757481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth9b_Minifantasy_ForgottenPlainsRiver_156
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcfae8596e2f5b50800000000000000
+      internalID: 6584032210237193401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth10b_Minifantasy_ForgottenPlainsRiver_157
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5f5d4b863c29d80800000000000000
+      internalID: -8245313113284020755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth8c_Minifantasy_ForgottenPlainsRiver_158
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2f87ac7a30f0980800000000000000
+      internalID: -8570627546671418638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth9c_Minifantasy_ForgottenPlainsRiver_159
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad879f905f0b59ae0800000000000000
+      internalID: -1543132730823706406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth10c_Minifantasy_ForgottenPlainsRiver_160
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25099ef9ce97f8b0800000000000000
+      internalID: -5118447861086223059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth8d_Minifantasy_ForgottenPlainsRiver_161
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d8aa9eb4c2b8ab0800000000000000
+      internalID: -5004857856337736361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth9d_Minifantasy_ForgottenPlainsRiver_162
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bf710694f83ede0800000000000000
+      internalID: -1305041921699742870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RiverNorth10d_Minifantasy_ForgottenPlainsRiver_163
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d42b198ea4d94700800000000000000
+      internalID: 525184677655028952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
