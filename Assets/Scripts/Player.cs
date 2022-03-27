@@ -33,8 +33,8 @@ public class Player : Entity
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
-    int coins = 0;
-    int icing = 0;
+    public int coins = 0;
+    public int icing = 0;
 
 
     void Start()

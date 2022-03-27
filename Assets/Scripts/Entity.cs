@@ -8,14 +8,14 @@ public abstract class Entity : MonoBehaviour
     [SerializeField]
     protected float attackRange = 0.5f;
     [SerializeField]
-    protected int maxHealth;
+    public int maxHealth;
     [SerializeField]
     protected Rigidbody2D rb;
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
     
     protected float moveSpeed = 5f;
-    protected int health;
+    public int health;
     protected Vector2 movement; 
     bool isDead;
 
