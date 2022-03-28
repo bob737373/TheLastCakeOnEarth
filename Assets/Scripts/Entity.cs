@@ -7,6 +7,13 @@ public abstract class Entity : MonoBehaviour
 
     [SerializeField]
     protected float attackRange = 0.5f;
+    [SerializeField]
+    protected int meleeAttackDmg = 1;
+
+    [SerializeField]
+    protected float attacksPerSecond = 1.0f;
+    private float nextDamageEvent;
+
     protected int maxHealth;
 
     [SerializeField]
@@ -45,11 +52,21 @@ public abstract class Entity : MonoBehaviour
 
     protected abstract void Attack();
 
+    public void meleeAttack(Entity target)
+    {
+        if (Time.time > nextDamageEvent)
+        {
+            nextDamageEvent = Time.time + attacksPerSecond;
+            target.TakeDamage(meleeAttackDmg, StatusEffect.caffeinated);
+        }
+    }
+
     public void TakeDamage(int damage, StatusEffect status)
     {
         health -= damage;
         if (health <= 0)
         {
+            health = 0;
             Die();
         }
     }

@@ -17,7 +17,6 @@ public class Enemy : Entity
         attacking // Attack mode
     }
     EnemyState currentState;
-
     Vector3 startingPosition;
     Transform target = null;
 
@@ -81,6 +80,10 @@ public class Enemy : Entity
             case EnemyState.moveToStartPosition:
             case EnemyState.alert:
                 WalkTo(startingPosition);
+                break;
+            case EnemyState.attacking:
+                var x = target.GetComponent<Entity>();
+                this.meleeAttack(x);
                 break;
             case EnemyState.moveToTarget:
                 {
