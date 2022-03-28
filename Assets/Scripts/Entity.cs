@@ -30,22 +30,15 @@ public abstract class Entity : MonoBehaviour
     public virtual void Start()
 
     {
-
-
-
         moveSpeed = this.defaultMoveSpeed;
         maxHealth = this.health;
     }
 
 
-
     // Update is called once per frame
     public virtual void Update()
     {
-        foreach (StatusItem se in currentStatusEffects)
-        {
-            print("ZXC" + se.statusEffect);
-        }
+
     }
 
     //void FixedUpdate() {} 
