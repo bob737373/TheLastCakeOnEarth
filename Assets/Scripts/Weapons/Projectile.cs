@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     float speedMultiplier;
 
     RangedWeapon weapon;
-    Player.StatusEffects effect;
+    StatusEffect effect;
     float radius;
     int damage;
     LayerMask enemyLayer;
@@ -26,9 +26,10 @@ public class Projectile : MonoBehaviour
 
     private string targetTag;
 
-    private void Start() {
-        rigidbody = GetComponent<Rigidbody2D> ();
-        weapon = GetComponentInParent<RangedWeapon> ();
+    private void Start()
+    {
+        rigidbody = GetComponent<Rigidbody2D>();
+        weapon = GetComponentInParent<RangedWeapon>();
         effect = weapon.GetEffect();
         radius = weapon.GetAttackRadius();
         damage = weapon.GetDamage();
@@ -36,19 +37,22 @@ public class Projectile : MonoBehaviour
         gameObject.name = "Icing Ball";
     }
 
-    public void Shoot(Vector2 force, LayerMask enemyLayer) {
+    public void Shoot(Vector2 force, LayerMask enemyLayer)
+    {
         this.enemyLayer = enemyLayer;
         // rigidbody.isKinematic = false;
         GetComponent<Rigidbody2D>().AddForce(force * speedMultiplier, ForceMode2D.Impulse);
         //transform.SetParent(null);
-        if(isDespawnable) StartCoroutine(DespawnAfterTime()); //don't let fly infinitely
+        if (isDespawnable) StartCoroutine(DespawnAfterTime()); //don't let fly infinitely
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         Enemy e = collision.collider.GetComponent<Enemy>();
         e.TakeDamage(damage, effect);
         Collider2D[] aoeHits = Physics2D.OverlapCircleAll(collision.transform.position, radius, enemyLayer);
-        foreach(Collider2D enemy in aoeHits) {
+        foreach (Collider2D enemy in aoeHits)
+        {
             print("hit " + enemy.name);
             enemy.GetComponent<Enemy>().TakeDamage(damage * aoeDamageMultiplier, effect);
         }
@@ -57,7 +61,8 @@ public class Projectile : MonoBehaviour
 
     }
 
-    private IEnumerator DespawnAfterTime() {
+    private IEnumerator DespawnAfterTime()
+    {
         yield return new WaitForSeconds(despawnTime);
         Destroy(gameObject);
     }

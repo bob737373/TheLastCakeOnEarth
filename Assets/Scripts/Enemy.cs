@@ -22,14 +22,14 @@ public class Enemy : Entity
     Transform target = null;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         currentState = EnemyState.idle;
         startingPosition = this.transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
         //print(currentState);
         // TODO: Check if in attack range.
