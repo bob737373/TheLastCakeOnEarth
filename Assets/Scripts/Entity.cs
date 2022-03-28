@@ -23,16 +23,25 @@ public abstract class Entity : MonoBehaviour
     protected Vector2 movement; 
     bool isDead;
 
+    protected virtual void StartEntity() {}
+    protected virtual void UpdateEntity() {}
+    protected virtual void FixedUpdateEntity() {}
+
     // Start is called before the first frame update
-    public virtual void Start()
+    void Start()
     {
         maxHealth = health;
+        StartEntity();
     }
 
     // Update is called once per frame
-    //void Update() {}
+    void Update() {
+        UpdateEntity();
+    }
 
-    //void FixedUpdate() {} 
+    void FixedUpdate() {
+        FixedUpdateEntity();
+    } 
 
     protected abstract void Attack();
 
