@@ -6,6 +6,10 @@ public class MeleeWeapon : Weapon
 {
     [SerializeField]
     Transform attackPoint;
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip swish;
     
 
     protected override void DoAttack(LayerMask enemyLayers)
@@ -15,6 +19,7 @@ public class MeleeWeapon : Weapon
             print("hit " + enemy.name);
             enemy.GetComponent<Entity>().TakeDamage(attackDamage, effect);
         }
+        audioSource.PlayOneShot(swish, 2f);
     }
 
 }
