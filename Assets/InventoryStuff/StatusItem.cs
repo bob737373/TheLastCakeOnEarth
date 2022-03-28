@@ -29,9 +29,10 @@ public class StatusItem
     {
         // If already has caffeinated
         if (entity.hasStatusEffect(StatusEffect.caffeinated))
-        {
+        {   
             this.statusEffect = StatusEffect.coffeeCrash;
         }
+
 
 
         switch (statusEffect)
@@ -45,8 +46,8 @@ public class StatusItem
                 entity.addMoveSpeed(amtMovespeedToAdd);
                 break;
             case StatusEffect.coffeeCrash:
+                // Apply coffeeCrash stats
                 entity.setMoveSpeed(entity.getDefaultMoveSpeed());
-                // Check if entity already has caffeinated?
                 break;
             case StatusEffect.minty:
                 break;
