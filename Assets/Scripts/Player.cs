@@ -40,8 +40,10 @@ public class Player : Entity
     [SerializeField]
     private int icing = 0;
 
-    void Start()
+    public override void Start()
     {   
+        base.Start();
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
