@@ -14,6 +14,8 @@ public class Player : Entity
     Camera cam;
     [SerializeField]
     Animator animator;
+    [SerializeField]
+    GameObject inventoryUI;
 
 
     bool[] statuses = { false, false, false, false, false };
@@ -40,6 +42,14 @@ public class Player : Entity
 
     [SerializeField]
     private int icing = 0;
+
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip oof;
+    [SerializeField]
+    AudioClip stepHard;
+    protected bool walking = false;
 
     public override void Start()
     {
@@ -74,9 +84,21 @@ public class Player : Entity
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos = mousePos3;
 
+        if (movement.x != 0 || movement.y != 0)
+        {
+            if (!walking)
+            {
+                StartCoroutine(walk());
+            }
+        }
+
+
         if (Input.GetButton("Fire1"))
         {
-            Attack();
+            if (!inventoryUI.activeSelf)
+            {
+                Attack();
+            }
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
@@ -100,6 +122,19 @@ public class Player : Entity
         //rb.rotation = ang;
     }
 
+    public override void TakeDamage(int damage, StatusEffect status)
+    {
+        base.TakeDamage(damage, status);
+        audioSource.PlayOneShot(oof, 1f);
+    }
+
+    IEnumerator walk()
+    {
+        walking = true;
+        audioSource.PlayOneShot(stepHard, 0.1f);
+        yield return new WaitForSeconds(0.25f);
+        walking = false;
+    }
 
     public int getCoins()
     {

@@ -334,6 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.5
+  meleeAttackDmg: 1
+  attacksPerSecond: 1
   rb: {fileID: 5685725065730189260}
   defaultMoveSpeed: 5
   health: 10
@@ -347,8 +349,12 @@ MonoBehaviour:
     m_Bits: 64
   cam: {fileID: 2320031452381813977}
   animator: {fileID: 7068420410341734693}
+  inventoryUI: {fileID: 0}
   coins: 10
   icing: 0
+  audioSource: {fileID: 7338483059602912444}
+  oof: {fileID: 8300000, guid: eedddfaf139190944acd2324bd64b657, type: 3}
+  stepHard: {fileID: 8300000, guid: 06e1401c0a212bb449ff0ced4fc2ae2b, type: 3}
 --- !u!58 &17673713
 CircleCollider2D:
   m_ObjectHideFlags: 0

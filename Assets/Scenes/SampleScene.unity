@@ -853,6 +853,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: oof
+      value: 
+      objectReference: {fileID: 8300000, guid: eedddfaf139190944acd2324bd64b657, type: 3}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1054786852}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: inventoryUI
+      value: 
+      objectReference: {fileID: 1435795426}
     - target: {fileID: 6385026478801179345, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: swish
       value: 
@@ -1197,6 +1209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+--- !u!1 &1435795426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7926844189737825431, guid: ead674ccb36f7c643bec6f7f459e5674, type: 3}
+  m_PrefabInstance: {fileID: 7926844188686422306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1479748514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1582,6 +1599,10 @@ PrefabInstance:
     - target: {fileID: 7926844189414698297, guid: ead674ccb36f7c643bec6f7f459e5674, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926844189737825431, guid: ead674ccb36f7c643bec6f7f459e5674, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7926844190138131998, guid: ead674ccb36f7c643bec6f7f459e5674, type: 3}
       propertyPath: m_Name

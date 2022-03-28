@@ -61,7 +61,7 @@ public abstract class Entity : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, StatusEffect status)
+    public virtual void TakeDamage(int damage, StatusEffect status)
     {
         health -= damage;
         if (health <= 0)
@@ -150,9 +150,10 @@ public abstract class Entity : MonoBehaviour
         }
     }
 
-    void Die()
+    public virtual void Die()
     {
-        print("died");
+        print("dead");
+        Destroy(gameObject);
     }
 
     bool canAttack()

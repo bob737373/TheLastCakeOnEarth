@@ -8,6 +8,13 @@ public class Enemy : Entity
     [SerializeField]
     float alertRange = 10.0f;
 
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    AudioClip enemyOof;
+    [SerializeField]
+    AudioClip enemyDie;
+
     enum EnemyState
     {
         idle, // Nothing in sight of enemm
@@ -30,6 +37,14 @@ public class Enemy : Entity
     // Update is called once per frame
     public override void Update()
     {
+        //test code, nuke
+        if (Input.GetKeyDown("]"))
+        {
+            this.TakeDamage(10000000, StatusEffect.caffeinated);
+            print("kaboom");
+        }
+
+
         //print(currentState);
         // TODO: Check if in attack range.
         if (target)
@@ -64,6 +79,25 @@ public class Enemy : Entity
 
     protected override void Attack() {
 
+    }
+
+    public override void TakeDamage(int damage, StatusEffect status)
+    {
+        base.TakeDamage(damage, status);
+        audioSource.PlayOneShot(enemyOof, 1f);
+    }
+
+    public override void Die()
+    {
+        StartCoroutine(waiter());
+    }
+
+    IEnumerator waiter()
+    {
+        audioSource.PlayOneShot(enemyDie, 1f);
+        moveSpeed = 0;
+        yield return new WaitForSeconds(0.5f);
+        base.Die();
     }
 
     void WalkTo(Vector3 destination)
