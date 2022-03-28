@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    public enum WeaponType {melee, ranged};
-    
+    public enum WeaponType { melee, ranged };
+
     [SerializeField]
     protected float attackRadius = 0.5f;
     [SerializeField]
@@ -17,12 +17,13 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField]
     protected float attackDelay = 0.5f;
     [SerializeField]
-    protected Player.StatusEffects effect;
+    protected StatusEffect effect;
 
     protected bool isReadying;
 
-    public void Attack(LayerMask enemyLayer) {
-        if(isReadying) return;
+    public void Attack(LayerMask enemyLayer)
+    {
+        if (isReadying) return;
         print("attack");
         animator.SetTrigger(attackTriggerName);
         DoAttack(enemyLayer);
@@ -31,32 +32,39 @@ public abstract class Weapon : MonoBehaviour
 
     protected abstract void DoAttack(LayerMask enemyLayer);
 
-    public int GetDamage() {
+    public int GetDamage()
+    {
         return this.attackDamage;
     }
 
-    public Player.StatusEffects GetEffect() {
+    public StatusEffect GetEffect()
+    {
         return effect;
     }
 
-    public float GetAttackRadius() {
+    public float GetAttackRadius()
+    {
         return attackRadius;
     }
 
-    private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex) {
+    private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
         animator.ResetTrigger(attackTriggerName);
     }
 
-    public void ResetWeapon() {
-        if (isReadying) { 
+    public void ResetWeapon()
+    {
+        if (isReadying)
+        {
             return;
         }
         isReadying = true;
         StartCoroutine(ResetAfterTime());
     }
 
-    protected IEnumerator ResetAfterTime() {
-        yield return new WaitForSeconds (attackDelay);
+    protected IEnumerator ResetAfterTime()
+    {
+        yield return new WaitForSeconds(attackDelay);
         isReadying = false;
     }
 }

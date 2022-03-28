@@ -14,29 +14,45 @@ public abstract class Entity : MonoBehaviour
 
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
-    
+
     protected float moveSpeed = 5f;
 
     [SerializeField]
     protected int health;
 
-    protected Vector2 movement; 
+    protected Vector2 movement;
     bool isDead;
+
+    List<StatusItem> currentStatusEffects = new List<StatusItem>();
+
 
     // Start is called before the first frame update
     public virtual void Start()
+
     {
-        maxHealth = health;
+
+
+
+        moveSpeed = this.defaultMoveSpeed;
+        maxHealth = this.health;
     }
 
+
+
     // Update is called once per frame
-    //void Update() {}
+    public virtual void Update()
+    {
+        foreach (StatusItem se in currentStatusEffects)
+        {
+            print("ZXC" + se.statusEffect);
+        }
+    }
 
     //void FixedUpdate() {} 
 
     protected abstract void Attack();
 
-    public void TakeDamage(int damage, Player.StatusEffects effect)
+    public void TakeDamage(int damage, StatusEffect status)
     {
         health -= damage;
         if (health <= 0)
@@ -44,10 +60,15 @@ public abstract class Entity : MonoBehaviour
             Die();
         }
     }
-    
+
     public int getHealth()
     {
         return this.health;
+    }
+
+    public float getDefaultMoveSpeed()
+    {
+        return this.defaultMoveSpeed;
     }
 
     public int getMaxHealth()
@@ -55,15 +76,68 @@ public abstract class Entity : MonoBehaviour
         return this.maxHealth;
     }
 
-    public void addHealth(int healthAmt){
+    public void addHealth(int healthAmt)
+    {
         int newHealthAmt = health + healthAmt;
 
         // Make sure health is not greater then max health
-        if (newHealthAmt > maxHealth){
+        if (newHealthAmt > maxHealth)
+        {
             newHealthAmt = maxHealth;
         }
 
         this.health = newHealthAmt;
+    }
+
+
+    public void addMoveSpeed(float moveSpeed)
+    {
+
+        if ((moveSpeed + this.moveSpeed) < defaultMoveSpeed)
+        {
+            this.moveSpeed = defaultMoveSpeed;
+        }
+        this.moveSpeed += moveSpeed;
+    }
+    public void setMoveSpeed(float moveSpeed)
+    {
+        this.moveSpeed = moveSpeed;
+    }
+
+
+    // Remove status effect from this entity
+    public void removeStatusEffect(StatusEffect statusEffect)
+    {
+        // Search effects
+        StatusItem itemToRemove = currentStatusEffects.Find(e => e.statusEffect == statusEffect);
+        currentStatusEffects.Remove(itemToRemove);
+    }
+
+    public void applyStatusEffect(StatusItem statusItem)
+    {
+        currentStatusEffects.Add(statusItem);
+
+        StartCoroutine(removeEffectTimer(statusItem));
+    }
+
+    IEnumerator removeEffectTimer(StatusItem statusItem)
+    {
+        yield return new WaitForSeconds(statusItem.time);
+        statusItem.removeEffect();
+    }
+
+    public bool hasStatusEffect(StatusEffect statusEffect)
+    {
+        // Search effects
+        StatusItem hasItem = currentStatusEffects.Find(e => e.statusEffect == statusEffect);
+        if (hasItem != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void Die()
