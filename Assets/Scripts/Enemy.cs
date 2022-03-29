@@ -119,6 +119,7 @@ public class Enemy : Entity
             case EnemyState.attacking:
                 var x = target.GetComponent<Entity>();
                 this.meleeAttack(x);
+                // this.WalkTo(x);
                 break;
             case EnemyState.moveToTarget:
                 {

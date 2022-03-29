@@ -201,7 +201,6 @@ GameObject:
   - component: {fileID: -5462167263018717961}
   - component: {fileID: 5344200442175806281}
   - component: {fileID: -2568964777802707717}
-  - component: {fileID: 2912119050261500525}
   m_Layer: 6
   m_Name: FriesEnemy
   m_TagString: Enemy
@@ -325,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69b1833f6b455048b1a31a7984faaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 0.5
+  attackRange: 1
   meleeAttackDmg: 1
   attacksPerSecond: 1
   rb: {fileID: -5462167263018717961}
@@ -335,22 +334,6 @@ MonoBehaviour:
   audioSource: {fileID: 3663188392561928631}
   enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
   enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
---- !u!58 &2912119050261500525
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461568776808595166}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.23
 --- !u!1 &5211775920727676532
 GameObject:
   m_ObjectHideFlags: 0
