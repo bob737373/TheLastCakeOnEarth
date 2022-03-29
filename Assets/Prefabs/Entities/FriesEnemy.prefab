@@ -330,7 +330,7 @@ MonoBehaviour:
   attacksPerSecond: 1
   rb: {fileID: -5462167263018717961}
   defaultMoveSpeed: 5
-  health: 4
+  health: 3
   alertRange: 8
   audioSource: {fileID: 3663188392561928631}
   enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}

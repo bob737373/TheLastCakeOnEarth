@@ -858,6 +858,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: eedddfaf139190944acd2324bd64b657, type: 3}
     - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: attackRange
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1054786852}
@@ -873,6 +877,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1054786852}
+    - target: {fileID: 6385026478801179345, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: attackRadius
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7936040600709503881, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_RootOrder
       value: 3
