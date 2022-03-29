@@ -44,7 +44,7 @@ public abstract class Weapon : MonoBehaviour
     }
 
     private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex) {
-        animator.ResetTrigger(attackTriggerName);
+        //animator.ResetTrigger(attackTriggerName);
     }
 
     public void ResetWeapon() {

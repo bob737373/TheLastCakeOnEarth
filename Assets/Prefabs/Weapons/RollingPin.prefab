@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6514912618223039647}
   - component: {fileID: 7016689722154029844}
   - component: {fileID: 1823862516754177523}
-  - component: {fileID: 7720407222886460879}
   m_Layer: 0
   m_Name: RollingPin
   m_TagString: Untagged
@@ -47,8 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 0.5
   attackDamage: 1
-  animator: {fileID: 7720407222886460879}
+  animator: {fileID: 0}
   attackTriggerName: Attack
+  attackDelay: 0.5
+  effect: 0
   attackPoint: {fileID: 6514912618223039647}
 --- !u!212 &1823862516754177523
 SpriteRenderer:
@@ -101,22 +102,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7720407222886460879
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983399841761929815}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 93e7c60c7afd8f54cb5aafa012dbd152, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

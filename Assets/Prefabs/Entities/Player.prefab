@@ -206,7 +206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.5
-  maxHealth: 20
   rb: {fileID: 5685725065730189260}
   defaultMoveSpeed: 5
   health: 10
@@ -320,6 +319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7016689722154029844, guid: 877d39e2e3771484fb2362d5b79f4400, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7068420410341734693}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 877d39e2e3771484fb2362d5b79f4400, type: 3}
 --- !u!4 &7175922380436190554 stripped
@@ -345,6 +348,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5685725065730189258}
     m_Modifications:
+    - target: {fileID: 2013476492102592528, guid: 5a2f14751f01cd541badf5b62668ec56, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7068420410341734693}
     - target: {fileID: 2196672575293508562, guid: 5a2f14751f01cd541badf5b62668ec56, type: 3}
       propertyPath: m_RootOrder
       value: 1
