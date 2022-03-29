@@ -170,9 +170,7 @@ public class Player : Entity
             selectedWeapon = weapons[newWeaponIndex].weapon;
             selectedWeapon.gameObject.SetActive(true);
             weaponIndex = newWeaponIndex;
-            print(selectedWeapon);
         }
-
     }
 
     override protected void Attack()

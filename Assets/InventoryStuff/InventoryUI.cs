@@ -14,10 +14,9 @@ public class InventoryUI : MonoBehaviour
         //inventory.onItemChangedCallback += UpdateUI;
     }
 
-    
     void Update()
     {
-        if (Input.GetKeyDown("i"))
+        if (Input.GetKeyDown("e"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }

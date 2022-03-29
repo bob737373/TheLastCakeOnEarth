@@ -35,18 +35,14 @@ public class HUD : MonoBehaviour
             updateHealth();
             updateCoins();
             updateIcing();
-
         }
     }
 
 
     public void updateHealth()
     {
-        print(player.getHealth());
-        print(player.getMaxHealth());
         healthBar.fillAmount = (float) player.getHealth() / (float) player.getMaxHealth();
 
-        print("HEALTH" + healthBar.fillAmount);
         if (healthBar.fillAmount < 0.3f)
         {
             healthBar.color = (Color.red);
