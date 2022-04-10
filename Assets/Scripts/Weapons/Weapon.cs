@@ -47,9 +47,8 @@ public abstract class Weapon : MonoBehaviour
         return attackRadius;
     }
 
-    private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-    {
-        animator.ResetTrigger(attackTriggerName);
+    private void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex) {
+        //animator.ResetTrigger(attackTriggerName);
     }
 
     public void ResetWeapon()

@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 2196672575293508562}
   - component: {fileID: 2013476492102592528}
   - component: {fileID: -1754863218124375831}
-  - component: {fileID: 5736697423104114021}
   m_Layer: 0
   m_Name: PipingBag
   m_TagString: Untagged
@@ -78,11 +77,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 0
   attackDamage: 1
-  animator: {fileID: 5736697423104114021}
+  animator: {fileID: 0}
+  attackTriggerName: Attack
+  attackDelay: 0.5
+  effect: 0
   projectileSpeed: 5
   projectileSpawnPoint: {fileID: 3732900174513864421}
   projectilePrefab: {fileID: 4941430942503637387, guid: 647a43542a4c6a042828560076da6804, type: 3}
-  shootDelay: 0.5
 --- !u!212 &-1754863218124375831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -134,22 +135,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5736697423104114021
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8199254251150321154}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
