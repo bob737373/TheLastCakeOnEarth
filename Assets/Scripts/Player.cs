@@ -64,6 +64,12 @@ public class Player : Entity
 
     void Update()
     {
+        // if(!animator.GetBool("Attack")) {
+        //     print("false");print((int)Direction.none);
+        //     animator.SetInteger("AttackDir", (int)Direction.none);
+        // } else {
+        //     print("true");
+        // }
         cam.transform.rotation = Quaternion.Euler(0, 0, 0);
         movement.x = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("SpeedX", movement.x);
@@ -169,9 +175,16 @@ public class Player : Entity
             attackDir = Direction.down;
         }
         animator.SetInteger("AttackDir", ((int)attackDir));
+        animator.SetTrigger("Attack");
         selectedWeapon.transform.rotation = Quaternion.Euler(0, 0, rot);//ang;
         if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
-        //animator.SetInteger("AttackDir", (int)AttackDir.none);
+        StartCoroutine(ResetAttackTrigger());
+    }
+
+    IEnumerator ResetAttackTrigger() {
+        yield return new WaitForEndOfFrame();
+        animator.ResetTrigger("Attack");
+        animator.SetInteger("AttackDir", (int)Direction.none);
     }
 
     void OnDrawGizmosSelected()
