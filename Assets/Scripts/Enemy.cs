@@ -15,6 +15,19 @@ public class Enemy : Entity
     [SerializeField]
     AudioClip enemyDie;
 
+    private Vector3 oldPosition;
+
+    enum MoveDirection
+    {
+        up,
+        down,
+        left,
+        right
+    }
+
+    private MoveDirection moveDir;
+
+
     enum EnemyState
     {
         idle, // Nothing in sight of enemm
@@ -35,6 +48,11 @@ public class Enemy : Entity
         startingPosition = this.transform.position;
     }
 
+    void LateUpdate()
+    {
+        oldPosition = this.transform.position;
+    }
+
     // Update is called once per frame
     public override void Update()
     {
@@ -44,7 +62,6 @@ public class Enemy : Entity
             this.TakeDamage(10000000, StatusEffect.caffeinated);
             print("kaboom");
         }
-
 
         //print(currentState);
         // TODO: Check if in attack range.
@@ -76,9 +93,41 @@ public class Enemy : Entity
 
 
         HandleState();
+
+        MoveDirection oldMov = moveDir;
+        double xDelta = Mathf.Abs(transform.position.x - oldPosition.x);
+        double yDelta = Mathf.Abs(transform.position.y - oldPosition.y);
+        // Animations
+        if (transform.position.x > oldPosition.x)
+        {
+            moveDir = MoveDirection.right;
+        }
+        if (transform.position.x < oldPosition.x)
+        {
+            moveDir = MoveDirection.left;
+        }
+
+        // If moving more in y direction then x
+        if (yDelta > xDelta)
+        {
+            if (transform.position.y > oldPosition.y)
+            {
+                moveDir = MoveDirection.up;
+            }
+            if (transform.position.y < oldPosition.y)
+            {
+                moveDir = MoveDirection.down;
+            }
+        }
+
+        if (oldMov != moveDir){
+            print(moveDir);
+        }
+
     }
 
-    protected override void Attack() {
+    protected override void Attack()
+    {
 
     }
 
