@@ -304,11 +304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 296.6518
+      value: 298.1518
       objectReference: {fileID: 0}
     - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 477.13058
+      value: 478.38058
       objectReference: {fileID: 0}
     - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -499,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 5685725065730189262, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: health
+      value: 272
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: inventoryUI
