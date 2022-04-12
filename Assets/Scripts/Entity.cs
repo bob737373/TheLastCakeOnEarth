@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public abstract class Entity : MonoBehaviour
+public abstract class Entity : NetworkBehaviour
 {
 
     [SerializeField]

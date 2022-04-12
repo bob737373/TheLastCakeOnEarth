@@ -78,13 +78,13 @@ public class Player : Entity
     public override void Update()
     {
         base.Update();
-
-
         cam.transform.rotation = Quaternion.Euler(0, 0, 0);
-        movement.x = Input.GetAxisRaw("Horizontal");
+        if(isLocalPlayer) {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
         animator.SetFloat("SpeedX", movement.x);
         animator.SetBool("MovingHorizontally", movement.x != 0);
-        movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("SpeedY", movement.y);
         if(movement.x > 0) {
             direction = Direction.right;
@@ -138,7 +138,9 @@ public class Player : Entity
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if(isLocalPlayer) {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
         //rb.rotation = ang;
     }
 
