@@ -116,7 +116,6 @@ MonoBehaviour:
   player: {fileID: 0}
   inventoryUI: {fileID: 3422157870705493778}
   space: 9
-  items: []
   open: 0
 --- !u!1 &3422157870705493778
 GameObject:
