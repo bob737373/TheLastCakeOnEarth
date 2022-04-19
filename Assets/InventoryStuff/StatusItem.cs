@@ -56,10 +56,7 @@ public class StatusItem
                 break;
         }
 
-
         Debug.Log(statusEffect);
-
-
     }
 
     public void removeEffect()
