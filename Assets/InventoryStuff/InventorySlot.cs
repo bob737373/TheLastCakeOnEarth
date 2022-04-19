@@ -4,23 +4,37 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Image icon;
 
     Item item;
 
-    public void AddItem (Item newItem)
-    {
-        item = newItem;
+    
 
-        icon.sprite = item.icon;
-        icon.enabled = true;
+    [SerializeField]
+    Image itemImage;
+
+    Button button;
+
+    [SerializeField]
+    GameObject buttonGO;
+
+    void Start()
+    {
+        button = buttonGO.GetComponent<Button>();
+        button.onClick.AddListener(() => item.Consume());
+        buttonGO.SetActive(false);
     }
 
-    public void ClearSlot ()
+    public void AddItem(Item newItem, int slotNumber)
+    {
+        item = newItem;
+        newItem.slotNumber = slotNumber;
+        buttonGO.SetActive(true);
+        itemImage.sprite = item.icon;
+    }
+
+    public void ClearSlot()
     {
         item = null;
-
-        icon.sprite = null;
-        icon.enabled = false;
+        buttonGO.SetActive(false);
     }
 }

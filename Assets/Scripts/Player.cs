@@ -17,6 +17,7 @@ public class Player : Entity
     [SerializeField]
     GameObject inventoryUI;
 
+    public Item[] items = new Item[9];
 
     //booleans for HUD icon display
     enum Direction { down, right, up, left, none };
@@ -32,8 +33,6 @@ public class Player : Entity
     3: spicy
     4: stomach ache
     */
-    
-
     Vector2 mousePos;
     Vector3 mousePos3;
     Vector2 mouseDir;
@@ -55,6 +54,9 @@ public class Player : Entity
     AudioClip oof;
     [SerializeField]
     AudioClip stepHard;
+
+
+
     protected bool walking = false;
 
     public override void Start()
@@ -86,19 +88,28 @@ public class Player : Entity
         animator.SetBool("MovingHorizontally", movement.x != 0);
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("SpeedY", movement.y);
-        if(movement.x > 0) {
+        if (movement.x > 0)
+        {
             direction = Direction.right;
             animator.SetBool("Moving", true);
-        } else if(movement.x < 0) {
+        }
+        else if (movement.x < 0)
+        {
             direction = Direction.left;
             animator.SetBool("Moving", true);
-        } else if(movement.y < 0) {
+        }
+        else if (movement.y < 0)
+        {
             direction = Direction.down;
             animator.SetBool("Moving", true);
-        } else if(movement.y > 0) {
+        }
+        else if (movement.y > 0)
+        {
             direction = Direction.up;
             animator.SetBool("Moving", true);
-        } else {
+        }
+        else
+        {
             animator.SetBool("Moving", false);
         }
         animator.SetInteger("Direction", (int)direction);
@@ -140,6 +151,58 @@ public class Player : Entity
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         //rb.rotation = ang;
+    }
+
+
+    // Call when picking up item
+    public bool addItem(Item itemToAdd)
+    {   
+        // Gets first null index in item array
+        int getFirstNullIndex()
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i] == null)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        int index = getFirstNullIndex();
+
+        // Attach item to player
+        if (index == -1)
+        {
+            // TODO: Display inventoiry full on UI
+            print("Inventory full!");
+            return false;
+        }
+        items[index] = itemToAdd;
+
+        InventorySlot slot = GameObject.Find($"InventorySlot ({index})").GetComponent<InventorySlot>();
+        slot.AddItem(itemToAdd, index);
+
+        if (slot != null)
+        {
+            return true;
+        }
+        print("Inventory slot returned null !?!?!?!?!?!?");
+        return false;
+
+
+    }
+
+
+
+    public void consumeItem(int index)
+    {
+        print(index);
+        print(items.Length);
+        this.items[index] = null;
+        GameObject.Find($"InventorySlot ({index})").GetComponent<InventorySlot>().ClearSlot();
     }
 
     public override void TakeDamage(int damage, StatusEffect status)
@@ -198,13 +261,20 @@ public class Player : Entity
         mouseDir = mousePos - rb.position;
         float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
         float rot = ang - 90f;
-        if(ang >= 135 || ang <= -135) {
+        if (ang >= 135 || ang <= -135)
+        {
             attackDir = Direction.left;
-        } else if(ang >= 45) {
+        }
+        else if (ang >= 45)
+        {
             attackDir = Direction.up;
-        } else if(ang >= -45) {
+        }
+        else if (ang >= -45)
+        {
             attackDir = Direction.right;
-        } else if(ang >= -135) {
+        }
+        else if (ang >= -135)
+        {
             attackDir = Direction.down;
         }
         animator.SetInteger("AttackDir", ((int)attackDir));
@@ -214,7 +284,8 @@ public class Player : Entity
         StartCoroutine(ResetAttackTrigger());
     }
 
-    IEnumerator ResetAttackTrigger() {
+    IEnumerator ResetAttackTrigger()
+    {
         yield return new WaitForSeconds(0.1f); //WaitForEndOfFrame();
         animator.ResetTrigger("Attack");
         animator.SetInteger("AttackDir", (int)Direction.none);
