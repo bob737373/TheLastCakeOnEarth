@@ -14,25 +14,14 @@ public class Player : Entity
     Camera cam;
     [SerializeField]
     Animator animator;
-    [SerializeField]
-    GameObject inventoryUI;
 
-    public Item[] items = new Item[9];
+    [SerializeField]
+    public Inventory inventory;
 
     //booleans for HUD icon display
     enum Direction { down, right, up, left, none };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
-    bool[] statuses = { false, false, false, false, false };
 
-
-    /*
-    status index list for all use cases of statuses:
-    0: caffeinated
-    1: coffee crash
-    2: minty
-    3: spicy
-    4: stomach ache
-    */
     Vector2 mousePos;
     Vector3 mousePos3;
     Vector2 mouseDir;
@@ -56,12 +45,16 @@ public class Player : Entity
     AudioClip stepHard;
 
 
-
     protected bool walking = false;
 
     public override void Start()
     {
         base.Start();
+        if (!inventory)
+        {
+            Debug.LogError("Inventory is not defined in GUI!");
+        }
+
         animator.SetInteger("Direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -127,12 +120,10 @@ public class Player : Entity
         }
 
 
-        if (Input.GetButton("Fire1"))
+        // Make sure inventory isnt open
+        if (Input.GetButton("Fire1") && !inventory.open)
         {
-            if (!inventoryUI.activeSelf)
-            {
-                Attack();
-            }
+            Attack();
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
@@ -151,58 +142,6 @@ public class Player : Entity
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         //rb.rotation = ang;
-    }
-
-
-    // Call when picking up item
-    public bool addItem(Item itemToAdd)
-    {   
-        // Gets first null index in item array
-        int getFirstNullIndex()
-        {
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (items[i] == null)
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
-
-        int index = getFirstNullIndex();
-
-        // Attach item to player
-        if (index == -1)
-        {
-            // TODO: Display inventoiry full on UI
-            print("Inventory full!");
-            return false;
-        }
-        items[index] = itemToAdd;
-
-        InventorySlot slot = GameObject.Find($"InventorySlot ({index})").GetComponent<InventorySlot>();
-        slot.AddItem(itemToAdd, index);
-
-        if (slot != null)
-        {
-            return true;
-        }
-        print("Inventory slot returned null !?!?!?!?!?!?");
-        return false;
-
-
-    }
-
-
-
-    public void consumeItem(int index)
-    {
-        print(index);
-        print(items.Length);
-        this.items[index] = null;
-        GameObject.Find($"InventorySlot ({index})").GetComponent<InventorySlot>().ClearSlot();
     }
 
     public override void TakeDamage(int damage, StatusEffect status)

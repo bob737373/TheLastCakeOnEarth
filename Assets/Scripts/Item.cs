@@ -8,15 +8,12 @@ public enum ItemsEnum
     JellyBeans
 };
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-public class Item : ScriptableObject
+public class Item
 {
     public string itemName;
     public int slotNumber;
     public ItemsEnum itemType;
     public Sprite icon;
-
-    public Player player;
 
     int amtHealthAffected = 0;
 
@@ -41,21 +38,16 @@ public class Item : ScriptableObject
         }
     }
 
-    public void Consume()
+    public void Consume(Player player)
     {
         player.addHealth(amtHealthAffected);
 
         if (statusEffect != StatusEffect.none)
         {
-            player.applyStatusEffect(new StatusItem((StatusEffect)statusEffect, this.player));
+            player.applyStatusEffect(new StatusItem((StatusEffect)statusEffect, player));
         }
-
-        player.consumeItem(slotNumber);
     }
-    public void OnConsume()
-    {
 
-    }
 
 }
 

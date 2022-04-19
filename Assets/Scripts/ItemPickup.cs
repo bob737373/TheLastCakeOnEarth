@@ -13,17 +13,17 @@ public class ItemPickup : MonoBehaviour
     Item item;
 
     void Start()
-    {
+    {   
+        // get sprite from item
         item = new Item(itemType);
-        SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
-        sprite.sprite = item.icon;
+        
+        SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = item.icon;
     }
 
     void pickUp()
     {   
-
-        item.player = target;
-        if (target.addItem(item))
+        if (target.inventory.Add(item))
         {
             // Destroy item
             Destroy(gameObject);
@@ -33,7 +33,7 @@ public class ItemPickup : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
-        {   
+        {
             target = other.GetComponent<Player>();
             pickUp();
         };
