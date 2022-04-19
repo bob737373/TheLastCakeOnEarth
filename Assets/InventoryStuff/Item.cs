@@ -43,7 +43,6 @@ public class Item : ScriptableObject
 
     public void Consume()
     {
-        Debug.Log($"ITEM NAME {itemName}");
         player.addHealth(amtHealthAffected);
 
         if (statusEffect != StatusEffect.none)

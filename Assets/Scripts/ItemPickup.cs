@@ -14,7 +14,6 @@ public class ItemPickup : MonoBehaviour
 
     void Start()
     {
-        print("ITEM");
         item = new Item(itemType);
         SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
         sprite.sprite = item.icon;
