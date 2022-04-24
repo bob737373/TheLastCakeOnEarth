@@ -26,56 +26,72 @@ public class Inventory : MonoBehaviour
 
         inventoryUI.SetActive(true);
 
-        // Cache all of our slots
+        // Cache/setup all of our slots
         for (int i = 0; i <= space - 1; i++)
         {
-            slots.Add(GameObject.Find($"InventorySlot ({i})").GetComponent<InventorySlot>());
+            InventorySlot slot = GameObject.Find($"InventorySlot ({i})").GetComponent<InventorySlot>();
+            slot.player = this.player;
+            slots.Add(slot);
         }
 
         inventoryUI.SetActive(open);
     }
 
 
+    private int getActiveSlotsCount()
+    {   
+        int count = 0;
+        foreach (InventorySlot slot in slots){
+            if(slot.isActive()){
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private InventorySlot getNextUnactiveSlot(){
+        foreach (InventorySlot slot in slots){
+            if(!slot.isActive()){
+                return slot;
+            }
+        }
+
+        return null;
+    }
+
     public bool Add(Item item)
     {
-        if (items.Count >= space)
+        Debug.Log("HRE");
+        // Add to existing slot if exists and not full. 
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.containsItemType(item))
+            {
+                if (slot.addItem(item))
+                {
+                    return true;
+                };
+            }
+        }
+        Debug.Log("HRE1");
+
+        // Cant add a new slot if slot inventory is full as well.
+        if (getActiveSlotsCount() >= space)
         {
             Debug.Log("not enough room in inventory");
             inventoryUI.SetActive(open);
             return false;
         }
+        Debug.Log("HRE2");
 
-        items.Add(item);
+        InventorySlot unactive = getNextUnactiveSlot();
+        unactive.addItem(item);
 
         return true;
     }
 
-    public void Remove(Item item)
-    {
-        items.Remove(item);
-    }
-
-    void UpdateUI()
-    {
-        if (!inventoryUI.activeSelf) return;
-        for (int i = 0; i <= items.Count - 1; i++)
-        {
-            slots[i].buttonAction = onItemUse;
-            slots[i].AddItem(items[i]);
-        }
-
-        // Clear rest of the slots
-        for (int i = items.Count; i <= space - 1; i++)
-        {
-            slots[i].ClearSlot();
-        }
-    }
-
-    void onItemUse(Item item)
-    {
-        item.Consume(player);
-        items.Remove(item);
-    }
+   
 
 
     void Update()
@@ -85,8 +101,6 @@ public class Inventory : MonoBehaviour
             open = !inventoryUI.activeSelf;
             inventoryUI.SetActive(open);
         }
-        
-        UpdateUI();
     }
 
 }

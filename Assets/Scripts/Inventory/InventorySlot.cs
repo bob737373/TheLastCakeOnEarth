@@ -1,37 +1,101 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class InventorySlot : MonoBehaviour
 {
-    Item item;
+
+    List<Item> items = new List<Item>();
 
     [SerializeField]
     Image itemImageUI;
 
     [SerializeField]
-    GameObject buttonUI;
+    public GameObject buttonUI;
     private Button button;
     public Action<Item> buttonAction;
+
+    [SerializeField]
+    Text countTxt;
+
+    public Player player;
+
+    [SerializeField]
+    int maxItemCount = 20;
+
+
 
     void Start()
     {
         button = buttonUI.GetComponent<Button>();
-        button.onClick.AddListener(() => buttonAction(item));
+        button.onClick.AddListener(useItem);
         buttonUI.SetActive(false);
     }
 
-    public void AddItem(Item newItem)
-    {   
-        item = newItem;
-        buttonUI.SetActive(true);
-        itemImageUI.sprite = newItem.icon;
+    void Update()
+    {
+        if (items.Count > 0)
+        {
+            countTxt.text = items.Count.ToString();
+        }
+        else
+        {
+            countTxt.text = "0";
+        }
     }
 
-    public void ClearSlot()
+    public void useItem()
     {
-        item = null;
+        items[0].Use(player);
+        removeItem(items[0]);
+    }
+
+    public bool containsItemType(Item itemToCheck)
+    {
+        if (items.Count != 0)
+        {
+            return items[0].itemName == itemToCheck.itemName;
+        }
+        return false;
+    }
+
+    public bool addItem(Item newItem)
+    {   
+        Debug.Log(items.Count);
+        if (items.Count >= maxItemCount)
+        {
+            Debug.Log("Max items in this slot!");
+            return false;
+        }
+
+
+        items.Add(newItem);
+        buttonUI.SetActive(true);
+        itemImageUI.sprite = newItem.icon;
+        Debug.Log(items);
+        countTxt.text = items.Count.ToString();
+        return true;
+    }
+
+    public void removeItem(Item item)
+    {
+        items.Remove(item);
+        countTxt.text = items.Count.ToString();
+        if (items.Count == 0)
+        {
+            clearSlot();
+        }
+    }
+
+    public bool isActive()
+    {
+        return this.items.Count >= 1;
+    }
+    public void clearSlot()
+    {
         buttonUI.SetActive(false);
     }
 }
