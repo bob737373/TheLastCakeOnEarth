@@ -22,20 +22,68 @@ public class Door : MonoBehaviour
     [SerializeField]
     Destination dest;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Destination src;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    GameObject player;
+
+    [SerializeField]
+    float spawnx;
+
+    [SerializeField]
+    float spawny;
+
+    private AsyncOperation sceneAsync;
+    private AsyncOperation unloadAsync;
 
     void OnCollisionEnter2D(Collision2D c){
-        SceneManager.LoadScene(getScene(dest));
+        StartCoroutine(loadScene(getScene(dest)));
+    }
+
+    IEnumerator loadScene(string name) {
+        AsyncOperation scene = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+        scene.allowSceneActivation = true;
+        sceneAsync = scene;
+
+        while (scene.progress < 1f)
+        {
+            Debug.Log("Loading scene " + " [][] Progress: " + scene.progress);
+            yield return null;
+        } 
+        OnFinishedLoadingAllScene(name);
+    }
+
+    IEnumerator unloadScene(string name) {
+        AsyncOperation unload = SceneManager.UnloadSceneAsync(name);
+        unload.allowSceneActivation = true;
+
+        while (unload.progress < 1f)
+        {
+            Debug.Log("Unloading scene " + " [][] Progress: " + unload.progress);
+            yield return null;
+        } 
+        Debug.Log("Unloaded");
+    }
+
+    void enableScene(string name)
+    {
+        Scene sceneToLoad = SceneManager.GetSceneByName(name);
+        if (sceneToLoad.IsValid())
+        {
+            Debug.Log("Scene is Valid");
+            SceneManager.MoveGameObjectToScene(player, sceneToLoad);
+            player.transform.position = new Vector2(spawnx, spawny);
+            SceneManager.SetActiveScene(sceneToLoad);
+        }
+    }
+
+    void OnFinishedLoadingAllScene(string name)
+    {
+        Debug.Log("Done Loading Scene");
+        enableScene(name);
+        Debug.Log("Scene Activated!");
+        StartCoroutine(unloadScene(getScene(src)));
     }
 
     private string getScene(Destination d){
