@@ -14,25 +14,19 @@ public class Player : Entity
     Camera cam;
     [SerializeField]
     Animator animator;
+
     [SerializeField]
-    GameObject inventoryUI;
+    public Inventory inventory;
 
-
-    bool[] statuses = { false, false, false, false, false };
-
-
-    /*
-    status index list for all use cases of statuses:
-    0: caffeinated
-    1: coffee crash
-    2: minty
-    3: spicy
-    4: stomach ache
-    */
+    //booleans for HUD icon display
+    enum Direction { down, right, up, left, none };
+    public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
 
     Vector2 mousePos;
     Vector3 mousePos3;
     Vector2 mouseDir;
+    Direction direction;
+    Direction attackDir;
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
@@ -49,12 +43,19 @@ public class Player : Entity
     AudioClip oof;
     [SerializeField]
     AudioClip stepHard;
+
+
     protected bool walking = false;
 
     public override void Start()
     {
         base.Start();
+        if (!inventory)
+        {
+            Debug.LogError("Inventory is not defined in GUI!");
+        }
 
+        animator.SetInteger("Direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
@@ -80,6 +81,32 @@ public class Player : Entity
         animator.SetBool("MovingHorizontally", movement.x != 0);
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("SpeedY", movement.y);
+        if (movement.x > 0)
+        {
+            direction = Direction.right;
+            animator.SetBool("Moving", true);
+        }
+        else if (movement.x < 0)
+        {
+            direction = Direction.left;
+            animator.SetBool("Moving", true);
+        }
+        else if (movement.y < 0)
+        {
+            direction = Direction.down;
+            animator.SetBool("Moving", true);
+        }
+        else if (movement.y > 0)
+        {
+            direction = Direction.up;
+            animator.SetBool("Moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
+        }
+        animator.SetInteger("Direction", (int)direction);
+
         movement.Normalize();
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
         mousePos = mousePos3;
@@ -93,12 +120,10 @@ public class Player : Entity
         }
 
 
-        if (Input.GetButton("Fire1"))
+        // Make sure inventory isnt open
+        if (Input.GetButton("Fire1") && !inventory.open)
         {
-            if (!inventoryUI.activeSelf)
-            {
-                Attack();
-            }
+            Attack();
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
@@ -116,9 +141,6 @@ public class Player : Entity
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        mouseDir = mousePos - rb.position;
-        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg - 90f;
-        selectedWeapon.transform.rotation = Quaternion.Euler(0, 0, ang);//ang;
         //rb.rotation = ang;
     }
 
@@ -175,7 +197,37 @@ public class Player : Entity
 
     override protected void Attack()
     {
+        mouseDir = mousePos - rb.position;
+        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
+        float rot = ang - 90f;
+        if (ang >= 135 || ang <= -135)
+        {
+            attackDir = Direction.left;
+        }
+        else if (ang >= 45)
+        {
+            attackDir = Direction.up;
+        }
+        else if (ang >= -45)
+        {
+            attackDir = Direction.right;
+        }
+        else if (ang >= -135)
+        {
+            attackDir = Direction.down;
+        }
+        animator.SetInteger("AttackDir", ((int)attackDir));
+        animator.SetTrigger("Attack");
+        selectedWeapon.transform.rotation = Quaternion.Euler(0, 0, rot);//ang;
         if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
+        StartCoroutine(ResetAttackTrigger());
+    }
+
+    IEnumerator ResetAttackTrigger()
+    {
+        yield return new WaitForSeconds(0.1f); //WaitForEndOfFrame();
+        animator.ResetTrigger("Attack");
+        animator.SetInteger("AttackDir", (int)Direction.none);
     }
 
 }
