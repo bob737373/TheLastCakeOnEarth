@@ -655,6 +655,8 @@ GameObject:
   - component: {fileID: 736516491108790118}
   - component: {fileID: 736516491108790116}
   - component: {fileID: 736516491108790117}
+  - component: {fileID: 6555970245642872623}
+  - component: {fileID: 505535079902841477}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -810,6 +812,39 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &6555970245642872623
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736516491108790119}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &505535079902841477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736516491108790119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4809b9533971cd042b8101b0bb705aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dest: 6
+  src: 1
+  player: {fileID: 0}
+  spawnx: 0
+  spawny: 0
 --- !u!1 &736516492365730068
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CityEastScene.unity
     guid: 7a71a996223f8914985c4f4bc2434719
+  - enabled: 1
+    path: Assets/Scenes/EggFactoryScene.unity
+    guid: f9601b0e1c15c7e4781475540b31ccf2
   m_configObjects: {}

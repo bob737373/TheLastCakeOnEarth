@@ -26,9 +26,6 @@ public class Door : MonoBehaviour
     Destination src;
 
     [SerializeField]
-    GameObject player;
-
-    [SerializeField]
     float spawnx;
 
     [SerializeField]
@@ -36,6 +33,18 @@ public class Door : MonoBehaviour
 
     private AsyncOperation sceneAsync;
     private AsyncOperation unloadAsync;
+
+    private GameObject player;
+    private GameObject inventory;
+    private GameObject hud;
+    private GameObject menu;
+
+    void Start() {
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        inventory = GameObject.FindGameObjectsWithTag("Inventory")[0];
+        hud = GameObject.FindGameObjectsWithTag("HUD")[0];
+        menu = GameObject.FindGameObjectsWithTag("Menu")[0];
+    }
 
     void OnCollisionEnter2D(Collision2D c){
         StartCoroutine(loadScene(getScene(dest)));
@@ -73,6 +82,9 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Scene is Valid");
             SceneManager.MoveGameObjectToScene(player, sceneToLoad);
+            SceneManager.MoveGameObjectToScene(inventory, sceneToLoad);
+            SceneManager.MoveGameObjectToScene(hud, sceneToLoad);
+            SceneManager.MoveGameObjectToScene(menu, sceneToLoad);
             player.transform.position = new Vector2(spawnx, spawny);
             SceneManager.SetActiveScene(sceneToLoad);
         }
