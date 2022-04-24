@@ -5,11 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Menu
-  - HUD
-  - Inventory
-  - Spawn
-  - EventSystem
+  - TransitionElements
   layers:
   - Default
   - TransparentFX

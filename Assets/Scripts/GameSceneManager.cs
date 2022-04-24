@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public enum Destination
+public enum ScenesEnum
 {
     BAKERY_AREA,
     CITY_EAST,
@@ -20,29 +20,16 @@ public enum Destination
 
 }
 
-/* 
-DEST COORDINATES
-    BAKERY_INTERIOR: 5, -3
-
-
-
-
-*/
-public class LoadInitialGame : MonoBehaviour
+public class GameSceneManager : MonoBehaviour
 {
-
-    private GameObject player;
-    private GameObject inventory;
-    private GameObject hud;
-    private GameObject menu;
-    private GameObject eventSystem;
+    private List<GameObject> gameObjects = new List<GameObject>();
 
 
     [SerializeField]
-    Destination dest;
+    protected ScenesEnum dest;
 
     [SerializeField]
-    Destination src;
+    ScenesEnum src;
 
     [SerializeField]
     float spawnx;
@@ -54,35 +41,30 @@ public class LoadInitialGame : MonoBehaviour
     private AsyncOperation unloadAsync;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        player = GameObject.FindGameObjectsWithTag("Player")[0];
-        inventory = GameObject.FindGameObjectsWithTag("Inventory")[0];
-        hud = GameObject.FindGameObjectsWithTag("HUD")[0];
-        menu = GameObject.FindGameObjectsWithTag("Menu")[0];
-        eventSystem = GameObject.FindGameObjectsWithTag("EventSystem")[0];
-
-        StartCoroutine(loadScene(dest));
+        gameObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("TransitionElements"));
+        gameObjects.Add(GameObject.FindGameObjectWithTag("Player"));
     }
 
-    IEnumerator loadScene(Destination dest)
+    protected IEnumerator loadScene(ScenesEnum dest)
     {
         string name = getScene(dest);
-
         AsyncOperation scene = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
         scene.allowSceneActivation = true;
         sceneAsync = scene;
 
         while (scene.progress < 1f)
         {
-            Debug.Log("Loading scene " + " [][] Progress: " + scene.progress);
             yield return null;
         }
         OnFinishedLoadingAllScene(name);
     }
 
-    IEnumerator unloadScene(string name)
+    protected IEnumerator unloadScene(ScenesEnum dest)
     {
+        string name = getScene(dest);
+
         AsyncOperation unload = SceneManager.UnloadSceneAsync(name);
         unload.allowSceneActivation = true;
 
@@ -94,55 +76,56 @@ public class LoadInitialGame : MonoBehaviour
         Debug.Log("Unloaded");
     }
 
-    void enableScene(string name)
+    protected void enableScene(string name)
     {
         Scene sceneToLoad = SceneManager.GetSceneByName(name);
         if (sceneToLoad.IsValid())
         {
             Debug.Log("Scene is Valid");
-            SceneManager.MoveGameObjectToScene(inventory, sceneToLoad);
-            SceneManager.MoveGameObjectToScene(hud, sceneToLoad);
-            SceneManager.MoveGameObjectToScene(menu, sceneToLoad);
-            SceneManager.MoveGameObjectToScene(eventSystem, sceneToLoad);
+            foreach (GameObject go in gameObjects)
+            {
+                SceneManager.MoveGameObjectToScene(go, sceneToLoad);
+            }
+
+            GameObject player = gameObjects[gameObjects.Count - 1];
             player.transform.position = new Vector2(spawnx, spawny);
             SceneManager.SetActiveScene(sceneToLoad);
-            SceneManager.MoveGameObjectToScene(player, sceneToLoad);
         }
     }
 
-    void OnFinishedLoadingAllScene(string name)
+    protected void OnFinishedLoadingAllScene(string name)
     {
         Debug.Log("Done Loading Scene");
         enableScene(name);
         Debug.Log("Scene Activated!");
-        StartCoroutine(unloadScene(getScene(src)));
+        StartCoroutine(unloadScene(src));
     }
 
-    private string getScene(Destination d)
+    protected string getScene(ScenesEnum d)
     {
         switch (d)
         {
-            case Destination.SCENE_LOAD:
+            case ScenesEnum.SCENE_LOAD:
                 return "LoadScene";
-            case Destination.BAKERY_AREA:
+            case ScenesEnum.BAKERY_AREA:
                 return "SampleScene";
-            case Destination.CITY_EAST:
+            case ScenesEnum.CITY_EAST:
                 return "CityEastScene";
-            case Destination.CITY_WEST:
+            case ScenesEnum.CITY_WEST:
                 return "CityWestScene";
-            case Destination.CITY_NORTH:
+            case ScenesEnum.CITY_NORTH:
                 return "CityNorthScene";
-            case Destination.CITY_SOUTH:
+            case ScenesEnum.CITY_SOUTH:
                 return "CitySouthScene";
-            case Destination.BAKERY_INTERIOR:
+            case ScenesEnum.BAKERY_INTERIOR:
                 return "BakeryScene";
-            case Destination.EGG_FACTORY_INTERIOR:
+            case ScenesEnum.EGG_FACTORY_INTERIOR:
                 return "EggFactoryScene";
-            case Destination.MILK_FACTORY_INTERIOR:
+            case ScenesEnum.MILK_FACTORY_INTERIOR:
                 return "MilkFactoryScene";
-            case Destination.SUGAR_FACTORY_INTERIOR:
+            case ScenesEnum.SUGAR_FACTORY_INTERIOR:
                 return "SugarFactoryScene";
-            case Destination.FLOUR_FACTORY_INTERIOR:
+            case ScenesEnum.FLOUR_FACTORY_INTERIOR:
                 return "FlourFactoryScene";
             default:
                 return "TestScene";

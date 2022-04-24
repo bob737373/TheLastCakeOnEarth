@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Door : GameSceneManager
+public class LoadInitialGame : GameSceneManager
 {
-    void OnCollisionEnter2D(Collision2D c)
+    // Start is called before the first frame update
+    override protected void Start()
     {
+        base.Start();
         StartCoroutine(loadScene(dest));
     }
+
 }

@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 611652165}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: EventSystem
+  m_TagString: TransitionElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUDCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7433431015426552498, guid: 6f7f73128354ad24a9f482ebbdae23b4, type: 3}
+      propertyPath: m_TagString
+      value: TransitionElements
+      objectReference: {fileID: 0}
     - target: {fileID: 7433431015487285119, guid: 6f7f73128354ad24a9f482ebbdae23b4, type: 3}
       propertyPath: player
       value: 
@@ -587,6 +591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6386684678397911840, guid: 7e2983e7f3f2bc84e9fa79e797062313, type: 3}
+      propertyPath: m_TagString
+      value: TransitionElements
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e2983e7f3f2bc84e9fa79e797062313, type: 3}
 --- !u!1001 &2088625419
@@ -603,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 3422157869763073435, guid: 17b087d0e8ad4d641860936595040e6f, type: 3}
       propertyPath: m_Name
       value: DynamicInventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422157869763073435, guid: 17b087d0e8ad4d641860936595040e6f, type: 3}
+      propertyPath: m_TagString
+      value: TransitionElements
       objectReference: {fileID: 0}
     - target: {fileID: 3422157869763073511, guid: 17b087d0e8ad4d641860936595040e6f, type: 3}
       propertyPath: m_Pivot.x

@@ -349,7 +349,7 @@ MonoBehaviour:
     m_Bits: 64
   cam: {fileID: 2320031452381813977}
   animator: {fileID: 7068420410341734693}
-  inventoryUI: {fileID: 0}
+  inventory: {fileID: 0}
   coins: 10
   icing: 0
   audioSource: {fileID: 7338483059602912444}
