@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Timers;
 
 //booleans for HUD icon display
-public enum StatusEffect { caffeinated, coffeeCrash, minty, spicy, stomachAche, chocolate }
+public enum StatusEffect { none, caffeinated, coffeeCrash, minty, spicy, stomachAche, chocolate }
 
 public class StatusItem
 {
@@ -41,7 +41,6 @@ public class StatusItem
                 entity.addHealth(8);
                 break;
             case StatusEffect.caffeinated:
-                entity.addHealth(5);
                 amtMovespeedToAdd = 5f;
                 entity.addMoveSpeed(amtMovespeedToAdd);
                 break;
@@ -57,10 +56,7 @@ public class StatusItem
                 break;
         }
 
-
         Debug.Log(statusEffect);
-
-
     }
 
     public void removeEffect()
