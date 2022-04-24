@@ -16,6 +16,15 @@ public enum Destination{
     FLOUR_FACTORY_INTERIOR = 9
 }
 
+/* 
+DEST COORDINATES
+    BAKERY_INTERIOR: 5, -3
+
+
+
+
+*/
+
 public class Door : MonoBehaviour
 {
     

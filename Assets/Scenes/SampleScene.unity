@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 1
   src: 0
-  spawnx: 341
+  spawnx: 350
   spawny: 452
 --- !u!50 &153058149
 Rigidbody2D:
@@ -596,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 366
+      value: 367
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.y
