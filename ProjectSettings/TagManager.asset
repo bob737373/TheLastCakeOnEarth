@@ -8,6 +8,7 @@ TagManager:
   - Menu
   - HUD
   - Inventory
+  - Spawn
   layers:
   - Default
   - TransparentFX

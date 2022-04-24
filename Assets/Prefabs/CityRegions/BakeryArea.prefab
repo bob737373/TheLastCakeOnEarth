@@ -178,7 +178,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5767621962390106956, guid: 1dea598966049244baceb71fbf4fd3b1, type: 3}
   m_PrefabInstance: {fileID: 5130419731079717237}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9082181477752099236
+--- !u!50 &153058149
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952824629801061189}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &153058144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,9 +208,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6952824629801061189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01bf0ad3b2d463d418151d8b260f1e2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4809b9533971cd042b8101b0bb705aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dest: 1
+  src: 0
+  spawnx: 350
+  spawny: 452
 --- !u!1001 &5160099813966783934
 PrefabInstance:
   m_ObjectHideFlags: 0

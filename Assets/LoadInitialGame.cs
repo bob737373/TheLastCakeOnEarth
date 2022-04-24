@@ -4,9 +4,38 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Door : MonoBehaviour
+public enum Destination
 {
-    
+    BAKERY_AREA,
+    CITY_EAST,
+    CITY_WEST,
+    CITY_NORTH,
+    CITY_SOUTH,
+    BAKERY_INTERIOR,
+    EGG_FACTORY_INTERIOR,
+    MILK_FACTORY_INTERIOR,
+    SUGAR_FACTORY_INTERIOR,
+    FLOUR_FACTORY_INTERIOR,
+    SCENE_LOAD,
+
+}
+
+/* 
+DEST COORDINATES
+    BAKERY_INTERIOR: 5, -3
+
+
+
+
+*/
+public class LoadInitialGame : MonoBehaviour
+{
+
+    private GameObject player;
+    private GameObject inventory;
+    private GameObject hud;
+    private GameObject menu;
+
     [SerializeField]
     Destination dest;
 
@@ -22,23 +51,21 @@ public class Door : MonoBehaviour
     private AsyncOperation sceneAsync;
     private AsyncOperation unloadAsync;
 
-    private GameObject player;
-    private GameObject inventory;
-    private GameObject hud;
-    private GameObject menu;
-
-    void Start() {
+    // Start is called before the first frame update
+    void Start()
+    {
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         inventory = GameObject.FindGameObjectsWithTag("Inventory")[0];
         hud = GameObject.FindGameObjectsWithTag("HUD")[0];
         menu = GameObject.FindGameObjectsWithTag("Menu")[0];
+
+        StartCoroutine(loadScene(dest));
     }
 
-    void OnCollisionEnter2D(Collision2D c){
-        StartCoroutine(loadScene(getScene(dest)));
-    }
+    IEnumerator loadScene(Destination dest)
+    {
+        string name = getScene(dest);
 
-    IEnumerator loadScene(string name) {
         AsyncOperation scene = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
         scene.allowSceneActivation = true;
         sceneAsync = scene;
@@ -47,11 +74,12 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Loading scene " + " [][] Progress: " + scene.progress);
             yield return null;
-        } 
+        }
         OnFinishedLoadingAllScene(name);
     }
 
-    IEnumerator unloadScene(string name) {
+    IEnumerator unloadScene(string name)
+    {
         AsyncOperation unload = SceneManager.UnloadSceneAsync(name);
         unload.allowSceneActivation = true;
 
@@ -59,7 +87,7 @@ public class Door : MonoBehaviour
         {
             Debug.Log("Unloading scene " + " [][] Progress: " + unload.progress);
             yield return null;
-        } 
+        }
         Debug.Log("Unloaded");
     }
 
@@ -86,8 +114,10 @@ public class Door : MonoBehaviour
         StartCoroutine(unloadScene(getScene(src)));
     }
 
-    private string getScene(Destination d){
-        switch(d){
+    private string getScene(Destination d)
+    {
+        switch (d)
+        {
             case Destination.SCENE_LOAD:
                 return "LoadScene";
             case Destination.BAKERY_AREA:
@@ -110,8 +140,8 @@ public class Door : MonoBehaviour
                 return "SugarFactoryScene";
             case Destination.FLOUR_FACTORY_INTERIOR:
                 return "FlourFactoryScene";
-            default: 
-                return "TestScene";        
+            default:
+                return "TestScene";
         }
     }
 }
