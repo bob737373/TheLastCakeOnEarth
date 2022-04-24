@@ -14,25 +14,13 @@ public class Player : Entity
     Camera cam;
     [SerializeField]
     Animator animator;
-    [SerializeField]
-    GameObject inventoryUI;
 
+    [SerializeField]
+    public Inventory inventory;
 
     //booleans for HUD icon display
     enum Direction { down, right, up, left, none };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
-    bool[] statuses = { false, false, false, false, false };
-
-
-    /*
-    status index list for all use cases of statuses:
-    0: caffeinated
-    1: coffee crash
-    2: minty
-    3: spicy
-    4: stomach ache
-    */
-    
 
     Vector2 mousePos;
     Vector3 mousePos3;
@@ -55,11 +43,18 @@ public class Player : Entity
     AudioClip oof;
     [SerializeField]
     AudioClip stepHard;
+
+
     protected bool walking = false;
 
     public override void Start()
     {
         base.Start();
+        if (!inventory)
+        {
+            Debug.LogError("Inventory is not defined in GUI!");
+        }
+
         animator.SetInteger("Direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -86,19 +81,28 @@ public class Player : Entity
         animator.SetFloat("SpeedX", movement.x);
         animator.SetBool("MovingHorizontally", movement.x != 0);
         animator.SetFloat("SpeedY", movement.y);
-        if(movement.x > 0) {
+        if (movement.x > 0)
+        {
             direction = Direction.right;
             animator.SetBool("Moving", true);
-        } else if(movement.x < 0) {
+        }
+        else if (movement.x < 0)
+        {
             direction = Direction.left;
             animator.SetBool("Moving", true);
-        } else if(movement.y < 0) {
+        }
+        else if (movement.y < 0)
+        {
             direction = Direction.down;
             animator.SetBool("Moving", true);
-        } else if(movement.y > 0) {
+        }
+        else if (movement.y > 0)
+        {
             direction = Direction.up;
             animator.SetBool("Moving", true);
-        } else {
+        }
+        else
+        {
             animator.SetBool("Moving", false);
         }
         animator.SetInteger("Direction", (int)direction);
@@ -116,12 +120,10 @@ public class Player : Entity
         }
 
 
-        if (Input.GetButton("Fire1"))
+        // Make sure inventory isnt open
+        if (Input.GetButton("Fire1") && !inventory.open)
         {
-            if (!inventoryUI.activeSelf)
-            {
-                Attack();
-            }
+            Attack();
         }
 
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
@@ -200,13 +202,20 @@ public class Player : Entity
         mouseDir = mousePos - rb.position;
         float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
         float rot = ang - 90f;
-        if(ang >= 135 || ang <= -135) {
+        if (ang >= 135 || ang <= -135)
+        {
             attackDir = Direction.left;
-        } else if(ang >= 45) {
+        }
+        else if (ang >= 45)
+        {
             attackDir = Direction.up;
-        } else if(ang >= -45) {
+        }
+        else if (ang >= -45)
+        {
             attackDir = Direction.right;
-        } else if(ang >= -135) {
+        }
+        else if (ang >= -135)
+        {
             attackDir = Direction.down;
         }
         animator.SetInteger("AttackDir", ((int)attackDir));
@@ -216,8 +225,9 @@ public class Player : Entity
         StartCoroutine(ResetAttackTrigger());
     }
 
-    IEnumerator ResetAttackTrigger() {
-        yield return new WaitForEndOfFrame();
+    IEnumerator ResetAttackTrigger()
+    {
+        yield return new WaitForSeconds(0.1f); //WaitForEndOfFrame();
         animator.ResetTrigger("Attack");
         animator.SetInteger("AttackDir", (int)Direction.none);
     }
