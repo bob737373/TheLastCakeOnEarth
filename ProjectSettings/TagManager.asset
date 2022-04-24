@@ -9,6 +9,7 @@ TagManager:
   - HUD
   - Inventory
   - Spawn
+  - EventSystem
   layers:
   - Default
   - TransparentFX

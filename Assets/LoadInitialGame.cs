@@ -35,6 +35,8 @@ public class LoadInitialGame : MonoBehaviour
     private GameObject inventory;
     private GameObject hud;
     private GameObject menu;
+    private GameObject eventSystem;
+
 
     [SerializeField]
     Destination dest;
@@ -58,6 +60,7 @@ public class LoadInitialGame : MonoBehaviour
         inventory = GameObject.FindGameObjectsWithTag("Inventory")[0];
         hud = GameObject.FindGameObjectsWithTag("HUD")[0];
         menu = GameObject.FindGameObjectsWithTag("Menu")[0];
+        eventSystem = GameObject.FindGameObjectsWithTag("EventSystem")[0];
 
         StartCoroutine(loadScene(dest));
     }
@@ -100,6 +103,7 @@ public class LoadInitialGame : MonoBehaviour
             SceneManager.MoveGameObjectToScene(inventory, sceneToLoad);
             SceneManager.MoveGameObjectToScene(hud, sceneToLoad);
             SceneManager.MoveGameObjectToScene(menu, sceneToLoad);
+            SceneManager.MoveGameObjectToScene(eventSystem, sceneToLoad);
             player.transform.position = new Vector2(spawnx, spawny);
             SceneManager.SetActiveScene(sceneToLoad);
             SceneManager.MoveGameObjectToScene(player, sceneToLoad);

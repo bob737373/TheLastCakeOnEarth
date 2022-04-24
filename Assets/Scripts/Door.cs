@@ -26,12 +26,15 @@ public class Door : MonoBehaviour
     private GameObject inventory;
     private GameObject hud;
     private GameObject menu;
+    private GameObject eventSystem;
+
 
     void Start() {
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         inventory = GameObject.FindGameObjectsWithTag("Inventory")[0];
         hud = GameObject.FindGameObjectsWithTag("HUD")[0];
         menu = GameObject.FindGameObjectsWithTag("Menu")[0];
+        eventSystem = GameObject.FindGameObjectsWithTag("EventSystem")[0];
     }
 
     void OnCollisionEnter2D(Collision2D c){
@@ -72,6 +75,8 @@ public class Door : MonoBehaviour
             SceneManager.MoveGameObjectToScene(inventory, sceneToLoad);
             SceneManager.MoveGameObjectToScene(hud, sceneToLoad);
             SceneManager.MoveGameObjectToScene(menu, sceneToLoad);
+            SceneManager.MoveGameObjectToScene(eventSystem, sceneToLoad);
+
             player.transform.position = new Vector2(spawnx, spawny);
             SceneManager.SetActiveScene(sceneToLoad);
             SceneManager.MoveGameObjectToScene(player, sceneToLoad);
