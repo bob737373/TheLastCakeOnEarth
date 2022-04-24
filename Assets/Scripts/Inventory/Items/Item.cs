@@ -9,9 +9,9 @@ public abstract class Item : MonoBehaviour
     [SerializeField]
     public Sprite icon;
 
-    public abstract void Use(Player player);
+    public abstract bool Use(Player player);
 
-    void pickUp(Player player)
+    protected void pickUp(Player player)
     {
         if (player.inventory.Add(this))
         {
@@ -28,7 +28,7 @@ public abstract class Item : MonoBehaviour
         };
     }
 
-    
+
 
 
 }

@@ -1,13 +1,5 @@
 using UnityEngine;
 
-public enum ItemsEnum
-{
-    Coffee,
-    ChocolateBar,
-    ExpiredSnackCakes,
-    JellyBeans
-};
-
 public class ConsumableItem : Item
 {
 
@@ -17,7 +9,7 @@ public class ConsumableItem : Item
     [SerializeField]
     StatusEffect statusEffect = StatusEffect.none;
 
-    public override void Use(Player player)
+    public override bool Use(Player player)
     {
         player.addHealth(amtHealthAffected);
 
@@ -25,25 +17,9 @@ public class ConsumableItem : Item
         {
             player.applyStatusEffect(new StatusItem((StatusEffect)statusEffect, player));
         }
-    }
 
-    void pickUp(Player player)
-    {
-        if (player.inventory.Add(this))
-        {
-            // Destroy item
-            Destroy(gameObject);
-        };
+        return true;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            pickUp(other.GetComponent<Player>());
-        };
-    }
-
 
 }
 

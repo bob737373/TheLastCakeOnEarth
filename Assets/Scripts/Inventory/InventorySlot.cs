@@ -8,7 +8,7 @@ using System;
 public class InventorySlot : MonoBehaviour
 {
 
-    List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>();
 
     [SerializeField]
     Image itemImageUI;
@@ -26,8 +26,6 @@ public class InventorySlot : MonoBehaviour
     [SerializeField]
     int maxItemCount = 20;
 
-
-
     void Start()
     {
         button = buttonUI.GetComponent<Button>();
@@ -37,20 +35,15 @@ public class InventorySlot : MonoBehaviour
 
     void Update()
     {
-        if (items.Count > 0)
-        {
-            countTxt.text = items.Count.ToString();
-        }
-        else
-        {
-            countTxt.text = "0";
-        }
+        countTxt.text = items.Count.ToString();
     }
 
     public void useItem()
     {
-        items[0].Use(player);
-        removeItem(items[0]);
+        if (items[0].Use(player))
+        {
+            removeItem(items[0]);
+        };
     }
 
     public bool containsItemType(Item itemToCheck)
@@ -63,8 +56,7 @@ public class InventorySlot : MonoBehaviour
     }
 
     public bool addItem(Item newItem)
-    {   
-        Debug.Log(items.Count);
+    {
         if (items.Count >= maxItemCount)
         {
             Debug.Log("Max items in this slot!");
@@ -75,7 +67,6 @@ public class InventorySlot : MonoBehaviour
         items.Add(newItem);
         buttonUI.SetActive(true);
         itemImageUI.sprite = newItem.icon;
-        Debug.Log(items);
         countTxt.text = items.Count.ToString();
         return true;
     }

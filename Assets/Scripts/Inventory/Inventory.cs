@@ -11,7 +11,6 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     GameObject inventoryUI;
     public int space = 9;
-    public List<Item> items = new List<Item>();
 
     private List<InventorySlot> slots = new List<InventorySlot>();
 
@@ -39,10 +38,12 @@ public class Inventory : MonoBehaviour
 
 
     private int getActiveSlotsCount()
-    {   
+    {
         int count = 0;
-        foreach (InventorySlot slot in slots){
-            if(slot.isActive()){
+        foreach (InventorySlot slot in slots)
+        {
+            if (slot.isActive())
+            {
                 count++;
             }
         }
@@ -50,9 +51,14 @@ public class Inventory : MonoBehaviour
         return count;
     }
 
-    private InventorySlot getNextUnactiveSlot(){
-        foreach (InventorySlot slot in slots){
-            if(!slot.isActive()){
+    
+
+    private InventorySlot getNextUnactiveSlot()
+    {
+        foreach (InventorySlot slot in slots)
+        {
+            if (!slot.isActive())
+            {
                 return slot;
             }
         }
@@ -62,7 +68,6 @@ public class Inventory : MonoBehaviour
 
     public bool Add(Item item)
     {
-        Debug.Log("HRE");
         // Add to existing slot if exists and not full. 
         foreach (InventorySlot slot in slots)
         {
@@ -74,7 +79,6 @@ public class Inventory : MonoBehaviour
                 };
             }
         }
-        Debug.Log("HRE1");
 
         // Cant add a new slot if slot inventory is full as well.
         if (getActiveSlotsCount() >= space)
@@ -83,7 +87,6 @@ public class Inventory : MonoBehaviour
             inventoryUI.SetActive(open);
             return false;
         }
-        Debug.Log("HRE2");
 
         InventorySlot unactive = getNextUnactiveSlot();
         unactive.addItem(item);
@@ -91,8 +94,28 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-   
+    // Take an item from the users inventory
+    public bool TakeItem(string itemName){
+        foreach(InventorySlot slot in slots){
+            foreach(Item item in slot.items){
+                if(item.itemName == itemName){
+                    slot.removeItem(item);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
+
+    public List<Item> getItems(){
+        List<Item> items = new List<Item>();
+        foreach(InventorySlot slot in slots){
+            items.AddRange(slot.items);
+        }
+        
+        return items;
+    }
 
     void Update()
     {
