@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public class Enemy : Entity, IPersistentObject
 {
 
     [SerializeField]
@@ -27,13 +27,19 @@ public class Enemy : Entity
     Vector3 startingPosition;
     Transform target = null;
 
+    public string persistent_unique_id { get; set; }
+
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         currentState = EnemyState.idle;
         startingPosition = this.transform.position;
+
+        shouldSpawn();
     }
+
+
 
     // Update is called once per frame
     public override void Update()
@@ -78,7 +84,8 @@ public class Enemy : Entity
         HandleState();
     }
 
-    protected override void Attack() {
+    protected override void Attack()
+    {
 
     }
 
@@ -90,6 +97,7 @@ public class Enemy : Entity
 
     public override void Die()
     {
+        setObjectUsed();
         StartCoroutine(waiter());
     }
 
@@ -98,6 +106,7 @@ public class Enemy : Entity
         audioSource.PlayOneShot(enemyDie, 1f);
         moveSpeed = 0;
         yield return new WaitForSeconds(0.5f);
+
         base.Die();
     }
 
@@ -138,5 +147,26 @@ public class Enemy : Entity
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player") target = null;
+    }
+
+    public void generateID()
+    {
+        this.persistent_unique_id = this.transform.position.sqrMagnitude.ToString();
+    }
+
+    public void shouldSpawn()
+    {
+        generateID();
+
+        string exists = PlayerPrefs.GetString(persistent_unique_id);
+        if (exists.Length > 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void setObjectUsed()
+    {
+        PlayerPrefs.SetString(persistent_unique_id, "dead!");
     }
 }

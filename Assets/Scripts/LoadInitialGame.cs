@@ -10,6 +10,8 @@ public class LoadInitialGame : GameSceneManager
     override protected void Start()
     {
         base.Start();
+        Debug.Log("Resetting player prefs!!");
+        PlayerPrefs.DeleteAll();
         StartCoroutine(loadScene(dest));
     }
 
