@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     public void Home()//(int sceneID)
     {
         Time.timeScale = 1f;
-        Application.Quit();
-        //SceneManager.LoadScene(sceneID);
+        //Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }

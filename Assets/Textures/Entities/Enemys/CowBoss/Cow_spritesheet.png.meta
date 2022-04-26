@@ -1,0 +1,1008 @@
+fileFormatVersion: 2
+guid: df19bff0cee8b1a4a95d57a64e6389b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2521357643694677050
+    second: Cow_spritesheet_0
+  - first:
+      213: -4768040887473781653
+    second: Cow_spritesheet_1
+  - first:
+      213: 7817691181216088334
+    second: Cow_spritesheet_2
+  - first:
+      213: 2479434784968000748
+    second: Cow_spritesheet_3
+  - first:
+      213: 4752931252875362672
+    second: Cow_spritesheet_4
+  - first:
+      213: -760326886059042147
+    second: Cow_spritesheet_5
+  - first:
+      213: 3179421679393609883
+    second: Cow_spritesheet_6
+  - first:
+      213: 8404806619851187279
+    second: Cow_spritesheet_7
+  - first:
+      213: 202402919923378691
+    second: Cow_spritesheet_8
+  - first:
+      213: -126064514656388310
+    second: Cow_spritesheet_9
+  - first:
+      213: 237560951666655854
+    second: Cow_spritesheet_10
+  - first:
+      213: 3517925373636889621
+    second: Cow_spritesheet_11
+  - first:
+      213: 7528646892701371257
+    second: Cow_spritesheet_12
+  - first:
+      213: 1229763528480984549
+    second: Cow_spritesheet_13
+  - first:
+      213: 1139713117060198896
+    second: Cow_spritesheet_14
+  - first:
+      213: 1131431897434036182
+    second: Cow_spritesheet_15
+  - first:
+      213: 5978179839916415630
+    second: Cow_spritesheet_16
+  - first:
+      213: -3346667619411165848
+    second: Cow_spritesheet_17
+  - first:
+      213: -1021272124038336983
+    second: Cow_spritesheet_18
+  - first:
+      213: 7863847577471017552
+    second: Cow_spritesheet_19
+  - first:
+      213: 6282645024195764104
+    second: Cow_spritesheet_20
+  - first:
+      213: 8592301111210688814
+    second: Cow_spritesheet_21
+  - first:
+      213: 203925340626078451
+    second: Cow_spritesheet_22
+  - first:
+      213: 7299932231115889547
+    second: Cow_spritesheet_23
+  - first:
+      213: 7006590312987088501
+    second: Cow_spritesheet_24
+  - first:
+      213: 7677223985279277605
+    second: Cow_spritesheet_25
+  - first:
+      213: 1257459815775377568
+    second: Cow_spritesheet_26
+  - first:
+      213: 1199935866775110037
+    second: Cow_spritesheet_27
+  - first:
+      213: -8986659514811072015
+    second: Cow_spritesheet_28
+  - first:
+      213: -7389809373345651485
+    second: Cow_spritesheet_29
+  - first:
+      213: -4449806583299657429
+    second: Cow_spritesheet_30
+  - first:
+      213: -2007661875642176455
+    second: Cow_spritesheet_31
+  - first:
+      213: 7514424115013467742
+    second: Cow_spritesheet_32
+  - first:
+      213: -6726861463068125901
+    second: Cow_spritesheet_33
+  - first:
+      213: -12183905379725684
+    second: Cow_spritesheet_34
+  - first:
+      213: 7842602078838022770
+    second: Cow_spritesheet_35
+  - first:
+      213: 2227472815262018078
+    second: Cow_spritesheet_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 450
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cow_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2979
+        width: 211
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3ecdfe496520dd0800000000000000
+      internalID: -2521357643694677050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2982
+        width: 206
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b644693331484ddb0800000000000000
+      internalID: -4768040887473781653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2979
+        width: 425
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01c61c95b40e7c60800000000000000
+      internalID: 7817691181216088334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 2979
+        width: 425
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4c3c1ecc8b86220800000000000000
+      internalID: 2479434784968000748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 2979
+        width: 425
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0710d79dacdc5f140800000000000000
+      internalID: 4752931252875362672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2887
+        y: 2979
+        width: 423
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a954bb9b6c275f0800000000000000
+      internalID: -760326886059042147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2414
+        width: 423
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b989e6f0c239f1c20800000000000000
+      internalID: 3179421679393609883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 2406
+        width: 424
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44e416171fd3a470800000000000000
+      internalID: 8404806619851187279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 2411
+        width: 341
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ae88f12641fc200800000000000000
+      internalID: 202402919923378691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 2582
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bbf19edf0204ef0800000000000000
+      internalID: -126064514656388310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 2414
+        width: 259
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6248984d6cfb4300800000000000000
+      internalID: 237560951666655854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 2414
+        width: 260
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cc5f11d7e22d030800000000000000
+      internalID: 3517925373636889621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 2414
+        width: 259
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b40ded5702b7860800000000000000
+      internalID: 7528646892701371257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1858
+        width: 212
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed07d0e96ff01110800000000000000
+      internalID: 1229763528480984549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1855
+        width: 260
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1f930aa0311df00800000000000000
+      internalID: 1139713117060198896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1858
+        width: 425
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d71a1ee057a3bf00800000000000000
+      internalID: 1131431897434036182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 1855
+        width: 424
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a9e9104e2c6f250800000000000000
+      internalID: 5978179839916415630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1855
+        width: 423
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86df1b3188f3e81d0800000000000000
+      internalID: -3346667619411165848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 1858
+        width: 423
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eafa30a66b3d1f0800000000000000
+      internalID: -1021272124038336983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1318
+        width: 339
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052e9fe05bff12d60800000000000000
+      internalID: 7863847577471017552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1318
+        width: 260
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f5015dc50703750800000000000000
+      internalID: 6282645024195764104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1318
+        width: 259
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2148e0365cfd3770800000000000000
+      internalID: 8592301111210688814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1318
+        width: 259
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fac7b0540d74d200800000000000000
+      internalID: 203925340626078451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 1318
+        width: 260
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b561000b19e4560800000000000000
+      internalID: 7299932231115889547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 1302
+        width: 209
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 576d94464c86c3160800000000000000
+      internalID: 7006590312987088501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 742
+        width: 206
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a1ea7f98afa8a60800000000000000
+      internalID: 7677223985279277605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 778
+        width: 178
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a89e964a05637110800000000000000
+      internalID: 1257459815775377568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 782
+        width: 188
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5918164305707a010800000000000000
+      internalID: 1199935866775110037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 782
+        width: 180
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f14d4ed8c8f84380800000000000000
+      internalID: -8986659514811072015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 782
+        width: 188
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e461ef178f127990800000000000000
+      internalID: -7389809373345651485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 782
+        width: 180
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21ba331d7c1f32c0800000000000000
+      internalID: -4449806583299657429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 181
+        width: 206
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ce041492a5324e0800000000000000
+      internalID: -2007661875642176455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 178
+        width: 209
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5eb1036be8984860800000000000000
+      internalID: 7514424115013467742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 178
+        width: 425
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3355f88c32365a2a0800000000000000
+      internalID: -6726861463068125901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 178
+        width: 424
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e4dd77dc6b4dff0800000000000000
+      internalID: -12183905379725684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 178
+        width: 425
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27261efe90586dc60800000000000000
+      internalID: 7842602078838022770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cow_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2870
+        y: 178
+        width: 424
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a288c49b299ee10800000000000000
+      internalID: 2227472815262018078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

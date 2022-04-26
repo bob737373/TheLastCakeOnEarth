@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/LoadScene.unity
+    guid: 75983fa338145744780ef8c4aab5fa9a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 136c47c5925fdf04288ceb47c29207a6
+  - enabled: 1
+    path: Assets/Scenes/CentralScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/CityEastScene.unity
+    guid: 7a71a996223f8914985c4f4bc2434719
+  - enabled: 1
+    path: Assets/Scenes/CitySouthScene.unity
+    guid: 77f23aec80836e346bc0a967e0efd5a1
+  - enabled: 1
+    path: Assets/Scenes/BakeryScene.unity
+    guid: 4c648d26e1e8dc549858931aa8f05d80
+  - enabled: 1
+    path: Assets/Scenes/FlourFactoryScene.unity
+    guid: 1994aab1fa45eaf48b9523804dcb45ae
+  - enabled: 1
+    path: Assets/Scenes/MilkFactoryScene.unity
+    guid: e94029f2b1568b648942c47bb788cf10
   m_configObjects: {}
