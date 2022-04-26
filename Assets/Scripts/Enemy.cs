@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+enum Direction
+{
+    UP = 1,
+    DOWN = -1,
+    LEFT = -2,
+    RIGHT = 2
+}
 public class Enemy : Entity, IPersistentObject
 {
 
@@ -15,6 +21,10 @@ public class Enemy : Entity, IPersistentObject
     [SerializeField]
     AudioClip enemyDie;
 
+    Animator animator;
+
+    private Vector3 previousPosition;
+
     enum EnemyState
     {
         idle, // Nothing in sight of enemm
@@ -27,6 +37,7 @@ public class Enemy : Entity, IPersistentObject
     Vector3 startingPosition;
     Transform target = null;
 
+
     public string persistent_unique_id { get; set; }
 
     // Start is called before the first frame update
@@ -35,7 +46,7 @@ public class Enemy : Entity, IPersistentObject
         base.Start();
         currentState = EnemyState.idle;
         startingPosition = this.transform.position;
-
+        animator = GetComponent<Animator>();
         shouldSpawn();
     }
 
@@ -71,8 +82,9 @@ public class Enemy : Entity, IPersistentObject
                 currentState = EnemyState.alert;
             }
         }
-        else if (startingPosition != this.transform.position)
+        else if (startingPosition.x != this.transform.position.x || startingPosition.y != this.transform.position.y)
         {
+            print($"{startingPosition} {this.transform.position}");
             currentState = EnemyState.moveToStartPosition;
         }
         else
@@ -80,7 +92,7 @@ public class Enemy : Entity, IPersistentObject
             currentState = EnemyState.idle;
         }
 
-
+        print(currentState);
         HandleState();
     }
 
@@ -89,6 +101,50 @@ public class Enemy : Entity, IPersistentObject
 
     }
 
+    private void updateDirection()
+    {
+        if (this.transform.position != this.previousPosition)
+        {
+            float xDelta = this.previousPosition.x - this.transform.position.x;
+            float yDelta = this.previousPosition.y - this.transform.position.y;
+
+            Direction xDirection;
+            Direction yDirection;
+            Direction walkingDirection;
+
+            if (xDelta >= 0)
+            {
+                xDirection = Direction.LEFT;
+            }
+            else
+            {
+                xDirection = Direction.RIGHT;
+            }
+
+            if (yDelta >= 0)
+            {
+                yDirection = Direction.DOWN;
+            }
+            else
+            {
+                yDirection = Direction.UP;
+            }
+
+
+            if (Mathf.Abs(yDelta) >= Mathf.Abs(xDelta))
+            {
+                walkingDirection = yDirection;
+            }
+            else
+            {
+                walkingDirection = xDirection;
+            }
+
+            animator.SetInteger("direction", (int)walkingDirection);
+        }
+
+        this.previousPosition = this.transform.position;
+    }
     public override void TakeDamage(int damage, StatusEffect status)
     {
         base.TakeDamage(damage, status);
@@ -112,7 +168,9 @@ public class Enemy : Entity, IPersistentObject
 
     void WalkTo(Vector3 destination)
     {
+        animator.SetBool("idle", false);
         transform.position = Vector2.MoveTowards(this.transform.position, destination, moveSpeed * Time.deltaTime);
+        updateDirection();
     }
 
     private void HandleState()
@@ -120,6 +178,7 @@ public class Enemy : Entity, IPersistentObject
         switch (currentState)
         {
             case EnemyState.idle:
+                animator.SetBool("idle", true);
                 break;
             case EnemyState.moveToStartPosition:
             case EnemyState.alert:
