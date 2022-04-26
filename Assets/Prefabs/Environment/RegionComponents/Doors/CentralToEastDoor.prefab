@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 6060851485788995275}
   - component: {fileID: 5340361352117338051}
   m_Layer: 0
-  m_Name: CityEastDoor
+  m_Name: CentralToEastDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

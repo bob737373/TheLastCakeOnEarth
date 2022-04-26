@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BakeryScene.unity
     guid: 4c648d26e1e8dc549858931aa8f05d80
+  - enabled: 1
+    path: Assets/Scenes/CitySouthScene.unity
+    guid: 77f23aec80836e346bc0a967e0efd5a1
   m_configObjects: {}

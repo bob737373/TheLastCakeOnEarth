@@ -46,7 +46,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2169,8 +2169,8 @@ Tilemap:
   - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: e4404d3fda059a24ea1533f429e75eb0, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -30809956541495820, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6538697211313885665, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 18
@@ -2205,8 +2205,8 @@ Tilemap:
     m_Data: {fileID: -8890744712169220107, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 78
     m_Data: {fileID: 923850051027585900, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -30809956541495820, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 5439228621243181349, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 6
@@ -2978,6 +2978,8 @@ GameObject:
   - component: {fileID: 3698387499270316440}
   - component: {fileID: 3698387499270316442}
   - component: {fileID: 3698387499270316443}
+  - component: {fileID: 6272391162811039704}
+  - component: {fileID: 3165179643007969460}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -3133,3 +3135,35 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &6272391162811039704
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698387499270316441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+--- !u!114 &3165179643007969460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698387499270316441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4809b9533971cd042b8101b0bb705aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dest: 9
+  src: 0
+  spawnx: 0
+  spawny: 0
