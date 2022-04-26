@@ -92,7 +92,6 @@ public class Enemy : Entity, IPersistentObject
             currentState = EnemyState.idle;
         }
 
-        print(currentState);
         HandleState();
     }
 
