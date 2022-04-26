@@ -6,12 +6,13 @@ public class Player : Entity
 {
 
     [SerializeField]
+    GameObject CameraMountPoint;
+
+    [SerializeField]
     WeaponContainer[] weapons;
 
     [SerializeField]
     LayerMask enemyLayers;
-    [SerializeField]
-    Camera cam;
     [SerializeField]
     Animator animator;
 
@@ -22,6 +23,7 @@ public class Player : Entity
     enum Direction { down, right, up, left, none };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
 
+    Camera cam;
     Vector2 mousePos;
     Vector3 mousePos3;
     Vector2 mouseDir;
@@ -55,6 +57,14 @@ public class Player : Entity
             Debug.LogError("Inventory is not defined in GUI!");
         }
 
+        if(isLocalPlayer) {
+            cam = Camera.main;
+            Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
+            cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point
+            cameraTransform.position = CameraMountPoint.transform.position;  //Set position/rotation same as the mount point
+            cameraTransform.rotation = CameraMountPoint.transform.rotation;
+        }
+
         animator.SetInteger("Direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -77,63 +87,62 @@ public class Player : Entity
         if(isLocalPlayer) {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
-        }
-        animator.SetFloat("SpeedX", movement.x);
-        animator.SetBool("MovingHorizontally", movement.x != 0);
-        animator.SetFloat("SpeedY", movement.y);
-        if (movement.x > 0)
-        {
-            direction = Direction.right;
-            animator.SetBool("Moving", true);
-        }
-        else if (movement.x < 0)
-        {
-            direction = Direction.left;
-            animator.SetBool("Moving", true);
-        }
-        else if (movement.y < 0)
-        {
-            direction = Direction.down;
-            animator.SetBool("Moving", true);
-        }
-        else if (movement.y > 0)
-        {
-            direction = Direction.up;
-            animator.SetBool("Moving", true);
-        }
-        else
-        {
-            animator.SetBool("Moving", false);
-        }
-        animator.SetInteger("Direction", (int)direction);
-
-        movement.Normalize();
-        mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos = mousePos3;
-
-        if (movement.x != 0 || movement.y != 0)
-        {
-            if (!walking)
+            animator.SetFloat("SpeedX", movement.x);
+            animator.SetBool("MovingHorizontally", movement.x != 0);
+            animator.SetFloat("SpeedY", movement.y);
+            if (movement.x > 0)
             {
-                StartCoroutine(walk());
+                direction = Direction.right;
+                animator.SetBool("Moving", true);
             }
-        }
+            else if (movement.x < 0)
+            {
+                direction = Direction.left;
+                animator.SetBool("Moving", true);
+            }
+            else if (movement.y < 0)
+            {
+                direction = Direction.down;
+                animator.SetBool("Moving", true);
+            }
+            else if (movement.y > 0)
+            {
+                direction = Direction.up;
+                animator.SetBool("Moving", true);
+            }
+            else
+            {
+                animator.SetBool("Moving", false);
+            }
+            animator.SetInteger("Direction", (int)direction);
 
+            movement.Normalize();
+            mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
+            mousePos = mousePos3;
 
-        // Make sure inventory isnt open
-        if (Input.GetButton("Fire1") && !inventory.open)
-        {
-            Attack();
-        }
+            if (movement.x != 0 || movement.y != 0)
+            {
+                if (!walking)
+                {
+                    StartCoroutine(walk());
+                }
+            }
 
-        float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
-        if (scroll > 0)
-        {
-            ChangeWeapon(true);
-        }
-        else if (scroll < 0)
-        {
-            ChangeWeapon(false);
+            // Make sure inventory isnt open
+            if (Input.GetButton("Fire1") && !inventory.open)
+            {
+                Attack();
+            }
+
+            float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
+            if (scroll > 0)
+            {
+                ChangeWeapon(true);
+            }
+            else if (scroll < 0)
+            {
+                ChangeWeapon(false);
+            }
         }
 
     }
