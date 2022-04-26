@@ -1186,6 +1186,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[7655].second.m_TileSpriteIndex
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 8078339325138730117, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_Name
+      value: MilkFactoryExterior
+      objectReference: {fileID: 0}
     - target: {fileID: 8078339325263565908, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
       propertyPath: m_Name
       value: CityEastRegion
@@ -1233,6 +1237,26 @@ PrefabInstance:
     - target: {fileID: 8078339325263565914, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078339325838662692, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078339325838662692, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[21].m_Data
+      value: 
+      objectReference: {fileID: -30809956541495820, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
+    - target: {fileID: 8078339325838662692, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078339325838662692, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[21].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8078339325838662692, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
+      propertyPath: m_Tiles.Array.data[0].second.m_TileSpriteIndex
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245f7c5e37a1bfd4a9823fbc2b2de64b, type: 3}
