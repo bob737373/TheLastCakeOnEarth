@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/* 
+    COORDS
+    In an ideal world, this would be in some kind of data structure for convenience.
+    Reality is rarely so kind.
+    Instead, I've plugged all of these coordinates into the appropriate doors across all of the scenes
+    
+    Default Spawn: 33, 5
+    Central -> South:28, 1
+    Central -> East: 350, 452
+    Central -> Bakery: 5, -5
+    East -> Central: 72, 18
+    East -> MilkFactory: 0, 1
+    South -> Central: 19, -11
+    South -> FlourFactory: 0, 1
+    Bakery -> Central: 33, 5
+    FlourFactory -> South: 64, -11
+    MilkFactory -> East: 371, 487
+*/
 
 public enum ScenesEnum
 {
@@ -108,7 +126,7 @@ public class GameSceneManager : MonoBehaviour
             case ScenesEnum.SCENE_LOAD:
                 return "LoadScene";
             case ScenesEnum.BAKERY_AREA:
-                return "SampleScene";
+                return "CentralScene";
             case ScenesEnum.CITY_EAST:
                 return "CityEastScene";
             case ScenesEnum.CITY_WEST:

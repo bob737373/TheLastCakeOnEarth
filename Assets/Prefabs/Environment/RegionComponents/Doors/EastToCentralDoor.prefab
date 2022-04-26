@@ -256,5 +256,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 0
   src: 1
-  spawnx: 370
-  spawny: 442
+  spawnx: 72
+  spawny: 18

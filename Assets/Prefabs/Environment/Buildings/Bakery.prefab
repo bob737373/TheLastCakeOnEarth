@@ -185,7 +185,7 @@ MonoBehaviour:
   dest: 5
   src: 0
   spawnx: 5
-  spawny: -3
+  spawny: -5
 --- !u!1 &8866759650308068963
 GameObject:
   m_ObjectHideFlags: 0

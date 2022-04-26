@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 0
   src: 10
-  spawnx: 367
-  spawny: 443
+  spawnx: 33
+  spawny: 5
 --- !u!4 &264018722
 Transform:
   m_ObjectHideFlags: 0
@@ -332,11 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 362.9078
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 441.69858
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.z

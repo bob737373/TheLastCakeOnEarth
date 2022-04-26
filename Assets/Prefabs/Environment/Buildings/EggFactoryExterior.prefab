@@ -840,11 +840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4809b9533971cd042b8101b0bb705aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dest: 6
+  dest: 7
   src: 1
-  player: {fileID: 0}
   spawnx: 0
-  spawny: 0
+  spawny: 1
 --- !u!1 &736516492365730068
 GameObject:
   m_ObjectHideFlags: 0
