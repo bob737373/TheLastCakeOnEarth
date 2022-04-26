@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BakeryScene.unity
     guid: 4c648d26e1e8dc549858931aa8f05d80
+  - enabled: 1
+    path: Assets/Scenes/LoadScene.unity
+    guid: 75983fa338145744780ef8c4aab5fa9a
   m_configObjects: {}
