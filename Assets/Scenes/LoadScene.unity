@@ -379,6 +379,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: milk
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: flour
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2088625420}
