@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 enum Direction
-{
+{   
+    None = 0,
     UP = 1,
     DOWN = -1,
     LEFT = -2,
@@ -178,6 +179,7 @@ public class Enemy : Entity, IPersistentObject
         {
             case EnemyState.idle:
                 animator.SetBool("idle", true);
+                animator.SetInteger("direction", (int)Direction.None);
                 break;
             case EnemyState.moveToStartPosition:
             case EnemyState.alert:
