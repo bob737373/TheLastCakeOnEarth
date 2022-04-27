@@ -3165,5 +3165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 9
   src: 4
-  spawnx: 0
-  spawny: 1
+  spawnx: -54
+  spawny: -40
