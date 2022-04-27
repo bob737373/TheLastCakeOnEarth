@@ -842,8 +842,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dest: 7
   src: 1
-  spawnx: 0
-  spawny: 1
+  spawnx: -54
+  spawny: -40
 --- !u!1 &736516492365730068
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3015,8 +3015,8 @@ Tilemap:
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 2ce4d544a5af1f94aab045443d26afda, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -30809956541495820, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6538697211313885665, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 18
@@ -3051,8 +3051,8 @@ Tilemap:
     m_Data: {fileID: -8890744712169220107, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 69
     m_Data: {fileID: 923850051027585900, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -30809956541495820, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 5439228621243181349, guid: ab9a2a392b734fd42acc441c495ac1f9, type: 3}
   - m_RefCount: 6

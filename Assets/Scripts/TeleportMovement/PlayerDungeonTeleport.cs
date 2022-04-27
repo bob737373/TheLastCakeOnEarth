@@ -20,7 +20,11 @@ public class PlayerDungeonTeleport : MonoBehaviour
                     transform.position = currentTeleporter.GetComponent<DungeonTeleporter>().GetDestination(GetComponent<SimpleSeed>().getSeedFor(floor + 1)).position;
                 } else {
                     floor = currentTeleporter.GetComponent<DungeonTeleporter>().GetFloor();
-                    transform.position = currentTeleporter.GetComponent<DungeonTeleporter>().GetDestination(GetComponent<SimpleSeed>().getSeedFor(floor - 1)).position;
+                    if(floor - 1 != 0){
+                        transform.position = currentTeleporter.GetComponent<DungeonTeleporter>().GetDestination(GetComponent<SimpleSeed>().getSeedFor(floor - 1)).position;
+                    } else {
+                        transform.position = currentTeleporter.GetComponent<DungeonTeleporter>().GetDestination(1).position;
+                    }  
                 }
             }
         }
