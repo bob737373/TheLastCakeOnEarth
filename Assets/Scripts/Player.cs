@@ -18,15 +18,12 @@ public class Player : Entity
     [SerializeField]
     public Inventory inventory;
 
-    //booleans for HUD icon display
-    enum Direction { down, right, up, left, none };
+    enum Direction { down = -1, right = 2, up = 1, left = -2, none = 0 };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
 
     Vector2 mousePos;
     Vector3 mousePos3;
-    Vector2 mouseDir;
     Direction direction;
-    Direction attackDir;
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
@@ -59,53 +56,38 @@ public class Player : Entity
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
-        if (weapons.Length != 0)
-        {
-            selectedWeapon = weapons[0].weapon;
-        }
-        for (int i = 1; i < weapons.Length; i++)
-        {
-            weapons[i].weapon.gameObject.SetActive(false);
-        }
 
     }
 
     public override void Update()
     {
         base.Update();
-
-
         cam.transform.rotation = Quaternion.Euler(0, 0, 0);
         movement.x = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("SpeedX", movement.x);
-        animator.SetBool("MovingHorizontally", movement.x != 0);
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("SpeedY", movement.y);
+
         if (movement.x > 0)
         {
             direction = Direction.right;
-            animator.SetBool("Moving", true);
         }
         else if (movement.x < 0)
         {
             direction = Direction.left;
-            animator.SetBool("Moving", true);
         }
         else if (movement.y < 0)
         {
             direction = Direction.down;
-            animator.SetBool("Moving", true);
         }
         else if (movement.y > 0)
         {
             direction = Direction.up;
-            animator.SetBool("Moving", true);
         }
         else
         {
-            animator.SetBool("Moving", false);
+            direction = Direction.none;
         }
-        animator.SetInteger("Direction", (int)direction);
+
+        animator.SetInteger("direction", (int)direction);
 
         movement.Normalize();
         mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -126,15 +108,6 @@ public class Player : Entity
             Attack();
         }
 
-        float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
-        if (scroll > 0)
-        {
-            ChangeWeapon(true);
-        }
-        else if (scroll < 0)
-        {
-            ChangeWeapon(false);
-        }
 
     }
 
@@ -168,67 +141,18 @@ public class Player : Entity
         return icing;
     }
 
-    void ChangeWeapon(bool increment)
-    {
-        if (increment)
-        {
-            weaponIndex++;
-            if (weaponIndex >= weapons.Length) weaponIndex = 0;
-        }
-        else
-        {
-            weaponIndex--;
-            if (weaponIndex < 0) weaponIndex = weapons.Length - 1;
-        }
-        SelectWeapon(weaponIndex);
-        //selectedWeapon = weapons [weaponIndex];
-    }
 
-    void SelectWeapon(int newWeaponIndex)
-    {
-        if (newWeaponIndex < weapons.Length && newWeaponIndex >= 0)
-        {
-            selectedWeapon.gameObject.SetActive(false);
-            selectedWeapon = weapons[newWeaponIndex].weapon;
-            selectedWeapon.gameObject.SetActive(true);
-            weaponIndex = newWeaponIndex;
-        }
-    }
 
     override protected void Attack()
     {
-        mouseDir = mousePos - rb.position;
-        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
-        float rot = ang - 90f;
-        if (ang >= 135 || ang <= -135)
-        {
-            attackDir = Direction.left;
-        }
-        else if (ang >= 45)
-        {
-            attackDir = Direction.up;
-        }
-        else if (ang >= -45)
-        {
-            attackDir = Direction.right;
-        }
-        else if (ang >= -135)
-        {
-            attackDir = Direction.down;
-        }
-        animator.SetInteger("AttackDir", ((int)attackDir));
-        animator.SetTrigger("Attack");
-        selectedWeapon.transform.rotation = Quaternion.Euler(0, 0, rot);//ang;
-        if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
-        StartCoroutine(ResetAttackTrigger());
+        animator.SetBool("isAttacking", true);
     }
 
-    IEnumerator ResetAttackTrigger()
+    void ResetAttack()
     {
-        yield return new WaitForSeconds(0.1f); //WaitForEndOfFrame();
-        animator.ResetTrigger("Attack");
-        animator.SetInteger("AttackDir", (int)Direction.none);
+        animator.SetBool("isAttacking", false);
     }
+
 
 }
 
