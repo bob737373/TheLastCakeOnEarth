@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
@@ -21,7 +22,7 @@ public class Player : Entity
     //booleans for HUD icon display
     enum Direction { down, right, up, left, none };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
-
+    
     Vector2 mousePos;
     Vector3 mousePos3;
     Vector2 mouseDir;
@@ -136,6 +137,7 @@ public class Player : Entity
             ChangeWeapon(false);
         }
 
+
     }
 
     void FixedUpdate()
@@ -230,6 +232,15 @@ public class Player : Entity
         animator.SetInteger("AttackDir", (int)Direction.none);
     }
 
+
+    public override void Die()
+    {
+        if (this.health <= 0)
+        {
+            SceneManager.LoadScene("DeathScreen");
+        }
+        base.Die();
+    }
 }
 
 [System.Serializable]
@@ -239,4 +250,6 @@ public struct WeaponContainer
     public string label;// { get; private set; }
     public Weapon weapon;// { get; private set; }
 
+
 }
+
