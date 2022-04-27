@@ -44,6 +44,12 @@ public class Player : Entity
     [SerializeField]
     AudioClip stepHard;
 
+    [SerializeField]
+    private bool milk;
+
+    [SerializeField]
+    private bool flour;
+
 
     protected bool walking = false;
 
@@ -166,6 +172,14 @@ public class Player : Entity
     public int getIcing()
     {
         return icing;
+    }
+
+    public bool getMilk(){
+        return milk;
+    }
+
+    public bool getFlour(){
+        return flour;
     }
 
     void ChangeWeapon(bool increment)
