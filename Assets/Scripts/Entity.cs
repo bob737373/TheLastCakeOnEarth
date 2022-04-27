@@ -21,7 +21,8 @@ public abstract class Entity : MonoBehaviour
 
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
-
+    
+    [SerializeField]
     protected float moveSpeed = 5f;
 
     [SerializeField]
