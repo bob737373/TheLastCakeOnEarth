@@ -12,6 +12,9 @@ public class ChestScript : MonoBehaviour
     public AudioClip clip;
 
     public Player player;
+
+    public GameObject chestItem;
+
     
     void Start()
     {
@@ -35,6 +38,8 @@ public class ChestScript : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = treasureChestOpen;
                 source.PlayOneShot(clip);
                 Debug.Log("yes");
+                       
+                transform. GetChild(0). transform. gameObject. SetActive(true);
             }       
         }
         
