@@ -13,8 +13,6 @@ public class ChestScript : MonoBehaviour
 
     public Player player;
 
-    public GameObject chestItem;
-
     
     void Start()
     {
