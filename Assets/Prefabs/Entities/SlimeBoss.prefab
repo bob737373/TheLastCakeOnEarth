@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d8bda10c1c36748ad437186aba5667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 4
+  attackRange: 2
   meleeAttackDmg: 1
   attacksPerSecond: 1
   maxHealth: 15
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.38
+  m_Radius: 2.65
 --- !u!95 &4102930753242572952
 Animator:
   serializedVersion: 3
