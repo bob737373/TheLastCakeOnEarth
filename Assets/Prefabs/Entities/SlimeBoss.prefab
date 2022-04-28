@@ -124,6 +124,7 @@ MonoBehaviour:
   attackRange: 4.18
   meleeAttackDmg: 1
   attacksPerSecond: 1
+  maxHealth: 0
   rb: {fileID: 767054784344275635}
   defaultMoveSpeed: 3
   moveSpeed: 5
@@ -132,6 +133,7 @@ MonoBehaviour:
   audioSource: {fileID: 883015572129202163}
   enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
   enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
+  shouldRespawn: 0
 --- !u!58 &4102930753242572953
 CircleCollider2D:
   m_ObjectHideFlags: 0
