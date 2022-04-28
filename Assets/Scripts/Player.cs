@@ -23,7 +23,9 @@ public class Player : Entity
 
     Vector2 mousePos;
     Vector3 mousePos3;
+    Vector2 mouseDir;
     Direction direction;
+    Direction attackDir;
     int weaponIndex;
     Weapon selectedWeapon;
     float camZ;
@@ -159,6 +161,27 @@ public class Player : Entity
 
     override protected void Attack()
     {
+        mouseDir = mousePos - rb.position;
+        float ang = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
+        float rot = ang - 90f;
+        if (ang >= 135 || ang <= -135)
+        {
+            attackDir = Direction.left;
+        }
+        else if (ang >= 45)
+        {
+            attackDir = Direction.up;
+        }
+        else if (ang >= -45)
+        {
+            attackDir = Direction.right;
+        }
+        else if (ang >= -135)
+        {
+            attackDir = Direction.down;
+        }
+        animator.SetInteger("AttackDir", ((int)attackDir));
+
         animator.SetBool("isAttacking", true);
         this.meleeAttack(this.enemyList);
     }
