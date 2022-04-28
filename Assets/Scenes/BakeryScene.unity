@@ -182,5 +182,13 @@ PrefabInstance:
       propertyPath: dest
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3469026985589824362, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_Text
+      value: Oven
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119473899623743773, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
