@@ -69,7 +69,12 @@ public abstract class Entity : MonoBehaviour
             nextDamageEvent = Time.time + attacksPerSecond;
             foreach (Enemy enemy in targets)
             {   
-                if (Vector2.Distance(enemy.transform.position, this.transform.position) <= attackRange || enemy.gameObject.GetComponent<CowBoss>())
+                float tempAttackRange = attackRange;
+                if(enemy.gameObject.GetComponent<CowBoss>()){
+                    tempAttackRange += 2;
+                }
+
+                if (Vector2.Distance(enemy.transform.position, this.transform.position) <= tempAttackRange)
                 {
                     enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
                 }
