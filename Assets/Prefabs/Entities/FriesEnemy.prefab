@@ -328,14 +328,16 @@ MonoBehaviour:
   attackRange: 1
   meleeAttackDmg: 1
   attacksPerSecond: 1
+  maxHealth: 10
   rb: {fileID: -5462167263018717961}
   defaultMoveSpeed: 3
   moveSpeed: 3
-  health: 3
+  health: 10
   alertRange: 8
   audioSource: {fileID: 3663188392561928631}
   enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
   enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
+  shouldRespawn: 1
 --- !u!95 &952015692
 Animator:
   serializedVersion: 3

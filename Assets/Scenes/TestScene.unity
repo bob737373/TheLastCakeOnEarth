@@ -35003,74 +35003,95 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!114 &1541499149 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-  m_PrefabInstance: {fileID: 1900373278}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8de0a7e76fa7894c8e28e5d21949848, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &1772815746
+--- !u!1001 &1347065372
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572954, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
+      propertyPath: m_Name
+      value: SlimeBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 331.341
+      value: 333.03
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 493.37924
+      value: 497.22
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.4439726
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595160, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+    - target: {fileID: 4102930753242572956, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 461568776808595166, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
-      propertyPath: m_Name
-      value: FriesEnemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
+--- !u!114 &1541499149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+  m_PrefabInstance: {fileID: 1900373278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722278500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8de0a7e76fa7894c8e28e5d21949848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1722278500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5685725065730189262, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+  m_PrefabInstance: {fileID: 1900373278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1722278508
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722278500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1001 &1900373278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35088,11 +35109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 337.082
+      value: 332.43
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 493.354
+      value: 493.09
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_LocalPosition.z

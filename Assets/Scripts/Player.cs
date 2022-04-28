@@ -47,6 +47,7 @@ public class Player : Entity
     [SerializeField]
     private bool flour;
 
+    HashSet<Entity> enemyList = new HashSet<Entity>();
 
     protected bool walking = false;
 
@@ -58,7 +59,7 @@ public class Player : Entity
             Debug.LogError("Inventory is not defined in GUI!");
         }
 
-        animator.SetInteger("Direction", (int)Direction.none);
+        animator.SetInteger("direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
@@ -120,7 +121,6 @@ public class Player : Entity
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        //rb.rotation = ang;
     }
 
     public override void TakeDamage(int damage, StatusEffect status)
@@ -147,22 +147,43 @@ public class Player : Entity
         return icing;
     }
 
-    public bool getMilk(){
+    public bool getMilk()
+    {
         return milk;
     }
 
-    public bool getFlour(){
+    public bool getFlour()
+    {
         return flour;
     }
 
     override protected void Attack()
     {
         animator.SetBool("isAttacking", true);
+        this.meleeAttack(this.enemyList);
     }
 
     void ResetAttack()
     {
         animator.SetBool("isAttacking", false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Enemy enemy = other.transform.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            this.enemyList.Add(enemy);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        Enemy enemy = col.transform.GetComponent<Enemy>();
+        if (enemy != null && this.enemyList.Contains(enemy) == true)
+        {
+            this.enemyList.Remove(enemy);
+        }
     }
 
 

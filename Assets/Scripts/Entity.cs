@@ -14,6 +14,7 @@ public abstract class Entity : MonoBehaviour
     protected float attacksPerSecond = 1.0f;
     private float nextDamageEvent;
 
+    [SerializeField]
     protected int maxHealth;
 
     [SerializeField]
@@ -21,7 +22,7 @@ public abstract class Entity : MonoBehaviour
 
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
-    
+
     [SerializeField]
     protected float moveSpeed = 5f;
 
@@ -58,6 +59,18 @@ public abstract class Entity : MonoBehaviour
         {
             nextDamageEvent = Time.time + attacksPerSecond;
             target.TakeDamage(meleeAttackDmg, StatusEffect.caffeinated);
+        }
+    }
+
+    public void meleeAttack(HashSet<Entity> targets)
+    {
+        if (Time.time > nextDamageEvent)
+        {
+            nextDamageEvent = Time.time + attacksPerSecond;
+            foreach (Enemy enemy in targets) 
+            {
+                enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+            }
         }
     }
 

@@ -18,7 +18,6 @@ public class SimpleSeed : MonoBehaviour
         {
             seed = (first * 1000) + (second * 100) + (third * 10) + (fourth);
         }
-        print("Seed: " + seed);
         // index for first room: (seed / 1000)
         // index for second room: ((seed % 1000) / 100)
         // index for third room: (((seed % 1000) % 100) / 10)

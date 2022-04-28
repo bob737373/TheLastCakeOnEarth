@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 enum Direction
-{   
+{
     None = 0,
     UP = 1,
     DOWN = -1,
@@ -23,6 +23,9 @@ public class Enemy : Entity, IPersistentObject
     AudioClip enemyDie;
 
     Animator animator;
+
+    [SerializeField]
+    bool shouldRespawn = true;
 
     private Vector3 previousPosition;
 
@@ -85,7 +88,6 @@ public class Enemy : Entity, IPersistentObject
         }
         else if (startingPosition.x != this.transform.position.x || startingPosition.y != this.transform.position.y)
         {
-            print($"{startingPosition} {this.transform.position}");
             currentState = EnemyState.moveToStartPosition;
         }
         else
@@ -216,13 +218,18 @@ public class Enemy : Entity, IPersistentObject
 
     public void shouldSpawn()
     {
-        generateID();
-
-        string exists = PlayerPrefs.GetString(persistent_unique_id);
-        if (exists.Length > 0)
+        if (!shouldRespawn)
         {
-            Destroy(gameObject);
+
+            generateID();
+
+            string exists = PlayerPrefs.GetString(persistent_unique_id);
+            if (exists.Length > 0)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 
     public void setObjectUsed()
