@@ -43,6 +43,8 @@ public class Player : Entity
     AudioClip oof;
     [SerializeField]
     AudioClip stepHard;
+    [SerializeField]
+    AudioClip swish;
 
     [SerializeField]
     public bool milk;
@@ -116,6 +118,7 @@ public class Player : Entity
         if (Input.GetButton("Fire1") && !inventory.open)
         {
             Attack();
+            audioSource.PlayOneShot(swish, 0.2f);
         }
 
 
