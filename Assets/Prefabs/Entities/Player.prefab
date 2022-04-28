@@ -335,11 +335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8de0a7e76fa7894c8e28e5d21949848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 0.5
-  meleeAttackDmg: 1
+  attackRange: 2.1
+  meleeAttackDmg: 5
   attacksPerSecond: 1
+  maxHealth: 0
   rb: {fileID: 5685725065730189260}
   defaultMoveSpeed: 5
+  moveSpeed: 5
   health: 10
   weapons:
   - label: RollingPin
@@ -357,6 +359,8 @@ MonoBehaviour:
   audioSource: {fileID: 7338483059602912444}
   oof: {fileID: 8300000, guid: eedddfaf139190944acd2324bd64b657, type: 3}
   stepHard: {fileID: 8300000, guid: 06e1401c0a212bb449ff0ced4fc2ae2b, type: 3}
+  milk: 0
+  flour: 0
 --- !u!58 &17673713
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -383,7 +387,7 @@ Animator:
   m_GameObject: {fileID: 5685725065730189262}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 560687781ad1e0b4584fa8cce2879be9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f87a77f1157b914b95977fe0427a5a3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

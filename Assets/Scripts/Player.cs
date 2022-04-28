@@ -193,7 +193,7 @@ public class Player : Entity
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {
+    {   
         Enemy enemy = other.transform.GetComponent<Enemy>();
         if (enemy != null)
         {
@@ -201,16 +201,16 @@ public class Player : Entity
         }
     }
 
-    private void OnTriggerExit2D(Collider2D col)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        Enemy enemy = col.transform.GetComponent<Enemy>();
+        Enemy enemy = other.transform.GetComponent<Enemy>();
         if (enemy != null && this.enemyList.Contains(enemy) == true)
         {
             this.enemyList.Remove(enemy);
         }
     }
 
-    public override void  Die()
+    public override void Die()
     {
         SceneManager.LoadScene("DeathScreen");
     }

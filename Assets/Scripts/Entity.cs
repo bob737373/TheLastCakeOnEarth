@@ -67,9 +67,12 @@ public abstract class Entity : MonoBehaviour
         if (Time.time > nextDamageEvent)
         {
             nextDamageEvent = Time.time + attacksPerSecond;
-            foreach (Enemy enemy in targets) 
+            foreach (Enemy enemy in targets)
             {
-                enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                if (Vector2.Distance(enemy.transform.position, this.transform.position) <= attackRange)
+                {
+                    enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                }
             }
         }
     }

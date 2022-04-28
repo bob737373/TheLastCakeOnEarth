@@ -203,6 +203,7 @@ public class Enemy : Entity, IPersistentObject
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.tag == "Player") target = other.transform;
     }
 

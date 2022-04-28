@@ -326,10 +326,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 235573608596038113, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: sceneId
-      value: 656165526
-      objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189258, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -379,33 +375,13 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: milk
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: flour
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 734318396}
-    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2088625420}
     - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: attackRange
-      value: 2
+      value: 2.1
       objectReference: {fileID: 0}
-    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: meleeAttackDmg
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068420410341734693, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f87a77f1157b914b95977fe0427a5a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
 --- !u!114 &734318395 stripped
@@ -419,11 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8de0a7e76fa7894c8e28e5d21949848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &734318396 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7068420410341734693, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
-  m_PrefabInstance: {fileID: 734318394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &912873363
 PrefabInstance:
   m_ObjectHideFlags: 0
