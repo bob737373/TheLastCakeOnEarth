@@ -118,7 +118,7 @@ public class Player : Entity
         if (Input.GetButton("Fire1") && !inventory.open)
         {
             Attack();
-            audioSource.PlayOneShot(swish, 0.2f);
+            audioSource.PlayOneShot(swish, .2f);
         }
 
 
@@ -196,7 +196,7 @@ public class Player : Entity
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {   
+    {
         Enemy enemy = other.transform.GetComponent<Enemy>();
         if (enemy != null)
         {
@@ -215,6 +215,7 @@ public class Player : Entity
 
     public override void Die()
     {
+        this.enemyList = new HashSet<Entity>();
         SceneManager.LoadScene("DeathScreen");
     }
 
