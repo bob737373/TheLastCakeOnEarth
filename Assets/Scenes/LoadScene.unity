@@ -394,6 +394,14 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 2088625420}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685725065730189263, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
+      propertyPath: meleeAttackDmg
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7068420410341734693, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
       propertyPath: m_Controller
       value: 

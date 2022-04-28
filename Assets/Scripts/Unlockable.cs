@@ -23,15 +23,19 @@ public class Unlockable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        player = playerObj.GetComponent<Player>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown("f") && player)
         {
+            Debug.Log("input registered");
             while (currentParts < numberOfPartsRequired && player.inventory.TakeItem("Part"))
             {
                 currentParts++;
+                Debug.Log("parts taken");
             }
         }
 
