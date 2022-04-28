@@ -44,10 +44,10 @@ public class Player : Entity
     AudioClip stepHard;
 
     [SerializeField]
-    private bool milk;
+    public bool milk;
 
     [SerializeField]
-    private bool flour;
+    public bool flour;
 
     HashSet<Entity> enemyList = new HashSet<Entity>();
 

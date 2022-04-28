@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4102930753242572956}
   - component: {fileID: 4102930753242572955}
   - component: {fileID: 767054784344275635}
-  - component: {fileID: 7119750888436964031}
+  - component: {fileID: 458169310625476818}
   - component: {fileID: 4102930753242572953}
   - component: {fileID: 4102930753242572952}
   m_Layer: 6
@@ -109,7 +109,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7119750888436964031
+--- !u!114 &458169310625476818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,18 +118,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4102930753242572954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69b1833f6b455048b1a31a7984faaf8, type: 3}
+  m_Script: {fileID: 11500000, guid: f7d8bda10c1c36748ad437186aba5667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 4.18
+  attackRange: 4
   meleeAttackDmg: 1
   attacksPerSecond: 1
-  maxHealth: 0
+  maxHealth: 15
   rb: {fileID: 767054784344275635}
   defaultMoveSpeed: 3
-  moveSpeed: 5
-  health: 3
-  alertRange: 8
+  moveSpeed: 3
+  health: 10
+  alertRange: 10
   audioSource: {fileID: 883015572129202163}
   enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
   enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
