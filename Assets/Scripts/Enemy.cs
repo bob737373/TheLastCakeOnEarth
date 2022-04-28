@@ -1,8 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Enemy : Entity
+enum Direction
+{
+    None = 0,
+    UP = 1,
+    DOWN = -1,
+    LEFT = -2,
+    RIGHT = 2
+}
+public class Enemy : Entity, IPersistentObject
 {
 
     [SerializeField]
@@ -14,6 +21,13 @@ public class Enemy : Entity
     AudioClip enemyOof;
     [SerializeField]
     AudioClip enemyDie;
+
+    Animator animator;
+
+    [SerializeField]
+    bool shouldRespawn = true;
+
+    private Vector3 previousPosition;
 
     enum EnemyState
     {
@@ -27,13 +41,20 @@ public class Enemy : Entity
     Vector3 startingPosition;
     Transform target = null;
 
+
+    public string persistent_unique_id { get; set; }
+
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         currentState = EnemyState.idle;
         startingPosition = this.transform.position;
+        animator = GetComponent<Animator>();
+        shouldSpawn();
     }
+
+
 
     // Update is called once per frame
     public override void Update()
@@ -65,7 +86,7 @@ public class Enemy : Entity
                 currentState = EnemyState.alert;
             }
         }
-        else if (startingPosition != this.transform.position)
+        else if (startingPosition.x != this.transform.position.x || startingPosition.y != this.transform.position.y)
         {
             currentState = EnemyState.moveToStartPosition;
         }
@@ -74,14 +95,58 @@ public class Enemy : Entity
             currentState = EnemyState.idle;
         }
 
-
         HandleState();
     }
 
-    protected override void Attack() {
+    protected override void Attack()
+    {
 
     }
 
+    private void updateDirection()
+    {
+        if (this.transform.position != this.previousPosition)
+        {
+            float xDelta = this.previousPosition.x - this.transform.position.x;
+            float yDelta = this.previousPosition.y - this.transform.position.y;
+
+            Direction xDirection;
+            Direction yDirection;
+            Direction walkingDirection;
+
+            if (xDelta >= 0)
+            {
+                xDirection = Direction.LEFT;
+            }
+            else
+            {
+                xDirection = Direction.RIGHT;
+            }
+
+            if (yDelta >= 0)
+            {
+                yDirection = Direction.DOWN;
+            }
+            else
+            {
+                yDirection = Direction.UP;
+            }
+
+
+            if (Mathf.Abs(yDelta) >= Mathf.Abs(xDelta))
+            {
+                walkingDirection = yDirection;
+            }
+            else
+            {
+                walkingDirection = xDirection;
+            }
+
+            animator.SetInteger("direction", (int)walkingDirection);
+        }
+
+        this.previousPosition = this.transform.position;
+    }
     public override void TakeDamage(int damage, StatusEffect status)
     {
         base.TakeDamage(damage, status);
@@ -90,6 +155,7 @@ public class Enemy : Entity
 
     public override void Die()
     {
+        setObjectUsed();
         StartCoroutine(waiter());
     }
 
@@ -98,12 +164,15 @@ public class Enemy : Entity
         audioSource.PlayOneShot(enemyDie, 1f);
         moveSpeed = 0;
         yield return new WaitForSeconds(0.5f);
+
         base.Die();
     }
 
     void WalkTo(Vector3 destination)
     {
+        animator.SetBool("idle", false);
         transform.position = Vector2.MoveTowards(this.transform.position, destination, moveSpeed * Time.deltaTime);
+        updateDirection();
     }
 
     private void HandleState()
@@ -111,6 +180,8 @@ public class Enemy : Entity
         switch (currentState)
         {
             case EnemyState.idle:
+                animator.SetBool("idle", true);
+                animator.SetInteger("direction", (int)Direction.None);
                 break;
             case EnemyState.moveToStartPosition:
             case EnemyState.alert:
@@ -138,5 +209,31 @@ public class Enemy : Entity
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player") target = null;
+    }
+
+    public void generateID()
+    {
+        this.persistent_unique_id = this.transform.position.sqrMagnitude.ToString();
+    }
+
+    public void shouldSpawn()
+    {
+        if (!shouldRespawn)
+        {
+
+            generateID();
+
+            string exists = PlayerPrefs.GetString(persistent_unique_id);
+            if (exists.Length > 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+    }
+
+    public void setObjectUsed()
+    {
+        PlayerPrefs.SetString(persistent_unique_id, "dead!");
     }
 }

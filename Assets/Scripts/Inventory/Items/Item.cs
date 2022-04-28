@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public abstract class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour, IPersistentObject
 {
     [SerializeField]
     public string itemName;
@@ -9,12 +9,22 @@ public abstract class Item : MonoBehaviour
     [SerializeField]
     public Sprite icon;
 
+    public string persistent_unique_id { get; set; }
+
+    protected virtual void Start()
+    {
+        this.generateID();
+        this.shouldSpawn();
+    }
+
+
     public abstract bool Use(Player player);
 
     protected void pickUp(Player player)
     {
         if (player.inventory.Add(this))
         {
+            setObjectUsed();
             // Destroy item
             Destroy(gameObject);
         };
@@ -28,7 +38,22 @@ public abstract class Item : MonoBehaviour
         };
     }
 
+    // Object persistence
+    public void generateID()
+    {
+        this.persistent_unique_id = this.transform.position.sqrMagnitude.ToString();
+    }
 
-
-
+    public void shouldSpawn()
+    {
+        string exists = PlayerPrefs.GetString(persistent_unique_id);
+        if (exists.Length > 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    public void setObjectUsed()
+    {
+        PlayerPrefs.SetString(persistent_unique_id, "used!");
+    }
 }

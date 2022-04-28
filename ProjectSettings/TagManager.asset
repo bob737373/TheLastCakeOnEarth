@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Chest
+  - TransitionElements
+  - HUD
+  - Inventory
+  - Teleporter
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - Items
+  - 
   - 
   - 
   - 

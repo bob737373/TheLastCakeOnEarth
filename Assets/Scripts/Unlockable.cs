@@ -13,6 +13,9 @@ public class Unlockable : MonoBehaviour
     int currentParts = 0;
 
     [SerializeField]
+    bool ovenfixed = false;
+
+    [SerializeField]
     Text textBox;
 
     Player player;
@@ -35,20 +38,21 @@ public class Unlockable : MonoBehaviour
         if (currentParts == numberOfPartsRequired)
         {
             textBox.text = $"Fixed!";
+            ovenfixed = true;
         }
         else
         {
             textBox.text = $"{currentParts}/{numberOfPartsRequired}";
 
         }
-
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
             player = other.GetComponent<Player>();
-        };
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -56,6 +60,10 @@ public class Unlockable : MonoBehaviour
         if (other.tag == "Player")
         {
             player = null;
-        };
+        }
+    }
+
+    public bool getFixed(){
+        return ovenfixed;
     }
 }
