@@ -360,6 +360,7 @@ MonoBehaviour:
   oof: {fileID: 8300000, guid: eedddfaf139190944acd2324bd64b657, type: 3}
   stepHard: {fileID: 8300000, guid: 06e1401c0a212bb449ff0ced4fc2ae2b, type: 3}
   swish: {fileID: 8300000, guid: 7b16b6a5642aeda46b969a71cc260df1, type: 3}
+  death: {fileID: 8300000, guid: 2ed138146ac830046a85efdbd7ddc4a9, type: 3}
   milk: 0
   flour: 0
 --- !u!58 &17673713

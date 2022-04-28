@@ -45,6 +45,8 @@ public class Player : Entity
     AudioClip stepHard;
     [SerializeField]
     AudioClip swish;
+    [SerializeField]
+    AudioClip death;
 
     [SerializeField]
     public bool milk;
@@ -216,6 +218,12 @@ public class Player : Entity
     public override void Die()
     {
         this.enemyList = new HashSet<Entity>();
+        audioSource.PlayOneShot(death, 2f);
+        StartCoroutine(deathEn());
+    }
+
+    IEnumerator deathEn() {
+        yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene("DeathScreen");
     }
 
