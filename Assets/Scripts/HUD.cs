@@ -11,6 +11,10 @@ public class HUD : MonoBehaviour
 
     public Image healthBar;
 
+    private Text milkText;
+
+    private Text flourText;
+
     [SerializeField]
     public Player player;
 
@@ -25,6 +29,12 @@ public class HUD : MonoBehaviour
 
         GameObject imageHealthGO = GameObject.Find("HealthMeter");
         healthBar = imageHealthGO.GetComponent<Image>();
+
+        GameObject milkTextGO = GameObject.Find("MilkText");
+        milkText = milkTextGO.GetComponent<Text>();
+
+        GameObject flourTextGO = GameObject.Find("FlourText");
+        flourText = flourTextGO.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -35,6 +45,7 @@ public class HUD : MonoBehaviour
             updateHealth();
             updateCoins();
             updateIcing();
+            updateIngredients();
         }
     }
 
@@ -65,6 +76,15 @@ public class HUD : MonoBehaviour
     public void updateIcing()
     {
         icingText.text = player.getIcing().ToString();
+    }
+
+    public void updateIngredients(){
+        if(player.getMilk()){
+            milkText.color = Color.green;
+        }
+        if(player.getFlour()){
+            flourText.color = Color.green;
+        }
     }
 
     public void setHealth(float health)
