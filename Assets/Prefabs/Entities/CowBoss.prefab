@@ -335,8 +335,8 @@ MonoBehaviour:
   health: 10
   alertRange: 10
   audioSource: {fileID: 136035310173470204}
-  enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
-  enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
+  enemyOof: {fileID: 8300000, guid: 863f63cc46cf7b1469d513ed248046bd, type: 3}
+  enemyDie: {fileID: 8300000, guid: de7e5462b38bd9940b8742a267737980, type: 3}
   shouldRespawn: 0
 --- !u!95 &3842374572857240210
 Animator:
