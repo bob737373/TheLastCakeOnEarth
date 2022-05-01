@@ -54,7 +54,8 @@ public class Player : Entity
         base.Start();
         if (!inventory)
         {
-            Debug.LogError("Inventory is not defined in GUI!");
+            inventory = FindObjectOfType<Inventory>();
+            if(!inventory) Debug.LogError("Inventory is not defined in GUI!");
         }
 
         if(isLocalPlayer) {
