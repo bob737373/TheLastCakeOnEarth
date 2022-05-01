@@ -1798,6 +1798,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 458169310625476818, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
+      propertyPath: health
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 458169310625476818, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
+      propertyPath: maxHealth
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 4102930753242572954, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
       propertyPath: m_Name
       value: SlimeBoss
