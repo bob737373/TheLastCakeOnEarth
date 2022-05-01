@@ -14,9 +14,9 @@ using UnityEngine.SceneManagement;
     Central -> East: 350, 452
     Central -> Bakery: 5, -5
     East -> Central: 72, 18
-    East -> MilkFactory: 0, 1
+    East -> MilkFactory: -54, -40
     South -> Central: 19, -11
-    South -> FlourFactory: 0, 1
+    South -> FlourFactory: -54, -40
     Bakery -> Central: 33, 5
     FlourFactory -> South: 64, -11
     MilkFactory -> East: 371, 487

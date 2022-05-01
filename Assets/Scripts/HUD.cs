@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    private Text coinsText;
-
-    private Text icingText;
 
     public Image healthBar;
+
+    [SerializeField]
+    private Image milkImg;
+
+    [SerializeField]
+    private Image jelloImg;
 
     [SerializeField]
     public Player player;
@@ -17,14 +20,17 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject coinsTextGO = GameObject.Find("CoinCountText");
-        coinsText = coinsTextGO.GetComponent<Text>();
-
-        GameObject icingTextGO = GameObject.Find("IcingCountText");
-        icingText = icingTextGO.GetComponent<Text>();
 
         GameObject imageHealthGO = GameObject.Find("HealthMeter");
         healthBar = imageHealthGO.GetComponent<Image>();
+
+        Color jColor = jelloImg.color;
+        jColor.a = .5f;
+        jelloImg.color = jColor;
+
+        Color mColor = milkImg.color;
+        mColor.a = .5f;
+        milkImg.color = mColor;
     }
 
     // Update is called once per frame
@@ -33,15 +39,14 @@ public class HUD : MonoBehaviour
         if (player)
         {
             updateHealth();
-            updateCoins();
-            updateIcing();
+            updateIngredients();
         }
     }
 
 
     public void updateHealth()
     {
-        healthBar.fillAmount = (float) player.getHealth() / (float) player.getMaxHealth();
+        healthBar.fillAmount = (float)player.getHealth() / (float)player.getMaxHealth();
 
         if (healthBar.fillAmount < 0.3f)
         {
@@ -57,14 +62,23 @@ public class HUD : MonoBehaviour
         }
     }
 
-    public void updateCoins()
-    {
-        this.coinsText.text = player.getCoins().ToString();
-    }
 
-    public void updateIcing()
+    public void updateIngredients()
     {
-        icingText.text = player.getIcing().ToString();
+        if (player.getMilk())
+        {
+            // milkText.color = Color.green;
+            Color mColor = milkImg.color;
+            mColor.a = 1.0f;
+            milkImg.color = mColor;
+        }
+        if (player.getFlour())
+        {
+            // flourText.color = Color.green;
+            Color jColor = jelloImg.color;
+            jColor.a = 1.0f;
+            jelloImg.color = jColor;
+        }
     }
 
     public void setHealth(float health)

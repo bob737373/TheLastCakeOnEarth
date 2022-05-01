@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
@@ -19,8 +20,7 @@ public class Player : Entity
     [SerializeField]
     public Inventory inventory;
 
-    //booleans for HUD icon display
-    enum Direction { down, right, up, left, none };
+    enum Direction { down = -1, right = 2, up = 1, left = -2, none = 0 };
     public enum StatusEffects { caffeinated, coffeeCrash, minty, spicy, stomachAche }
 
     Camera cam;
@@ -45,7 +45,18 @@ public class Player : Entity
     AudioClip oof;
     [SerializeField]
     AudioClip stepHard;
+    [SerializeField]
+    AudioClip swish;
+    [SerializeField]
+    AudioClip death;
 
+    [SerializeField]
+    public bool milk;
+
+    [SerializeField]
+    public bool flour;
+
+    HashSet<Entity> enemyList = new HashSet<Entity>();
 
     protected bool walking = false;
 
@@ -66,32 +77,65 @@ public class Player : Entity
             cameraTransform.rotation = CameraMountPoint.transform.rotation;
         }
 
-        animator.SetInteger("Direction", (int)Direction.none);
+        animator.SetInteger("direction", (int)Direction.none);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         camZ = cam.transform.position.z;
-        if (weapons.Length != 0)
-        {
-            selectedWeapon = weapons[0].weapon;
-        }
-        for (int i = 1; i < weapons.Length; i++)
-        {
-            weapons[i].weapon.gameObject.SetActive(false);
-        }
 
     }
 
     public override void Update()
     {
         base.Update();
-        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
         if(isLocalPlayer) {
+            cam.transform.rotation = Quaternion.Euler(0, 0, 0);
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
-            animator.SetFloat("SpeedX", movement.x);
-            animator.SetBool("MovingHorizontally", movement.x != 0);
-            animator.SetFloat("SpeedY", movement.y);
-            if (movement.x > 0)
+            // Make sure inventory isnt open
+            if (Input.GetButton("Fire1") && !inventory.open)
+            {
+                Attack();
+                audioSource.PlayOneShot(swish, .2f);
+            }
+        }
+
+        if (movement.x > 0)
+        {
+            direction = Direction.right;
+        }
+        else if (movement.x < 0)
+        {
+            direction = Direction.left;
+        }
+        else if (movement.y < 0)
+        {
+            direction = Direction.down;
+        }
+        else if (movement.y > 0)
+        {
+            direction = Direction.up;
+        }
+        else
+        {
+            direction = Direction.none;
+        }
+
+        // Make sure inventory isnt open
+        if (Input.GetButton("Fire1") && !inventory.open)
+        {
+            Attack();
+            audioSource.PlayOneShot(swish, .2f);
+        }
+
+        animator.SetInteger("direction", (int)direction);
+
+        movement.Normalize();
+        mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mousePos3;
+
+        if (movement.x != 0 || movement.y != 0)
+        {
+            if (!walking)
             {
                 direction = Direction.right;
                 animator.SetBool("Moving", true);
@@ -120,40 +164,13 @@ public class Player : Entity
             movement.Normalize();
             mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
             mousePos = mousePos3;
-
-            if (movement.x != 0 || movement.y != 0)
-            {
-                if (!walking)
-                {
-                    StartCoroutine(walk());
-                }
-            }
-
-            // Make sure inventory isnt open
-            if (Input.GetButton("Fire1") && !inventory.open)
-            {
-                Attack();
-            }
-
-            float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
-            if (scroll > 0)
-            {
-                ChangeWeapon(true);
-            }
-            else if (scroll < 0)
-            {
-                ChangeWeapon(false);
-            }
         }
 
     }
 
     void FixedUpdate()
     {
-        if(isLocalPlayer) {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
-        //rb.rotation = ang;
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     public override void TakeDamage(int damage, StatusEffect status)
@@ -180,31 +197,14 @@ public class Player : Entity
         return icing;
     }
 
-    void ChangeWeapon(bool increment)
+    public bool getMilk()
     {
-        if (increment)
-        {
-            weaponIndex++;
-            if (weaponIndex >= weapons.Length) weaponIndex = 0;
-        }
-        else
-        {
-            weaponIndex--;
-            if (weaponIndex < 0) weaponIndex = weapons.Length - 1;
-        }
-        SelectWeapon(weaponIndex);
-        //selectedWeapon = weapons [weaponIndex];
+        return milk;
     }
 
-    void SelectWeapon(int newWeaponIndex)
+    public bool getFlour()
     {
-        if (newWeaponIndex < weapons.Length && newWeaponIndex >= 0)
-        {
-            selectedWeapon.gameObject.SetActive(false);
-            selectedWeapon = weapons[newWeaponIndex].weapon;
-            selectedWeapon.gameObject.SetActive(true);
-            weaponIndex = newWeaponIndex;
-        }
+        return flour;
     }
 
     override protected void Attack()
@@ -229,17 +229,44 @@ public class Player : Entity
             attackDir = Direction.down;
         }
         animator.SetInteger("AttackDir", ((int)attackDir));
-        animator.SetTrigger("Attack");
-        selectedWeapon.transform.rotation = Quaternion.Euler(0, 0, rot);//ang;
-        if (selectedWeapon) selectedWeapon.Attack(this.enemyLayers);
-        StartCoroutine(ResetAttackTrigger());
+
+        animator.SetBool("isAttacking", true);
+        this.meleeAttack(this.enemyList);
     }
 
-    IEnumerator ResetAttackTrigger()
+    void ResetAttack()
     {
-        yield return new WaitForSeconds(0.1f); //WaitForEndOfFrame();
-        animator.ResetTrigger("Attack");
-        animator.SetInteger("AttackDir", (int)Direction.none);
+        animator.SetBool("isAttacking", false);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Enemy enemy = other.transform.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            this.enemyList.Add(enemy);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Enemy enemy = other.transform.GetComponent<Enemy>();
+        if (enemy != null && this.enemyList.Contains(enemy) == true)
+        {
+            this.enemyList.Remove(enemy);
+        }
+    }
+
+    public override void Die()
+    {
+        this.enemyList = new HashSet<Entity>();
+        audioSource.PlayOneShot(death, 2f);
+        StartCoroutine(deathEn());
+    }
+
+    IEnumerator deathEn() {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene("DeathScreen");
     }
 
 }

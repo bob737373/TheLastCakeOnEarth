@@ -141,7 +141,6 @@ GameObject:
   - component: {fileID: 3896970562687714268}
   - component: {fileID: 2334993046471201902}
   - component: {fileID: 8816193966437197381}
-  - component: {fileID: 1127356814}
   m_Layer: 6
   m_Name: SlimeEnemy
   m_TagString: Enemy
@@ -268,13 +267,16 @@ MonoBehaviour:
   attackRange: 1
   meleeAttackDmg: 1
   attacksPerSecond: 1
+  maxHealth: 0
   rb: {fileID: 5191735820515046498}
   defaultMoveSpeed: 3
+  moveSpeed: 5
   health: 3
   alertRange: 8
   audioSource: {fileID: 5686068891772842274}
-  enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
-  enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
+  enemyOof: {fileID: 8300000, guid: 9104a998e29d44d489a4505b10fa51ac, type: 3}
+  enemyDie: {fileID: 8300000, guid: 9104a998e29d44d489a4505b10fa51ac, type: 3}
+  shouldRespawn: 1
 --- !u!95 &8816193966437197381
 Animator:
   serializedVersion: 3
@@ -294,22 +296,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1127356814
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8816193966437197387}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.3
 --- !u!1 &8952799716666804802
 GameObject:
   m_ObjectHideFlags: 0

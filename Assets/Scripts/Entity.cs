@@ -15,6 +15,7 @@ public abstract class Entity : NetworkBehaviour
     protected float attacksPerSecond = 1.0f;
     private float nextDamageEvent;
 
+    [SerializeField]
     protected int maxHealth;
 
     [SerializeField]
@@ -23,6 +24,7 @@ public abstract class Entity : NetworkBehaviour
     [SerializeField]
     protected float defaultMoveSpeed = 5f;
 
+    [SerializeField]
     protected float moveSpeed = 5f;
 
     [SerializeField]
@@ -58,6 +60,26 @@ public abstract class Entity : NetworkBehaviour
         {
             nextDamageEvent = Time.time + attacksPerSecond;
             target.TakeDamage(meleeAttackDmg, StatusEffect.caffeinated);
+        }
+    }
+
+    public void meleeAttack(HashSet<Entity> targets)
+    {
+        if (Time.time > nextDamageEvent)
+        {
+            nextDamageEvent = Time.time + attacksPerSecond;
+            foreach (Enemy enemy in targets)
+            {   
+                float tempAttackRange = attackRange;
+                if(enemy.gameObject.GetComponent<CowBoss>()){
+                    tempAttackRange += 2;
+                }
+
+                if (Vector2.Distance(enemy.transform.position, this.transform.position) <= tempAttackRange)
+                {
+                    enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                }
+            }
         }
     }
 

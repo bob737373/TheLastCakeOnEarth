@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 3842374572857240212}
   - component: {fileID: 506499772189784252}
   - component: {fileID: 8727801218257096450}
-  - component: {fileID: 8028859507006511280}
+  - component: {fileID: -8666776060025770876}
   - component: {fileID: 3842374572857240210}
   m_Layer: 6
   m_Name: CowBoss
@@ -312,8 +312,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.93
---- !u!114 &8028859507006511280
+  m_Radius: 12.1
+--- !u!114 &-8666776060025770876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,19 +322,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3842374572857240213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69b1833f6b455048b1a31a7984faaf8, type: 3}
+  m_Script: {fileID: 11500000, guid: cbe1b753e5bb6604eb7e1eff5a5f7cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 3.07
+  attackRange: 3.5
   meleeAttackDmg: 1
   attacksPerSecond: 1
+  maxHealth: 10
   rb: {fileID: 506499772189784252}
-  defaultMoveSpeed: 1
-  health: 50
-  alertRange: 8
+  defaultMoveSpeed: 2
+  moveSpeed: 2
+  health: 10
+  alertRange: 10
   audioSource: {fileID: 136035310173470204}
-  enemyOof: {fileID: 8300000, guid: 1e18492d8931a79428978263ebdbfa47, type: 3}
-  enemyDie: {fileID: 8300000, guid: d8d0c0829fc81a04397fd76aa79d45e7, type: 3}
+  enemyOof: {fileID: 8300000, guid: 863f63cc46cf7b1469d513ed248046bd, type: 3}
+  enemyDie: {fileID: 8300000, guid: de7e5462b38bd9940b8742a267737980, type: 3}
+  shouldRespawn: 0
 --- !u!95 &3842374572857240210
 Animator:
   serializedVersion: 3
