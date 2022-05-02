@@ -68,15 +68,19 @@ public abstract class Entity : MonoBehaviour
         {
             nextDamageEvent = Time.time + attacksPerSecond;
             foreach (Enemy enemy in targets)
-            {   
-                float tempAttackRange = attackRange;
-                if(enemy.gameObject.GetComponent<CowBoss>()){
-                    tempAttackRange += 2;
-                }
-
-                if (Vector2.Distance(enemy.transform.position, this.transform.position) <= tempAttackRange)
+            {
+                if (enemy != null)
                 {
-                    enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                    float tempAttackRange = attackRange;
+                    if (enemy.gameObject.GetComponent<CowBoss>() != null)
+                    {
+                        tempAttackRange += 2;
+                    }
+
+                    if (Vector2.Distance(enemy.transform.position, this.transform.position) <= tempAttackRange)
+                    {
+                        enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                    }
                 }
             }
         }
