@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5627605777231600958}
-  - component: {fileID: 4935579533286752131}
-  - component: {fileID: 383356002351663887}
-  - component: {fileID: 8609613095062865589}
+  - component: {fileID: 8184534079093935172}
+  - component: {fileID: 8171218996958154355}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: TransitionElements
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4935579533286752131
+--- !u!114 &8184534079093935172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,24 +41,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 3577092801435381082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e89cebc9e973a748915a77aa8dbad65, type: 3}
+  m_Script: {fileID: 11500000, guid: b1404e60435f25f45a0f746f42ec14a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   runInBackground: 1
   autoStartServerBuild: 1
   serverTickRate: 30
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 383356002351663887}
+  offlineScene: Assets/Scenes/MainMenu.unity
+  onlineScene: Assets/Scenes/LoadScene.unity
+  transport: {fileID: 8171218996958154355}
   networkAddress: localhost
-  maxConnections: 100
+  maxConnections: 4
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 5685725065730189262, guid: 6685c79a8988f4d46a2adbd66785e113, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
---- !u!114 &383356002351663887
+  spawnPrefabs:
+  - {fileID: 461568776808595166, guid: aa02b3aee423e0940a963a9585098dd8, type: 3}
+  - {fileID: 8816193966437197387, guid: e65181f742719094094cf4b4e7c2226c, type: 3}
+  - {fileID: 3842374572857240213, guid: d410e9fdab7e41a4c89eef4da83c7af4, type: 3}
+  - {fileID: 4102930753242572954, guid: 7310633f1dc636b448c0644e108d7a94, type: 3}
+--- !u!114 &8171218996958154355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,17 +91,3 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &8609613095062865589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3577092801435381082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 0

@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 6386684678397911263}
   m_Layer: 5
   m_Name: MenuCanvas
-  m_TagString: Menu
+  m_TagString: TransitionElements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

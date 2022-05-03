@@ -12,7 +12,8 @@ public class LoadInitialGame : GameSceneManager
         base.Start();
         Debug.Log("Resetting player prefs!!");
         PlayerPrefs.DeleteAll();
-        StartCoroutine(loadScene(dest));
+        // StartCoroutine(loadScene(dest));
+        loadScene(dest);
     }
 
 }

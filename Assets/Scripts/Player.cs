@@ -8,6 +8,8 @@ public class Player : Entity
 
     [SerializeField]
     GameObject CameraMountPoint;
+    [SerializeField]
+    Camera cameraPrefab;
 
     [SerializeField]
     WeaponContainer[] weapons;
@@ -70,34 +72,34 @@ public class Player : Entity
         }
 
         if(isLocalPlayer) {
-            cam = Camera.main;
+            cam = Instantiate(cameraPrefab);
             Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
             cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point
             cameraTransform.position = CameraMountPoint.transform.position;  //Set position/rotation same as the mount point
             cameraTransform.rotation = CameraMountPoint.transform.rotation;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+            camZ = cam.transform.position.z;
         }
 
         animator.SetInteger("direction", (int)Direction.none);
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        camZ = cam.transform.position.z;
 
     }
 
     public override void Update()
     {
         base.Update();
-        if(isLocalPlayer) {
-            cam.transform.rotation = Quaternion.Euler(0, 0, 0);
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
-            // Make sure inventory isnt open
-            if (Input.GetButton("Fire1") && !inventory.open)
-            {
-                Attack();
-                audioSource.PlayOneShot(swish, .2f);
-            }
+        if(!isLocalPlayer) { return; }
+        cam.transform.rotation = Quaternion.Euler(0, 0, 0);
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        // Make sure inventory isnt open
+        if (Input.GetButton("Fire1") && !inventory.open)
+        {
+            Attack();
+            audioSource.PlayOneShot(swish, .2f);
         }
+    
 
         if (movement.x > 0)
         {
@@ -118,13 +120,6 @@ public class Player : Entity
         else
         {
             direction = Direction.none;
-        }
-
-        // Make sure inventory isnt open
-        if (Input.GetButton("Fire1") && !inventory.open)
-        {
-            Attack();
-            audioSource.PlayOneShot(swish, .2f);
         }
 
         animator.SetInteger("direction", (int)direction);
@@ -170,6 +165,7 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        if(!isLocalPlayer) { return; } 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 

@@ -8,6 +8,7 @@ public class Door : GameSceneManager
 {
     void OnCollisionEnter2D(Collision2D c)
     {
-        StartCoroutine(loadScene(dest));
+        // StartCoroutine(loadScene(dest));
+        loadScene(dest);
     }
 }

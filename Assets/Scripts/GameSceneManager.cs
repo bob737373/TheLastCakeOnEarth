@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Mirror;
 
 /* 
     COORDS
@@ -35,7 +36,6 @@ public enum ScenesEnum
     SUGAR_FACTORY_INTERIOR,
     FLOUR_FACTORY_INTERIOR,
     SCENE_LOAD,
-
 }
 
 public class GameSceneManager : MonoBehaviour
@@ -58,26 +58,36 @@ public class GameSceneManager : MonoBehaviour
     private AsyncOperation sceneAsync;
     private AsyncOperation unloadAsync;
 
+    public static Vector3 targetPos { private set; get; }
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
         gameObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("TransitionElements"));
-        gameObjects.Add(GameObject.FindGameObjectWithTag("Player"));
+        // gameObjects.Add(GameObject.FindGameObjectWithTag("Player"));
+        // var cam = GameObject.FindGameObjectWithTag("MainCamera");
+        // if(cam) gameObjects.Add(cam);
     }
 
-    protected IEnumerator loadScene(ScenesEnum dest)
-    {
+    protected void loadScene(ScenesEnum dest) {
         string name = getScene(dest);
-        AsyncOperation scene = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
-        scene.allowSceneActivation = true;
-        sceneAsync = scene;
-
-        while (scene.progress < 1f)
-        {
-            yield return null;
-        }
-        OnFinishedLoadingAllScene(name);
+        targetPos = new Vector3(spawnx, spawny, 0);
+        NetworkManager.singleton.ServerChangeScene(name);
     }
+
+    // protected IEnumerator loadScene(ScenesEnum dest)
+    // {
+    //     string name = getScene(dest);
+    //     AsyncOperation scene = SceneManager.LoadSceneAsync(name, LoadSceneMode.Additive);
+    //     scene.allowSceneActivation = true;
+    //     sceneAsync = scene;
+
+    //     while (scene.progress < 1f)
+    //     {
+    //         yield return null;
+    //     }
+    //     OnFinishedLoadingAllScene(name);
+    // }
 
     protected IEnumerator unloadScene(ScenesEnum dest)
     {
@@ -116,7 +126,7 @@ public class GameSceneManager : MonoBehaviour
         Debug.Log("Done Loading Scene");
         enableScene(name);
         Debug.Log("Scene Activated!");
-        StartCoroutine(unloadScene(src));
+        //StartCoroutine(unloadScene(src));
     }
 
     protected string getScene(ScenesEnum d)

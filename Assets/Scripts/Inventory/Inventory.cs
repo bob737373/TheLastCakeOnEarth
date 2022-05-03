@@ -20,7 +20,8 @@ public class Inventory : MonoBehaviour
     {
         if (player == null)
         {
-            Debug.LogError("Player not defined!!!");
+            player = GetComponent<Player>();
+            if(player == null) Debug.LogError("Player not defined!!!");
         }
 
         inventoryUI.SetActive(true);
