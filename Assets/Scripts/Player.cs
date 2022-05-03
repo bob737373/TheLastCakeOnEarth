@@ -11,6 +11,8 @@ public class Player : Entity
     GameObject CameraMountPoint;
     [SerializeField]
     Camera cameraPrefab;
+    [SerializeField]
+    GameObject HUDPrefab;
 
     [SerializeField]
     WeaponContainer[] weapons;
@@ -73,6 +75,9 @@ public class Player : Entity
         }
 
         if(isLocalPlayer) {
+            GameObject hud = Instantiate(HUDPrefab);
+            //hud.transform.parent = this.transform;
+            hud.transform.SetParent(this.transform, false); //unity said to do this, don't really get why but whatever
             cam = Instantiate(cameraPrefab);
             Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
             cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point

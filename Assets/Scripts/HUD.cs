@@ -20,6 +20,10 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!player) {
+            player = GetComponentInParent<Player>();
+            if(!player) Debug.LogError("HUD doesn't seem to be attached to a player.");
+        }
 
         GameObject imageHealthGO = GameObject.Find("HealthMeter");
         healthBar = imageHealthGO.GetComponent<Image>();

@@ -40,7 +40,7 @@ public class Enemy : Entity, IPersistentObject
     }
     EnemyState currentState;
     Vector3 startingPosition;
-    Transform target = null;
+    List<Transform> targets = new List<Transform>();
 
 
     public string persistent_unique_id { get; set; }
@@ -70,9 +70,9 @@ public class Enemy : Entity, IPersistentObject
 
         //print(currentState);
         // TODO: Check if in attack range.
-        if (target)
+        if (targets.Count > 0)
         {
-            float distanceFromTarget = Vector2.Distance(target.transform.position, transform.position);
+            float distanceFromTarget = Vector2.Distance(targets[0].transform.position, transform.position);
 
             if (distanceFromTarget < attackRange)
             {
@@ -191,13 +191,13 @@ public class Enemy : Entity, IPersistentObject
                 WalkTo(startingPosition);
                 break;
             case EnemyState.attacking:
-                var x = target.GetComponent<Entity>();
+                var x = targets[0].GetComponent<Entity>();
                 this.meleeAttack(x);
                 // this.WalkTo(x);
                 break;
             case EnemyState.moveToTarget:
                 {
-                    WalkTo(target.transform.position);
+                    WalkTo(targets[0].transform.position);
                     break;
                 }
             default: break;
@@ -207,12 +207,16 @@ public class Enemy : Entity, IPersistentObject
     void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (other.tag == "Player") target = other.transform;
+        if (other.tag == "Player") targets.Add(other.transform);
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player") target = null;
+        if (other.tag == "Player") {
+            // int i = targets.FindIndex(0, targets.Count, (val) => val.Equals(other.GetComponent<Transform>()));
+            targets.Remove(other.transform);
+            // target = null;
+        }
     }
 
     public void generateID()
