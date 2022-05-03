@@ -13,12 +13,17 @@ public class MainMenu : MonoBehaviour
     void Awake() {
         //manager = GetComponent<NewNetworkManager>();
     }
+
+    void SetIP(string newIP) {
+        manager.networkAddress = newIP;
+    }
     
     public void HostGame() {
         manager.StartHost();
     }
 
     public void JoinGame() {
+        if(manager.networkAddress == string.Empty) manager.networkAddress = "localhost";
         manager.StartClient();
     }
 

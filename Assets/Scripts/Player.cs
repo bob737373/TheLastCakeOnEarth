@@ -269,7 +269,17 @@ public class Player : Entity
 
     IEnumerator deathEn() {
         yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene("DeathScreen");
+        //SceneManager.LoadScene("DeathScreen");
+        NetworkManager.singleton.offlineScene = "DeathScreen";
+        if(NetworkClient.isConnected) {
+            if(NetworkServer.active) {
+                NetworkManager.singleton.StopHost();
+            } else {
+                NetworkManager.singleton.StopClient();
+            }
+        }
+        // NetworkManager.singleton.ServerChangeScene("DeathScreen");
+        // Destroy(this);
     }
 
 }

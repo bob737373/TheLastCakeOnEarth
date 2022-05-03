@@ -15,7 +15,7 @@ public class NewNetworkManager : NetworkManager
     // have to cast to this type everywhere.
     public static new NewNetworkManager singleton { get; private set; }
 
-    List<Player> players = new List<Player>();
+    Dictionary<int, Player> players = new Dictionary<int, Player>();
 
     #region Unity Callbacks
 
@@ -93,7 +93,7 @@ public class NewNetworkManager : NetworkManager
     {
         base.ServerChangeScene(newSceneName);
         onlineScene = newSceneName;
-        foreach(Player player in players) {
+        foreach(Player player in players.Values) {
             player.transform.position = GameSceneManager.targetPos;
         }
     }
@@ -167,7 +167,7 @@ public class NewNetworkManager : NetworkManager
         // instantiating a "Player" prefab gives it the name "Player(clone)"
         // => appending the connectionId is WAY more useful for debugging!
         player.name = $"{playerPrefab.name} [connId={conn.connectionId}]";
-        players.Add(player.GetComponent<Player>());
+        players.Add(conn.connectionId, player.GetComponent<Player>());
         DontDestroyOnLoad(player);
         NetworkServer.AddPlayerForConnection(conn, player);
     }
@@ -179,6 +179,7 @@ public class NewNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerDisconnect(NetworkConnectionToClient conn)
     {
+        players.Remove(conn.connectionId);
         base.OnServerDisconnect(conn);
     }
 
