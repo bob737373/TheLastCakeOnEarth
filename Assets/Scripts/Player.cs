@@ -160,7 +160,7 @@ public class Player : Entity
             {
                 animator.SetBool("Moving", false);
             }
-            animator.SetInteger("Direction", (int)direction);
+            // animator.SetInteger("direction", (int)direction);
 
             movement.Normalize();
             mousePos3 = cam.ScreenToWorldPoint(Input.mousePosition);
