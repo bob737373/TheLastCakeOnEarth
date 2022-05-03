@@ -18,7 +18,7 @@ public class MeleeWeapon : Weapon
         foreach(Collider2D enemy in hitEnemies) {
             print("hit " + enemy.name);
             print("AD " + attackDamage);
-            enemy.GetComponent<Entity>().TakeDamage(attackDamage, effect);
+            enemy.GetComponent<Entity>().CmdTakeDamage(attackDamage, effect);
         }
         audioSource.PlayOneShot(swish, 2f);
     }

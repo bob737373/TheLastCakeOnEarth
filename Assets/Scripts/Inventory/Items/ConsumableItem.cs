@@ -11,7 +11,7 @@ public class ConsumableItem : Item
 
     public override bool Use(Player player)
     {
-        player.addHealth(amtHealthAffected);
+        player.CmdAddHealth(amtHealthAffected);
 
         if (statusEffect != StatusEffect.none)
         {

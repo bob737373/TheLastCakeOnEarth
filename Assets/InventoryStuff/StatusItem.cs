@@ -38,7 +38,7 @@ public class StatusItem
         switch (statusEffect)
         {
             case StatusEffect.chocolate:
-                entity.addHealth(8);
+                entity.CmdAddHealth(8);
                 break;
             case StatusEffect.caffeinated:
                 amtMovespeedToAdd = 5f;

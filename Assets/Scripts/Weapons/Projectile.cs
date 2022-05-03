@@ -49,12 +49,12 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Enemy e = collision.collider.GetComponent<Enemy>();
-        e.TakeDamage(damage, effect);
+        e.CmdTakeDamage(damage, effect);
         Collider2D[] aoeHits = Physics2D.OverlapCircleAll(collision.transform.position, radius, enemyLayer);
         foreach (Collider2D enemy in aoeHits)
         {
             print("hit " + enemy.name);
-            enemy.GetComponent<Enemy>().TakeDamage(damage * aoeDamageMultiplier, effect);
+            enemy.GetComponent<Enemy>().CmdTakeDamage(damage * aoeDamageMultiplier, effect);
         }
         print("hit " + collision.collider.name);
         Destroy(gameObject);

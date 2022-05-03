@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 enum Direction
 {
     None = 0,
@@ -62,7 +63,7 @@ public class Enemy : Entity, IPersistentObject
         //test code, nuke
         if (Input.GetKeyDown("]"))
         {
-            this.TakeDamage(10000000, StatusEffect.caffeinated);
+            this.CmdTakeDamage(10000000, StatusEffect.caffeinated);
             print("kaboom");
         }
 
@@ -147,9 +148,11 @@ public class Enemy : Entity, IPersistentObject
 
         this.previousPosition = this.transform.position;
     }
-    public override void TakeDamage(int damage, StatusEffect status)
+
+    [Command(requiresAuthority = false)]
+    public override void CmdTakeDamage(int damage, StatusEffect status)
     {
-        base.TakeDamage(damage, status);
+        base.CmdTakeDamage(damage, status);
         audioSource.PlayOneShot(enemyOof, 1f);
     }
 

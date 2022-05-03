@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Mirror;
 
 public class Player : Entity
 {
@@ -169,9 +170,10 @@ public class Player : Entity
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    public override void TakeDamage(int damage, StatusEffect status)
+    [Command(requiresAuthority = false)]
+    public override void CmdTakeDamage(int damage, StatusEffect status)
     {
-        base.TakeDamage(damage, status);
+        base.CmdTakeDamage(damage, status);
         audioSource.PlayOneShot(oof, 1f);
     }
 

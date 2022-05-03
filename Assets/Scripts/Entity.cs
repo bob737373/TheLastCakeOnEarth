@@ -27,7 +27,7 @@ public abstract class Entity : NetworkBehaviour
     [SerializeField]
     protected float moveSpeed = 5f;
 
-    [SerializeField]
+    [SerializeField, SyncVar]
     protected int health;
 
     protected Vector2 movement;
@@ -59,7 +59,7 @@ public abstract class Entity : NetworkBehaviour
         if (Time.time > nextDamageEvent)
         {
             nextDamageEvent = Time.time + attacksPerSecond;
-            target.TakeDamage(meleeAttackDmg, StatusEffect.caffeinated);
+            target.CmdTakeDamage(meleeAttackDmg, StatusEffect.caffeinated);
         }
     }
 
@@ -77,13 +77,14 @@ public abstract class Entity : NetworkBehaviour
 
                 if (Vector2.Distance(enemy.transform.position, this.transform.position) <= tempAttackRange)
                 {
-                    enemy.TakeDamage(meleeAttackDmg, StatusEffect.none);
+                    enemy.CmdTakeDamage(meleeAttackDmg, StatusEffect.none);
                 }
             }
         }
     }
 
-    public virtual void TakeDamage(int damage, StatusEffect status)
+    [Command(requiresAuthority = false)]
+    public virtual void CmdTakeDamage(int damage, StatusEffect status)
     {
         health -= damage;
         if (health <= 0)
@@ -108,7 +109,8 @@ public abstract class Entity : NetworkBehaviour
         return this.maxHealth;
     }
 
-    public void addHealth(int healthAmt)
+    [Command(requiresAuthority = false)]
+    public void CmdAddHealth(int healthAmt)
     {
         int newHealthAmt = health + healthAmt;
 
