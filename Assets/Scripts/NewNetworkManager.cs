@@ -92,10 +92,8 @@ public class NewNetworkManager : NetworkManager
     public override void ServerChangeScene(string newSceneName)
     {
         base.ServerChangeScene(newSceneName);
-        onlineScene = newSceneName;
-        foreach(Player player in players.Values) {
-            player.transform.position = GameSceneManager.targetPos;
-        }
+        onlineScene = newSceneName;   
+        Debug.Log("Server changing scene to " + newSceneName);
     }
 
     /// <summary>
@@ -103,13 +101,22 @@ public class NewNetworkManager : NetworkManager
     /// <para>This allows server to do work / cleanup / prep before the scene changes.</para>
     /// </summary>
     /// <param name="newSceneName">Name of the scene that's about to be loaded</param>
-    public override void OnServerChangeScene(string newSceneName) { }
+    public override void OnServerChangeScene(string newSceneName) {
+        Debug.Log("Server scene changing to " + newSceneName);
+    }
 
     /// <summary>
     /// Called on the server when a scene is completed loaded, when the scene load was initiated by the server with ServerChangeScene().
     /// </summary>
     /// <param name="sceneName">The name of the new scene.</param>
-    public override void OnServerSceneChanged(string sceneName) { }
+    public override void OnServerSceneChanged(string sceneName) {
+        Debug.Log("Server scene changed to " + sceneName + ", moving players to" + GameSceneManager.targetPos);
+        Debug.Log(players + "num players: " + players.Count);
+        foreach(var player in players.Values) {
+            Debug.Log("moving " + player.name + " to " + GameSceneManager.targetPos);
+            player.transform.position = GameSceneManager.targetPos;
+        }
+    }
 
     /// <summary>
     /// Called from ClientChangeScene immediately before SceneManager.LoadSceneAsync is executed
@@ -118,7 +125,9 @@ public class NewNetworkManager : NetworkManager
     /// <param name="newSceneName">Name of the scene that's about to be loaded</param>
     /// <param name="sceneOperation">Scene operation that's about to happen</param>
     /// <param name="customHandling">true to indicate that scene loading will be handled through overrides</param>
-    public override void OnClientChangeScene(string newSceneName, SceneOperation sceneOperation, bool customHandling) { }
+    public override void OnClientChangeScene(string newSceneName, SceneOperation sceneOperation, bool customHandling) {
+        Debug.Log("Client changing scene to " + newSceneName);
+    }
 
     /// <summary>
     /// Called on clients when a scene has completed loaded, when the scene load was initiated by the server.
@@ -127,6 +136,7 @@ public class NewNetworkManager : NetworkManager
     public override void OnClientSceneChanged()
     {
         base.OnClientSceneChanged();
+        Debug.Log("Client has changed scene");
     }
 
     #endregion
@@ -167,7 +177,9 @@ public class NewNetworkManager : NetworkManager
         // instantiating a "Player" prefab gives it the name "Player(clone)"
         // => appending the connectionId is WAY more useful for debugging!
         player.name = $"{playerPrefab.name} [connId={conn.connectionId}]";
+        Debug.Log("adding player " + player.name);
         players.Add(conn.connectionId, player.GetComponent<Player>());
+        player.transform.position = GameSceneManager.targetPos;
         DontDestroyOnLoad(player);
         NetworkServer.AddPlayerForConnection(conn, player);
     }
