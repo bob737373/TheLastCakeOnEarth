@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Mirror;
 
-public class Oven : MonoBehaviour
+public class Oven : Unlockable
 {
     [SerializeField]
     private Text flourText;
@@ -14,9 +15,6 @@ public class Oven : MonoBehaviour
     private Button bakeButton;
 
     [SerializeField]
-    private Unlockable oven;
-
-    [SerializeField]
     private GameObject ovenMenu;
     
     private Player player;
@@ -24,17 +22,19 @@ public class Oven : MonoBehaviour
     private bool menuEnabled = false;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         player = playerObj.GetComponent<Player>();
         ovenMenu.SetActive(menuEnabled);
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        if(oven.getFixed()){
+        base.Update();
+        if(this.unlocked){
             if(player){  
                 if(Input.GetKeyDown("q")){
                     menuEnabled = !menuEnabled;

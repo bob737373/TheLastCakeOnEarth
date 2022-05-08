@@ -75,6 +75,7 @@ public class Inventory : MonoBehaviour
         {
             if (slot.containsItemType(item))
             {
+                Debug.Log("found matching slot");
                 if (slot.addItem(item))
                 {
                     return true;
@@ -100,6 +101,7 @@ public class Inventory : MonoBehaviour
 
     // Take an item from the users inventory
     public bool TakeItem(string itemName){
+        Debug.Log("taking " + itemName);
         foreach(InventorySlot slot in slots){
             foreach(Item item in slot.items){
                 if(item.itemName == itemName){

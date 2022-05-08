@@ -1,10 +1,26 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public abstract class Item : MonoBehaviour, IPersistentObject
 {
+
+    // public enum ItemType {
+    //     PartItem,
+    //     ChocolateBar,
+    //     Coffee
+    // }
+    // public static readonly Dictionary<ItemType, string> itemTypeDict = new Dictionary<ItemType, string>{
+    //     {ItemType.PartItem, "Part"},
+    //     {ItemType.ChocolateBar, "Chocolate Bar"},
+    //     {ItemType.Coffee, "Coffee"}
+    // };
+    
+
     [SerializeField]
     public string itemName;
+    // [SerializeField]
+    // public ItemType type;
 
     [SerializeField]
     public Sprite icon;
@@ -26,7 +42,8 @@ public abstract class Item : MonoBehaviour, IPersistentObject
         {
             setObjectUsed();
             // Destroy item
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         };
     }
 

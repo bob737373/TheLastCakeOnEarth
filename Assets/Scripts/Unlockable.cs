@@ -2,47 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class Unlockable : MonoBehaviour
+public class Unlockable : NetworkBehaviour
 {
-
+    
     [SerializeField]
-    int numberOfPartsRequired;
+    int numberOfPartsRequired = 20;
 
-    [SerializeField]
+    [SerializeField, SyncVar]
     int currentParts = 0;
 
-    [SerializeField]
-    bool ovenfixed = false;
+    [SerializeField, SyncVar]
+    public bool unlocked = false;
 
     [SerializeField]
     Text textBox;
+    new BoxCollider2D collider;
 
     Player player;
+    CircleCollider2D playerCollider;
 
     // Start is called before the first frame update
-    void Start()
+    virtual protected void Start()
     {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        player = playerObj.GetComponent<Player>();
+        collider = GetComponent<BoxCollider2D>();
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(var player in players) {
+            if(player.name == "Player(local)"){ //TODO - make these tags and name comparison strings constants
+                this.player = player.GetComponent<Player>();
+                break;
+            }
+        }
+        if(this.player) {
+            playerCollider = player.GetComponent<CircleCollider2D>();
+        }
+        // GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        // player = playerObj.GetComponent<Player>();
     }
 
-    void Update()
+    virtual protected void Update()
     {
-        if (Input.GetKeyDown("f") && player)
+        if (Input.GetKeyDown("f") && player && collider.IsTouching(playerCollider))
         {
             Debug.Log("input registered");
             while (currentParts < numberOfPartsRequired && player.inventory.TakeItem("Part"))
             {
-                currentParts++;
+                CmdAddPart();
                 Debug.Log("parts taken");
             }
         }
 
-        if (currentParts == numberOfPartsRequired)
+        if (currentParts >= numberOfPartsRequired)
         {
             textBox.text = $"Fixed!";
-            ovenfixed = true;
+            CmdUnlock();
         }
         else
         {
@@ -51,23 +65,29 @@ public class Unlockable : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            player = other.GetComponent<Player>();
-        }
+    [Command]
+    void CmdAddPart() {
+        currentParts++;
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            player = null;
-        }
+    [Command]
+    void CmdUnlock() {
+        unlocked = true;
     }
 
-    public bool getFixed(){
-        return ovenfixed;
-    }
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.tag == "Player")
+    //     {
+    //         player = other.GetComponent<Player>();
+    //     }
+    // }
+
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.tag == "Player")
+    //     {
+    //         player = null;
+    //     }
+    // }
 }

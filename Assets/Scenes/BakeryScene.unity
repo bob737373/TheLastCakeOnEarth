@@ -178,6 +178,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BakeryInteriorBase
       objectReference: {fileID: 0}
+    - target: {fileID: 473713361672647790, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: sceneId
+      value: 258598562
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333902181228258370, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 233.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333902181228258370, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3090529586458138276, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
       propertyPath: dest
       value: 0
@@ -186,9 +198,33 @@ PrefabInstance:
       propertyPath: m_Text
       value: Oven
       objectReference: {fileID: 0}
+    - target: {fileID: 3960949775146152149, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: sceneId
+      value: 1310774932
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092473049581809201, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092473049581809201, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092473049581809201, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -219.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092473049581809201, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6119473899623743773, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728284394086401815, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+      propertyPath: sceneId
+      value: 1199860177
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
@@ -293,3 +329,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &303496038193244938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9036680785825616976, guid: 0afb23ec6be4c0b4897a8dce6232e867, type: 3}
+  m_PrefabInstance: {fileID: 303496038193244935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &303496038193244939
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303496038193244938}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 09907ff455c58164c84af79aa8ef9f34, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
