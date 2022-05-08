@@ -71,8 +71,25 @@ public class Player : Entity
 
     private bool teleporting = false;
     
-    [SyncVar]
-    public Vector3 teleportTarget;
+    // [SyncVar(hook = nameof(teleportHook))]
+    // public Vector3 teleportTarget;
+
+    // public void teleportHook(Vector3 oldValue, Vector3 newValue) {
+    //     // Debug.Log("teleport call");
+    //     // if(localPlayer) {
+    //     //     Debug.Log("teleporting " + localPlayer + " to " + localPlayer.teleportTarget);
+    //     //     //localPlayer.rb.MovePosition(localPlayer.teleportTarget);
+    //     //     localPlayer.transform.position = localPlayer.teleportTarget;
+    //     // }
+
+    //     Debug.Log("teleport " + this);
+    //     if(isLocalPlayer) {
+    //         Debug.Log("to " + newValue);
+    //         // this.transform.position = newValue;
+    //         GetComponent<NetworkTransform>().RpcTeleport
+    //     }
+
+    // }
 
     public override void Start()
     {
@@ -87,6 +104,7 @@ public class Player : Entity
 
         if(isLocalPlayer) {
             localPlayer = this;
+            localPlayer.name = "Player(local)";
             GameObject eventSys = Instantiate(eventSystemPrefab);
             eventSys.transform.parent = this.transform;
             GameObject hud = Instantiate(HUDPrefab);
@@ -100,6 +118,8 @@ public class Player : Entity
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
             camZ = cam.transform.position.z;
+        } else {
+            this.name = "Player(remote)";
         }
 
         animator.SetInteger("direction", (int)Direction.none);
@@ -208,38 +228,39 @@ public class Player : Entity
         // rb.velocity = movement * moveSpeed;
     }
 
-    public static void TeleportLocalPlayer() {
-        // yield return new WaitForSeconds(0.1f);
-        Debug.Log("teleporting " + localPlayer + " to " + localPlayer.teleportTarget);
-        if(localPlayer) {
-            //localPlayer.rb.MovePosition(localPlayer.teleportTarget);
-            localPlayer.transform.position = localPlayer.teleportTarget;
-        }
-    }
+    // public static void TeleportLocalPlayer() {
+    //     // yield return new WaitForSeconds(0.1f);
+    //     Debug.Log("teleport call");
+    //     if(localPlayer) {
+    //         Debug.Log("teleporting " + localPlayer + " to " + localPlayer.teleportTarget);
+    //         //localPlayer.rb.MovePosition(localPlayer.teleportTarget);
+    //         localPlayer.transform.position = localPlayer.teleportTarget;
+    //     }
+    // }
 
-    [Command(requiresAuthority = false)]
-    public void TriggerTeleport(Vector3 pos) {
-        Debug.Log("triggering teleport from server");
-        RpcTeleport(pos);
-    }
+    // [Command(requiresAuthority = false)]
+    // public void TriggerTeleport(Vector3 pos) {
+    //     Debug.Log("triggering teleport from server");
+    //     RpcTeleport(pos);
+    // }
 
-    [ClientRpc]
-    public void RpcTeleport(Vector3 pos) {
-        // Teleport(pos);
-        Debug.Log("teleporting");
-        // transform.position = pos;
-        rb.MovePosition(pos);
-    }
+    // [ClientRpc]
+    // public void RpcTeleport(Vector3 pos) {
+    //     // Teleport(pos);
+    //     Debug.Log("teleporting");
+    //     // transform.position = pos;
+    //     rb.MovePosition(pos);
+    // }
 
-    public void Teleport(Vector3 pos) {
-        Debug.Log("starting teleporting");
-        TriggerTeleport(pos);
-    }
+    // public void Teleport(Vector3 pos) {
+    //     Debug.Log("starting teleporting");
+    //     TriggerTeleport(pos);
+    // }
 
-    [Command(requiresAuthority = false)]
-    public void CmdMovePlayer() {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+    // [Command(requiresAuthority = false)]
+    // public void CmdMovePlayer() {
+    //     rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    // }
 
     [Command(requiresAuthority = false)]
     public override void CmdTakeDamage(int damage, StatusEffect status)

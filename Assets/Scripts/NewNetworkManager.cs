@@ -114,11 +114,12 @@ public class NewNetworkManager : NetworkManager
         Debug.Log(players + "num players: " + players.Count);
         foreach(var player in players.Values) {
             Debug.Log("moving " + player.name + " to " + GameSceneManager.targetPos);
-            //player.transform.position = GameSceneManager.targetPos;
-            player.teleportTarget = GameSceneManager.targetPos;//Teleport(GameSceneManager.targetPos);//RpcTeleport(GameSceneManager.targetPos);
-            // var pnt = player.GetComponent<NetworkTransform>();
-            // pnt.RpcTeleport(new Vector3(1000, 1000, 0));
-            // pnt.RpcTeleport(GameSceneManager.targetPos);
+            var nt = player.GetComponent<NetworkTransform>();
+            Debug.Log(nt);
+            nt.Reset();
+            player.transform.position = GameSceneManager.targetPos;
+            // should be able to use either nt.CmdTeleport or nt.RpcTeleport but they don't seem to work for some reason so I'm just emulating what they do here anyways
+            // the Reset is important as it sort of blocks the interpolation from messing with the teleport.
         }
     }
 
@@ -141,7 +142,7 @@ public class NewNetworkManager : NetworkManager
     {
         base.OnClientSceneChanged();
         Debug.Log("Client has changed scene");
-        Player.TeleportLocalPlayer();
+        // Player.TeleportLocalPlayer();
         // Debug.Log(players + "num players: " + players.Count);
         // foreach(var player in players.Values) {
         //     Debug.Log("moving " + player.name + " to " + GameSceneManager.targetPos);
@@ -198,7 +199,7 @@ public class NewNetworkManager : NetworkManager
         var p = player.GetComponent<Player>();
         players.Add(conn.connectionId, p);
         player.transform.position = GameSceneManager.targetPos;
-        p.teleportTarget = GameSceneManager.targetPos;
+        //p.teleportTarget = GameSceneManager.targetPos;
         // DontDestroyOnLoad(player);
         NetworkServer.AddPlayerForConnection(conn, player);
     }
