@@ -8,33 +8,6 @@ using System;
 public class InventorySlot : MonoBehaviour
 {
 
-
-    // public int numItems { get; private set; } = 0;
-    // public Item.ItemType itemType { get; private set; }
-
-
-    // public bool AddItem(Item item) {
-    //     if(numItems <= maxItemCount || item.type != itemType) { return false; }
-    //     numItems++;
-    //     buttonUI.SetActive(true);
-    //     itemImageUI.sprite = item.icon;
-    //     countTxt.text = items.Count.ToString();
-    //     return true;
-    // }
-
-    // public bool RemoveItem(Item item) {
-    //     if(numItems <= 0 || item.type != itemType) { return false; }
-    //     numItems--;
-    //     if (items.Count == 0)
-    //     {
-    //         clearSlot();
-    //     }
-    //     return true;
-    // }
-
-
-
-
     public List<Item> items = new List<Item>();
 
     [SerializeField]
@@ -63,6 +36,7 @@ public class InventorySlot : MonoBehaviour
     void Update()
     {
         countTxt.text = items.Count.ToString();
+        if(isActive() && !buttonUI.activeSelf) buttonUI.SetActive(true);
     }
 
     public void useItem()
@@ -95,7 +69,7 @@ public class InventorySlot : MonoBehaviour
         items.Add(newItem);
         newItem.transform.parent = this.transform;
         // DontDestroyOnLoad(newItem);
-        buttonUI.SetActive(true);
+        //buttonUI.SetActive(true);
         itemImageUI.sprite = newItem.icon;
         countTxt.text = items.Count.ToString();
         return true;

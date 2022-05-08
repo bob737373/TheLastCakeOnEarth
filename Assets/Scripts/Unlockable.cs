@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
+using UnityEngine.SceneManagement;
 
 public class Unlockable : NetworkBehaviour
 {
@@ -18,10 +19,13 @@ public class Unlockable : NetworkBehaviour
 
     [SerializeField]
     Text textBox;
+    [SerializeField]
+    string homeScene;
     new BoxCollider2D collider;
 
-    Player player;
+    protected Player player;
     CircleCollider2D playerCollider;
+    bool active;
 
     // Start is called before the first frame update
     virtual protected void Start()
@@ -37,12 +41,30 @@ public class Unlockable : NetworkBehaviour
         if(this.player) {
             playerCollider = player.GetComponent<CircleCollider2D>();
         }
+        DontDestroyOnLoad(this.gameObject);
         // GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         // player = playerObj.GetComponent<Player>();
     }
 
     virtual protected void Update()
     {
+        if(SceneManager.GetActiveScene().name == homeScene) {
+            if(!active) {
+                var unlockables = FindObjectsOfType<Unlockable>();
+                foreach(var u in unlockables) {
+                    if(!u.Equals(this)) {
+                        Destroy(u.gameObject);
+                    } 
+                }
+                this.gameObject.SetActive(true);
+                active = true;
+            }
+        } else {
+            if(active) {
+                this.gameObject.SetActive(false);
+                active = false;
+            }
+        }
         if (Input.GetKeyDown("f") && player && collider.IsTouching(playerCollider))
         {
             Debug.Log("input registered");
@@ -53,26 +75,28 @@ public class Unlockable : NetworkBehaviour
             }
         }
 
-        if (currentParts >= numberOfPartsRequired)
+        if (currentParts >= numberOfPartsRequired && !unlocked)
         {
             textBox.text = $"Fixed!";
             CmdUnlock();
         }
-        else
+        else if(!unlocked)
         {
             textBox.text = $"{currentParts}/{numberOfPartsRequired}";
 
         }
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     void CmdAddPart() {
         currentParts++;
+        Debug.Log("server increment parts to " + currentParts);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     void CmdUnlock() {
         unlocked = true;
+        Debug.Log("server unlock oven");
     }
 
     // void OnTriggerEnter2D(Collider2D other)

@@ -7,6 +7,7 @@ using Mirror;
 
 public class Oven : Unlockable
 {
+    public static Oven singleton { get; private set; }
     [SerializeField]
     private Text flourText;
     [SerializeField]
@@ -16,17 +17,19 @@ public class Oven : Unlockable
 
     [SerializeField]
     private GameObject ovenMenu;
-    
-    private Player player;
 
     private bool menuEnabled = false;
 
     // Start is called before the first frame update
     protected override void Start()
     {
+        if(!singleton) singleton = this;
+        else {
+            Destroy(this.gameObject);
+            return;
+        }
         base.Start();
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        player = playerObj.GetComponent<Player>();
         ovenMenu.SetActive(menuEnabled);
     }
 
@@ -64,4 +67,5 @@ public class Oven : Unlockable
     public void bakeCake(){
         SceneManager.LoadScene("EndScene");
     }
+
 }
