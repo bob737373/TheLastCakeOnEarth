@@ -104,7 +104,7 @@ public class NewNetworkManager : NetworkManager
     public override void OnServerChangeScene(string newSceneName) {
         Debug.Log("Server scene changing to " + newSceneName);
     }
-
+ 
     /// <summary>
     /// Called on the server when a scene is completed loaded, when the scene load was initiated by the server with ServerChangeScene().
     /// </summary>
@@ -114,7 +114,11 @@ public class NewNetworkManager : NetworkManager
         Debug.Log(players + "num players: " + players.Count);
         foreach(var player in players.Values) {
             Debug.Log("moving " + player.name + " to " + GameSceneManager.targetPos);
-            player.transform.position = GameSceneManager.targetPos;
+            //player.transform.position = GameSceneManager.targetPos;
+            player.teleportTarget = GameSceneManager.targetPos;//Teleport(GameSceneManager.targetPos);//RpcTeleport(GameSceneManager.targetPos);
+            // var pnt = player.GetComponent<NetworkTransform>();
+            // pnt.RpcTeleport(new Vector3(1000, 1000, 0));
+            // pnt.RpcTeleport(GameSceneManager.targetPos);
         }
     }
 
@@ -137,6 +141,19 @@ public class NewNetworkManager : NetworkManager
     {
         base.OnClientSceneChanged();
         Debug.Log("Client has changed scene");
+        Player.TeleportLocalPlayer();
+        // Debug.Log(players + "num players: " + players.Count);
+        // foreach(var player in players.Values) {
+        //     Debug.Log("moving " + player.name + " to " + GameSceneManager.targetPos);
+        //     //player.transform.position = GameSceneManager.targetPos;
+        //     player.Teleport(GameSceneManager.targetPos);
+        //     // var pnt = player.GetComponent<NetworkTransform>();
+        //     // pnt.RpcTeleport(new Vector3(1000, 1000, 0));
+        //     // pnt.RpcTeleport(GameSceneManager.targetPos);
+        // }
+        // foreach(var player in clientPlayers) {
+        //     player.Teleport(GameSceneManager.targetPos);
+        // }
     }
 
     #endregion
@@ -178,9 +195,11 @@ public class NewNetworkManager : NetworkManager
         // => appending the connectionId is WAY more useful for debugging!
         player.name = $"{playerPrefab.name} [connId={conn.connectionId}]";
         Debug.Log("adding player " + player.name);
-        players.Add(conn.connectionId, player.GetComponent<Player>());
+        var p = player.GetComponent<Player>();
+        players.Add(conn.connectionId, p);
         player.transform.position = GameSceneManager.targetPos;
-        DontDestroyOnLoad(player);
+        p.teleportTarget = GameSceneManager.targetPos;
+        // DontDestroyOnLoad(player);
         NetworkServer.AddPlayerForConnection(conn, player);
     }
 
@@ -261,6 +280,7 @@ public class NewNetworkManager : NetworkManager
     /// This is invoked when the client is started.
     /// </summary>
     public override void OnStartClient() {
+        Debug.Log("readying client");
         NetworkClient.Ready();
         if (NetworkClient.localPlayer == null)
         {

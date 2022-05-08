@@ -7,10 +7,14 @@ using Mirror;
 public class Player : Entity
 {
 
+    static Player localPlayer;
+
     [SerializeField]
     GameObject CameraMountPoint;
     [SerializeField]
     Camera cameraPrefab;
+    [SerializeField]
+    GameObject eventSystemPrefab;
     [SerializeField]
     GameObject HUDPrefab;
 
@@ -65,16 +69,26 @@ public class Player : Entity
 
     protected bool walking = false;
 
+    private bool teleporting = false;
+    
+    [SyncVar]
+    public Vector3 teleportTarget;
+
     public override void Start()
     {
         base.Start();
+        DontDestroyOnLoad(this.gameObject);
         if (!inventory)
         {
             inventory = FindObjectOfType<Inventory>();
             if(!inventory) Debug.LogError("Inventory is not defined in GUI!");
         }
 
+
         if(isLocalPlayer) {
+            localPlayer = this;
+            GameObject eventSys = Instantiate(eventSystemPrefab);
+            eventSys.transform.parent = this.transform;
             GameObject hud = Instantiate(HUDPrefab);
             //hud.transform.parent = this.transform;
             hud.transform.SetParent(this.transform, false); //unity said to do this, don't really get why but whatever
@@ -92,13 +106,23 @@ public class Player : Entity
 
     }
 
+    [Command(requiresAuthority = false)]
+    public void CmdSetMovement(float x, float y) {
+        movement.x = x;
+        movement.y = y;
+    }
+
     public override void Update()
     {
         base.Update();
         if(!isLocalPlayer) { return; }
         cam.transform.rotation = Quaternion.Euler(0, 0, 0);
         movement.x = Input.GetAxisRaw("Horizontal");
+        // var x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        // var y = Input.GetAxisRaw("Vertical");
+        // CmdSetMovement(x, y);
+        
         // Make sure inventory isnt open
         if (Input.GetButton("Fire1") && !inventory.open)
         {
@@ -169,9 +193,51 @@ public class Player : Entity
 
     }
 
+
     void FixedUpdate()
     {
         if(!isLocalPlayer) { return; } 
+        // CmdMovePlayer();
+        Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+        // if(teleporting){
+        //     Debug.Log("waiting for teleport");
+        //     if(teleportTarget.Equals(transform.position)) teleporting = false;
+        //     else return;
+        // }
+        rb.MovePosition(pos + movement * moveSpeed * Time.fixedDeltaTime);
+        // rb.velocity = movement * moveSpeed;
+    }
+
+    public static void TeleportLocalPlayer() {
+        // yield return new WaitForSeconds(0.1f);
+        Debug.Log("teleporting " + localPlayer + " to " + localPlayer.teleportTarget);
+        if(localPlayer) {
+            //localPlayer.rb.MovePosition(localPlayer.teleportTarget);
+            localPlayer.transform.position = localPlayer.teleportTarget;
+        }
+    }
+
+    [Command(requiresAuthority = false)]
+    public void TriggerTeleport(Vector3 pos) {
+        Debug.Log("triggering teleport from server");
+        RpcTeleport(pos);
+    }
+
+    [ClientRpc]
+    public void RpcTeleport(Vector3 pos) {
+        // Teleport(pos);
+        Debug.Log("teleporting");
+        // transform.position = pos;
+        rb.MovePosition(pos);
+    }
+
+    public void Teleport(Vector3 pos) {
+        Debug.Log("starting teleporting");
+        TriggerTeleport(pos);
+    }
+
+    [Command(requiresAuthority = false)]
+    public void CmdMovePlayer() {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 

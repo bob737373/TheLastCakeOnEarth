@@ -30,6 +30,7 @@ public abstract class Entity : NetworkBehaviour
     [SerializeField, SyncVar]
     protected int health;
 
+    // [SyncVar]
     protected Vector2 movement;
     bool isDead;
 
@@ -112,6 +113,7 @@ public abstract class Entity : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void CmdAddHealth(int healthAmt)
     {
+        Debug.Log("adding " + healthAmt + " to " + this);
         int newHealthAmt = health + healthAmt;
 
         // Make sure health is not greater then max health

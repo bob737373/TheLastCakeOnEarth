@@ -69,6 +69,7 @@ public class Inventory : MonoBehaviour
 
     public bool Add(Item item)
     {
+        Debug.Log("adding " + item);
         // Add to existing slot if exists and not full. 
         foreach (InventorySlot slot in slots)
         {
@@ -81,6 +82,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
+        Debug.Log("adding new slot");
         // Cant add a new slot if slot inventory is full as well.
         if (getActiveSlotsCount() >= space)
         {
@@ -90,6 +92,7 @@ public class Inventory : MonoBehaviour
         }
 
         InventorySlot unactive = getNextUnactiveSlot();
+        Debug.Log("adding to slot" + unactive);
         unactive.addItem(item);
 
         return true;
