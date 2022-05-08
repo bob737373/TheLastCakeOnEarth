@@ -17,6 +17,8 @@ public class Player : Entity
     GameObject eventSystemPrefab;
     [SerializeField]
     GameObject HUDPrefab;
+    [SerializeField]
+    GameObject inventoryPrefab;
 
     [SerializeField]
     WeaponContainer[] weapons;
@@ -26,7 +28,6 @@ public class Player : Entity
     [SerializeField]
     Animator animator;
 
-    [SerializeField]
     public Inventory inventory;
 
     enum Direction { down = -1, right = 2, up = 1, left = -2, none = 0 };
@@ -69,37 +70,16 @@ public class Player : Entity
 
     protected bool walking = false;
 
-    private bool teleporting = false;
-    
-    // [SyncVar(hook = nameof(teleportHook))]
-    // public Vector3 teleportTarget;
-
-    // public void teleportHook(Vector3 oldValue, Vector3 newValue) {
-    //     // Debug.Log("teleport call");
-    //     // if(localPlayer) {
-    //     //     Debug.Log("teleporting " + localPlayer + " to " + localPlayer.teleportTarget);
-    //     //     //localPlayer.rb.MovePosition(localPlayer.teleportTarget);
-    //     //     localPlayer.transform.position = localPlayer.teleportTarget;
-    //     // }
-
-    //     Debug.Log("teleport " + this);
-    //     if(isLocalPlayer) {
-    //         Debug.Log("to " + newValue);
-    //         // this.transform.position = newValue;
-    //         GetComponent<NetworkTransform>().RpcTeleport
-    //     }
-
-    // }
 
     public override void Start()
     {
         base.Start();
         DontDestroyOnLoad(this.gameObject);
-        if (!inventory)
-        {
-            inventory = FindObjectOfType<Inventory>();
-            if(!inventory) Debug.LogError("Inventory is not defined in GUI!");
-        }
+        // if (!inventory)
+        // {
+        //     inventory = FindObjectOfType<Inventory>();
+        //     if(!inventory) Debug.LogError("Inventory is not defined in GUI!");
+        // }
 
 
         if(isLocalPlayer) {
@@ -108,8 +88,12 @@ public class Player : Entity
             GameObject eventSys = Instantiate(eventSystemPrefab);
             eventSys.transform.parent = this.transform;
             GameObject hud = Instantiate(HUDPrefab);
-            //hud.transform.parent = this.transform;
+            // hud.transform.parent = this.transform;
             hud.transform.SetParent(this.transform, false); //unity said to do this, don't really get why but whatever
+            GameObject inven = Instantiate(inventoryPrefab);
+            inven.transform.SetParent(this.transform);
+            inventory = inven.GetComponent<Inventory>();
+
             cam = Instantiate(cameraPrefab);
             Transform cameraTransform = Camera.main.gameObject.transform;  //Find main camera which is part of the scene instead of the prefab
             cameraTransform.parent = CameraMountPoint.transform;  //Make the camera a child of the mount point

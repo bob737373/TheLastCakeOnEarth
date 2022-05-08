@@ -113,7 +113,7 @@ public abstract class Entity : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void CmdAddHealth(int healthAmt)
     {
-        Debug.Log("adding " + healthAmt + " to " + this);
+        Debug.Log("server adding " + healthAmt + " to " + this);
         int newHealthAmt = health + healthAmt;
 
         // Make sure health is not greater then max health

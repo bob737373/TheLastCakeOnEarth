@@ -47,7 +47,15 @@ public class MainMenu : MonoBehaviour
 
     public void ReturnToMain()
     {
-        SceneManager.LoadScene("MainMenu");
+        if(NetworkServer.active && NetworkClient.isConnected) {
+            NetworkManager.singleton.StopHost();
+        } else if(NetworkClient.isConnected) {
+            NetworkManager.singleton.StopClient();
+        } else if(manager) {
+            NetworkManager.singleton.ServerChangeScene("MainMenu");
+        } else {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
 }

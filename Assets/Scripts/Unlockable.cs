@@ -21,11 +21,10 @@ public class Unlockable : NetworkBehaviour
     Text textBox;
     [SerializeField]
     string homeScene;
-    new BoxCollider2D collider;
+    protected new BoxCollider2D collider;
 
     protected Player player;
-    CircleCollider2D playerCollider;
-    bool active;
+    protected CircleCollider2D playerCollider;
 
     // Start is called before the first frame update
     virtual protected void Start()
@@ -48,22 +47,17 @@ public class Unlockable : NetworkBehaviour
 
     virtual protected void Update()
     {
-        if(SceneManager.GetActiveScene().name == homeScene) {
-            if(!active) {
-                var unlockables = FindObjectsOfType<Unlockable>();
-                foreach(var u in unlockables) {
-                    if(!u.Equals(this)) {
-                        Destroy(u.gameObject);
-                    } 
-                }
-                this.gameObject.SetActive(true);
-                active = true;
+        if(SceneManager.GetActiveScene().name == homeScene && !this.gameObject.activeSelf) {
+            var unlockables = FindObjectsOfType<Unlockable>();
+            foreach(var u in unlockables) {
+                if(!u.Equals(this)) {
+                    Destroy(u.gameObject);
+                } 
             }
-        } else {
-            if(active) {
-                this.gameObject.SetActive(false);
-                active = false;
-            }
+            this.gameObject.SetActive(true);
+        } else if(SceneManager.GetActiveScene().name != homeScene && this.gameObject.activeSelf) {
+            Debug.Log("hiding oven");
+            this.gameObject.SetActive(false);
         }
         if (Input.GetKeyDown("f") && player && collider.IsTouching(playerCollider))
         {

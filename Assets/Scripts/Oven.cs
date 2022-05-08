@@ -38,7 +38,7 @@ public class Oven : Unlockable
     {
         base.Update();
         if(this.unlocked){
-            if(player){  
+            if(player && collider.IsTouching(playerCollider)){  
                 if(Input.GetKeyDown("q")){
                     menuEnabled = !menuEnabled;
                     ovenMenu.SetActive(menuEnabled);
@@ -65,7 +65,8 @@ public class Oven : Unlockable
     }
 
     public void bakeCake(){
-        SceneManager.LoadScene("EndScene");
+        //SceneManager.LoadScene("EndScene");
+        NetworkManager.singleton.ServerChangeScene("EndScene");
     }
 
 }

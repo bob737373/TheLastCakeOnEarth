@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     {
         if (player == null)
         {
-            player = GetComponent<Player>();
+            player = GetComponentInParent<Player>();
             if(player == null) Debug.LogError("Player not defined!!!");
         }
 

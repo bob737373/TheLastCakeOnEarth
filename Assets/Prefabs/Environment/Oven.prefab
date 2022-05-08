@@ -530,7 +530,7 @@ MonoBehaviour:
   currentParts: 0
   unlocked: 0
   textBox: {fileID: 126655948167184613}
-  homeScene: 
+  homeScene: BakeryScene
   flourText: {fileID: 6506048734887631026}
   milkText: {fileID: 6506048735798782537}
   bakeButton: {fileID: 6506048736654982065}
