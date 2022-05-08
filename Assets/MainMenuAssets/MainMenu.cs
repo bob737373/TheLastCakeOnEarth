@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Mirror;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -10,12 +11,19 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     NetworkManager manager;
 
+    InputField ip;
+
     void Awake() {
         //manager = GetComponent<NewNetworkManager>();
     }
 
-    void SetIP(string newIP) {
-        manager.networkAddress = newIP;
+    void Start() {
+        ip = GetComponentInChildren<InputField>();
+    }
+
+    public void SetIP() {
+        Debug.Log("ip changed to " + ip.text);
+        NetworkManager.singleton.networkAddress = ip.text;
     }
     
     public void HostGame() {
@@ -23,16 +31,17 @@ public class MainMenu : MonoBehaviour
     }
 
     public void JoinGame() {
-        if(manager.networkAddress == string.Empty) manager.networkAddress = "localhost";
-        manager.StartClient();
+        Debug.Log("passed in: " + manager.networkAddress);
+        if(NetworkManager.singleton.networkAddress == string.Empty) NetworkManager.singleton.networkAddress = "localhost";
+        NetworkManager.singleton.StartClient();
     }
 
     public void CancelHost() {
-        manager.StopHost();
+        NetworkManager.singleton.StopHost();
     }
 
     public void CancelJoin() {
-        manager.StopClient();
+        NetworkManager.singleton.StopClient();
     }
     
     public void StartGame()
