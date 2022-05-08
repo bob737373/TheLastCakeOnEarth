@@ -263,9 +263,9 @@ MonoBehaviour:
   attacksPerSecond: 1
   maxHealth: 0
   rb: {fileID: 5685725065730189260}
-  defaultMoveSpeed: 10
-  moveSpeed: 10
-  health: 10
+  defaultMoveSpeed: 5
+  moveSpeed: 5
+  health: 5
   CameraMountPoint: {fileID: 6886557209336134302}
   cameraPrefab: {fileID: 1457365657226023504, guid: ec8756053c071d34d819b61371d86870, type: 3}
   eventSystemPrefab: {fileID: 3040826695753950261, guid: bee8bf45eb728b844b140bea23dc6d5b, type: 3}
