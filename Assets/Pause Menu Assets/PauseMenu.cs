@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Mirror;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,19 +11,24 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     public void Resume()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
     }
 
     public void Home()//(int sceneID)
     {
         Time.timeScale = 1f;
         //Application.Quit();
-        SceneManager.LoadScene("MainMenu");
+        if(NetworkServer.active && NetworkClient.isConnected) {
+            NetworkManager.singleton.StopHost();
+        } else if(NetworkClient.isConnected) {
+            NetworkManager.singleton.StopClient();
+        }
+        //SceneManager.LoadScene("MainMenu");
     }
 }
